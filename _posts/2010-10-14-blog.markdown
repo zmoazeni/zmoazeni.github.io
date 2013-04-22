@@ -1,0 +1,22 @@
+---
+layout: !binary |-
+  cGFnZQ==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: Blog
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 381
+wordpress_url: !binary |-
+  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLw==
+date: 2010-10-14 06:31:23.000000000 -04:00
+categories: []
+tags: []
+comments: []
+---
+

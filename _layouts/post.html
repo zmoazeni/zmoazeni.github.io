@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+
+  <link href="/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Connection ⚡ Required</a></li>
+      <li><a href="/">About</a></li>
+    </ul>
+  </nav>
+
+  <article id="main">
+    <h1>{{ page.title }} ⚡ <abbr title="{{page.date | date_to_xmlschema}}">{{ page.date | date_to_string }}</abbr></h1>
+    {{ content }}
+  </article>
+</body>
+</html>

@@ -1,0 +1,29 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: ack
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 50
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD01MA==
+date: 2007-05-20 01:17:33.000000000 -04:00
+categories:
+- Uncategorized
+tags:
+- code
+- elevatorup
+comments: []
+---
+At Elevator Up I spend roughly 90% of my time buried in TextMate coding in Ruby. Initially I used grep when searching for text out of command line habit. I also toyed with TextMate's built in searching, but that took too long, especially when I froze Rails. 
+
+Then I came across [ack](http://petdance.com/ack/). All I can say is wow. I'm not a big fan of perl, but this little script does a great job. It even ignores those pesky `.svn` directories.
+
+Give it a shot, I use the standalone version which is just a big perl script to toss in your `PATH`.

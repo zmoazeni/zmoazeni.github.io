@@ -1,0 +1,32 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: Brutus
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 37
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0zNw==
+date: 2007-04-30 20:33:51.000000000 -04:00
+categories:
+- Uncategorized
+tags:
+- family
+comments: []
+---
+Yesterday we brought home our newest addition to the Moazeni household. Meet our new Great Dane. Brutus:
+
+[![Brutus](http://farm1.static.flickr.com/219/478608940_d483829e49.jpg "Brutus")](http://www.flickr.com/photos/8036711@N07/sets/72157600157904347/)
+
+He's been quite the handful, and boy is he scrappy. He does not have any qualms about showing off his puppy bark. His first encounter with Mocha he gave her a few tiny growls and barks and now she steers clear of him.
+
+[![Brutus](http://farm1.static.flickr.com/231/478608890_94888222cf.jpg "Brutus's first meeting with Mocha")](http://www.flickr.com/photos/8036711@N07/sets/72157600157904347/)
+
+So if see this little Harlequin on the street, watch out. He'll give you a piece of his mind. Just ask his chew toys and my socks.

@@ -1,0 +1,28 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: Picnik
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 45
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD00NQ==
+date: 2007-05-15 00:22:38.000000000 -04:00
+categories:
+- Uncategorized
+tags:
+- family
+comments: []
+---
+Recently I got Brit hooked on [Flickr](http://flickr.com/) and it only took her 3 days to hit her monthly bandwidth quota. However, what's more interesting is that I needed to find a very intuitive application for her to edit photos quickly. And those of you who know me, I'm all big into thin clients, so I started googling. 
+
+I came across one called [Picnik](http://www.picnik.com/) and holy cow is it awesomely simple / powerful. I've caught myself using it to resize and crop photos rather than pulling them into The Gimp. And it integrates easily into Flickr or [Picasa](http://picasa.google.com/).
+
+A very neat find, especially for minor picture changes.

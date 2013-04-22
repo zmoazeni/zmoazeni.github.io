@@ -1,0 +1,32 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: New House
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 64
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD02NA==
+date: 2007-07-19 21:32:42.000000000 -04:00
+categories:
+- Uncategorized
+tags:
+- family
+comments: []
+---
+I've been rather quiet the past few weeks due to Brittany and I buying our first house. After 3 years of renting, we felt we were finally stable enough to make a commitment with our own home.
+
+We purchased our brand new house in Howard City, MI. Everyone I talk to gives me this pained "I'm sorry about your commute" look, and no one seems to believe me that, it's really not that bad.
+
+Sure gas prices are a pain in the ass, but it's actually nice to have an hour to sit and stew over what I need to do that day, or what I did that afternoon.
+
+I'm rather lucky since we live only 5 minutes from the interstate, so it's pretty much smooth sailing. But with the number of Orange Barrels I pass everyday, it feels like this month all of Michigan road construction decided to focus on Grand Rapids.
+
+Hopefully soon I'll post some pictures of our new home, and the area.

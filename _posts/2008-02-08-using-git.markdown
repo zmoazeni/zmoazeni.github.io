@@ -1,0 +1,77 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: Using Git
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 116
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMTY=
+date: 2008-02-08 02:07:42.000000000 -05:00
+categories:
+- Uncategorized
+tags:
+- code
+- elevatorup
+comments: []
+---
+Janson and I have been using [Git](http://git.or.cz/) for a few months now at work. We're still keeping an open mind with regards to [Mercurial](http://www.selenic.com/mercurial/wiki/) and [Bazaar](http://bazaar-vcs.org/) however its clear that we'll be moving to a distributed version control.
+
+Working with git, I've come across a few gotchas and a few takeaways, especially in regards to git-svn. 
+
+### Some terminology
+
+Here's some layman's definitions to two very common terms with git. These are actually a very narrow view of what they actually do, but helps when starting out.
+
+* "rebase" typically means to take the changes from a source branch, and bring them into the branch you are currently working with
+* "merge" typically means to take the changes in your current branch, and push them into another branch
+
+### Ignore files and svn:ignore
+
+There's two ways for git to track ignored files. You can track it for your branch only in `DIR/.git/info/exclude` as well as a shared revisioned file at `DIR/.gitignore`. We've been preferring the latter on most of our projects.
+
+When using git-svn, you can have it dump all svn:ignores into a git file which is convienient, however I ran into a few issues where git was trying to add / remove files that svn thought were ignored. If you're going to interface with svn, I'd recommend keeping all ignores at the git level.
+
+### Merging conflicts
+
+One thing thats cool about git is the amount of docs out there. That being said, it was hard for me to get  the hang of merging conflicts. Its actually a relatively easy process once you've done it a few times. More often than not, the conflicts will happen on a rebase.
+
+* First edit the conflicted file and merge the changes by hand
+* Run a `git add path/to/file`
+* Tell git to finish the rebase by `git rebase --continue`
+
+Don't under any circumstances delete the `.dotest` folder. I repeat, leave that folder **alone**. I think there's some carry over from using svn that some people think that how you finish the merge. I was one of those people, and I know a few people who did the same. The `.dotest` allows you to run `git rebase --abort` to quit a rebase in the middle of a conflict.
+
+### Commiting files
+
+Most people come across this within the first few days of using git. Unlike svn, you have to tell git what files you want to commit every changeset. You do this by running `git add path/to/file` on already revisioned files. However to save the hassle you can run `git commit -a` to add any tracked files to the next commit.
+
+On a related note, you can use wildcards with `git add`. So `git add *` will add all the untracked files in the directory and any subdirectories. That can be helpful at times.
+
+### Reverting changes
+
+This one seemed a bit unintuitive to me. Lets say you have a file, made some changes, then wanted to dump all changes for the latest known revision. To do this you run `git checkout path/to/file` or `git checkout .` to dump your entire changeset.
+
+Don't use `git reset` unless you really know what you are doing. When using git-svn, this can revert all changes since your last rebase with svn. Which can be a real pain in the ass.
+
+### Showing old revisions
+
+You can do this pretty easily by running `git log path/to/file` taking the commit id and then running `git show commit-id:path/to/file`.
+
+### Dumping changes in order to rebase with svn
+
+This can be a pain, and if anyone has an easier solution, please share. Let's say you have a repository  that has recently been rebased against svn. You start making some changes, and then you realize someone else commited something to svn that you need. The approach I've been taking is this:
+
+1. First make a patch of you current changes `git diff > changes.patch`
+1. Reset all your changes `git checkout .`
+1. Rebase with svn `git-svn rebase`
+1. Re-apply the changes to your directory. `git-apply changes.patch`
+
+I hope this helps. If you have any other suggestions or tips, by all means share them.

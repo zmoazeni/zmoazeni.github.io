@@ -1,0 +1,79 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: RubyConf 2008
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 146
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xNDY=
+date: 2008-11-19 22:11:42.000000000 -05:00
+categories:
+- Uncategorized
+tags:
+- code
+comments: []
+---
+I was lucky enough to attend [RubyConf 2008](http://rubyconf.org/). I really enjoyed last year's conference, and I felt this year was better.
+
+There was lots of great content, and more than handful of time slots where I wanted to attend both. I'm eagerly waiting for [Confreaks](http://www.confreaks.com/) to post all the talks so I could watch the ones I missed, as well as re-watch the ones I attended.
+
+Among all the talks I attended, there were three talks that really enjoyed.
+
+### Ruby Heavy-Lifting: Lazy load it, Event it, Defer it, and then Optimize it ###
+
+This was given by Ilya Grigorik of [AideRSS](http://aiderss.com/), and was my favorite talk of the weekend. Ilya went over their experiences developing PostRank and main optimization techniques they used with Ruby.
+
+Primarily:
+
+1. Message Queues
+1. EventMachine
+1. Process Forking
+1. Custom C Extensions
+
+Ilya didn't just gloss over each point in a tutorial fashion, but instead described how they used each item and the resulting effects.
+
+It was very refreshing to hear someone speak of their roadblocks and creative solutions to work around them. Hearing that PostRank is making around 5 million requests per day, and is spread over 100 servers is pretty inspiring.
+
+### What Every Rubyist Should Know About Threads ###
+
+Jim Weirich from [EdgeCase](http://theedgecase.com) gave this talk. Now I've been interested in fairly interested in concurrency this year. Especially as we see hardware trends stalling out on speed and moving towards multiple cores. I really appreciated this talk for two reasons.
+
+First, it shamed me. Yup, I'll admit it. As snobby as I acted about concurrency, and as much as I touted I understood deadlocking and thread safety code, Jim's talk exposed me to my ignorance, and for that I'm very grateful.
+
+This talk may not appeal to others the same way it did to me, however for those interested in threading basics as well as virtual machine quicks this was worthwhile.
+
+### Dramatis: Actors for Ruby ###
+
+[Steven Parks](http://smparkes.net/) gave a great talk about his Actor-based Concurrency library for both Ruby and Python [Dramatis](http://dramatis.mischance.net/). Now Dramatis is rather young, but has a lot of potential. Not to mention Steven's presentation and conversation afterwards indicates he has been working in this particular field a while.
+
+Earlier this year I played with Erlang quite a bit, and despite the syntax annoyances, the actor model was very interesting. Steven mentioned explicit vs implicit receiving, which happens to be one of the bold stances this API takes. Erlang is an explicit receive model. Which means the code has to explicitly request the next message.
+
+An explicit receive example with Ruby:
+
+    while message = receive
+      # do something with the message and then re-loop
+    end
+    
+An implicit receive example:
+
+    def some_method
+      # this will get called when a message is sent
+    end
+    
+The second example doesn't look too foreign, and that's because it's not. The entire class becomes an API, and the messaging framework calls the appropriate method. When I worked with Erlang, I liked the Actor model, but I didn't like the boilerplate code that was copy-pasted for every Actor.
+
+I don't expect everyone to prefer this type of messaging, but for me it makes the concurrency model more transparent, and the actors easier to read as well as easier to test.
+
+### That's a lot of concurrency ###
+
+As you can tell all my favorite talks all had some connection with concurrency and scale. That's because I've been very interested in scaling Ruby applications. Not because I'm some outside developer who is evaluating Ruby as a language and concerned about FUD. It's because I am a Ruby developer, and I've been writing in Ruby for the past couple years, but I have rarely heard talks addressing scaling.
+
+There were many other great talks at the conference. For those on the fence on whether to attend next year, I definitely recommend it.

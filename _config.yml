@@ -1,0 +1,7 @@
+auto: true
+markdown: rdiscount
+permalink: /blog/:year/:month/:title
+sass:
+  syntax: scss
+  style: nested
+

@@ -1,0 +1,32 @@
+---
+layout: !binary |-
+  cG9zdA==
+status: !binary |-
+  cHVibGlzaA==
+published: true
+title: Buck
+author: !binary |-
+  WmFjaCBNb2F6ZW5p
+author_login: !binary |-
+  YWRtaW4=
+author_email: !binary |-
+  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
+wordpress_id: 39
+wordpress_url: !binary |-
+  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0zOQ==
+date: 2007-05-12 17:47:11.000000000 -04:00
+categories:
+- Uncategorized
+tags:
+- family
+comments: []
+---
+So we bought a 2nd Great Dane, as if [Brutus](/2007/5/brutus) wasn't enough of a handful.
+
+Meet Buck: ![Buck](/assets/2007/5/12/brutus1.png "Buck")
+
+We called the Breeder for Brutus's papers, and while she was on the phone we asked about one of his brothers who had injured his leg when he was a few weeks old. She said that someone had brought him home, but then decided to return him.
+
+So going against my better judgment we decided to give this poor pup a good home. Boy these two are going to be huge.
+
+![Buck tired](/assets/2007/5/12/brutus2.png "Ready for Nap Time")
