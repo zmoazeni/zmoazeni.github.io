@@ -58,14 +58,33 @@ post](http://blog.headius.com/2012/11/refining-ruby.html) such as:
 
 What does the following do?
 
-<script src="https://gist.github.com/4110634.js?file=ref_1.rb"></script>
+{% highlight ruby %}
+class Baz < Quux
+  def up_and_add(str1, str2)
+    str1.upcase + str2.upcase
+  end
+end
+{% endhighlight %}
 
 Josh Ballanco's example, also from Charles's post where
 
 
 > "the following code only refines the "bar" method, not the "foo"
-method." <script
-src="https://gist.github.com/4110634.js?file=ref13.rb"></script>
+method."
+
+{% highlight ruby %}
+class Yummy
+  def foo(str)
+    str.camelize # will error
+  end
+
+  using StringCamelize
+
+  def bar(str)
+    str.camelize
+  end
+end
+{% endhighlight %}
 
 I strongly dislike this argument. In complete fairness, you have no idea
 what `String#upcase` is going to do. Someone before the call may or may
