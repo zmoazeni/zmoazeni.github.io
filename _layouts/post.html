@@ -5,6 +5,7 @@
   <title>{{ page.title }}</title>
 
   <link href="/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/pygments-solarized.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <nav>
@@ -15,8 +16,12 @@
   </nav>
 
   <article id="main">
-    <h1>{{ page.title }} ⚡ <abbr title="{{page.date | date_to_xmlschema}}">{{ page.date | date_to_string }}</abbr></h1>
+    <h1><cite>{{ page.title }}</cite> <span class="separator">⚡</span> <time datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time></h1>
     {{ content }}
   </article>
+
+  <footer>
+    <a href="">Zach Moazeni</a> &copy; 2007 - 2013
+  </footer>
 </body>
 </html>
