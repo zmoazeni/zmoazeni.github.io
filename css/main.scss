@@ -16,13 +16,15 @@ body {
   background: #fff;
   padding: 0;
   margin: 0;
-  top: -10px;
   display: block;
   padding-top: 1px;
 }
 
 $h1-font-size: $font-size + 10;
-h1 { font-size: $h1-font-size; }
+h1 {
+  font-size: $h1-font-size;
+  margin-bottom: 10px;
+}
 h2 { font-size: $h1-font-size - 4; }
 h3 { font-size: $h1-font-size - 8; }
 
@@ -48,8 +50,16 @@ nav {
   padding: 5px 0;
   text-transform: lowercase;
 
+  color: #eee8d5;
+
   a {
     color: #eee8d5;
+    border-bottom: 1px dashed;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
   }
 
   ul {
@@ -63,31 +73,27 @@ nav {
       }
     }
   }
-}
 
-footer {
-  padding: 10px 40px 10px;
-  background-color: #002b36;
-  color: #eee8d5;
-  border-top: 3px solid #738b91;
+  #copyright {
+    float: right;
+    margin-right: 40px;
+    /*text-transform: none;*/
+  }
 }
-
 
 #main {
   margin-top: 60px;
-  padding: 0px 100px 50px;
+  padding: 0px 100px 25px;
   width: 80%;
 }
 
-time { font-style: italic; }
+time {
+  font-style: italic;
+}
+
 .separator {
   font-size: 22px;
   margin: 0 5px;
-
-  h1 & {
-    font-size: $h1-font-size + 4;
-    margin: 0;
-  }
 }
 
 cite { font-style: normal }
@@ -104,5 +110,10 @@ cite { font-style: normal }
   .post {
     font-size: 18px;
     margin-bottom: 10px;
+  }
+
+  time {
+    display: inline-block;
+    width: 120px;
   }
 }
