@@ -12,7 +12,7 @@ body {
   font-family: Verdana, "Lucida Grande", Helvetica, sans-serif;
   color: #002b36;
   font-size: $font-size;
-  line-height: 22px;
+  line-height: 28px;
   background: #fff;
   padding: 0;
   margin: 0;
@@ -25,7 +25,12 @@ h1 {
   font-size: $h1-font-size;
   margin-bottom: 10px;
 }
-h2 { font-size: $h1-font-size - 4; }
+
+h2 {
+  font-size: $h1-font-size - 4;
+  border-bottom: 1px solid #738b91;
+}
+
 h3 { font-size: $h1-font-size - 8; }
 
 
@@ -35,10 +40,9 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    border-bottom: 1px dashed;
   }
 }
-
 
 nav {
   background-color: #002b36;
@@ -48,17 +52,11 @@ nav {
   margin: 0px;
   width: 100%;
   padding: 5px 0;
-
+  text-transform: lowercase;
   color: #eee8d5;
 
   a {
     color: #eee8d5;
-    border-bottom: 1px dashed;
-
-    &:hover {
-      text-decoration: none;
-      border-bottom: 1px solid;
-    }
   }
 
   ul {
@@ -72,17 +70,18 @@ nav {
       }
     }
   }
-
-  #copyright {
-    float: right;
-    margin-right: 40px;
-  }
 }
 
 #main {
   margin-top: 60px;
   padding: 0px 100px 25px;
   width: 80%;
+}
+
+footer {
+  padding: 20px;
+  color: #9aabaf;
+  clear: both;
 }
 
 time {
@@ -98,8 +97,6 @@ cite { font-style: normal }
 
 #posts {
   h2 {
-    border-bottom: 1px solid #738b91;
-
     ~ h2 {
       margin-top: 50px;
     }
@@ -107,11 +104,17 @@ cite { font-style: normal }
 
   .post {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   time {
     display: inline-block;
     width: 120px;
   }
+}
+
+#profilepic {
+  float: left;
+  margin-right: 40px;
+  display: block;
 }
