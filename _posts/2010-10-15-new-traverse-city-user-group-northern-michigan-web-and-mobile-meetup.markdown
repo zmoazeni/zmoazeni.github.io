@@ -17,8 +17,6 @@ wordpress_url: !binary |-
 date: 2010-10-15 09:48:05.000000000 -04:00
 categories:
 - Uncategorized
-tags:
-- highlighted
 comments: []
 ---
 After we moved back home in Elk Rapids Michigan, one thing that I acutely missed was the number of user groups we had in West Michigan. Don't get me wrong, West Michigan doesn't have nearly as many compared to a metropolitan hub. In Chicago they even have a [VIM Usergroup](http://groups.google.com/group/vimchicago). But West Michigan did a lot of events going on, and active communities around them.

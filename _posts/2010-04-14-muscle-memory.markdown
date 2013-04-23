@@ -15,9 +15,12 @@ wordpress_id: 273
 wordpress_url: !binary |-
   aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTI3Mw==
 date: 2010-04-14 21:48:01.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
+tags:
+- highlighted
+
+abstract: >
+  I gave the Dvorak keyboard layout an honest attempt. For years.
+
 comments:
 - id: 91
   author: Jon

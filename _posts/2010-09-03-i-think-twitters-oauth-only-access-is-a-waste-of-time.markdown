@@ -15,10 +15,6 @@ wordpress_id: 373
 wordpress_url: !binary |-
   aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTM3Mw==
 date: 2010-09-03 15:41:57.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- highlighted
 comments:
 - id: 113
   author: Leon

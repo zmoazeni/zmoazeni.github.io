@@ -20,7 +20,11 @@ categories:
 tags:
 - code
 - elevatorup
-comments: []
+- highlighted
+
+abstract: >
+  Sometimes you make strange correlations with software.
+
 ---
 My brother in law bought a Rubik's Cube at a yardsale for a quarter. He was playing around with it when he and his wife stopped by our house. I've never personally owned a cube, but I had seen them around (more so when I was younger).
 

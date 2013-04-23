@@ -15,10 +15,6 @@ wordpress_id: 365
 wordpress_url: !binary |-
   aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTM2NQ==
 date: 2010-08-30 15:50:28.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- highlighted
 comments:
 - id: 111
   author: Cliff Wegner

@@ -15,10 +15,13 @@ wordpress_id: 353
 wordpress_url: !binary |-
   aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTM1Mw==
 date: 2010-08-24 10:47:20.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments: []
+tags:
+- highlighted
+
+abstract: >
+  After freelancing for a while, I reflected on a one man shop
+  providing excellent service.
+
 ---
 I've heard the argument "it takes Resources to provide good Client Satisfaction" and I simply have to disagree. _Great_ client satisfaction has to come first, and the resources will follow. I also believe that companies who take this stance will often re-use those resources to provide even better client satisfaction.
 

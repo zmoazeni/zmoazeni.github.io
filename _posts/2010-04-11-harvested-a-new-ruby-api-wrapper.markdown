@@ -15,10 +15,6 @@ wordpress_id: 268
 wordpress_url: !binary |-
   aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTI2OA==
 date: 2010-04-11 14:17:02.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- highlighted
 comments:
 - id: 90
   author: Wes Garrison

@@ -15,10 +15,6 @@ wordpress_id: 481
 wordpress_url: !binary |-
   aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDgx
 date: 2011-01-19 15:31:05.000000000 -05:00
-categories:
-- Uncategorized
-tags:
-- highlighted
 comments:
 - id: 144
   author: Derek Kastner

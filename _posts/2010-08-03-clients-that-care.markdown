@@ -47,6 +47,10 @@ comments:
     <p>Torey</p>
 
 '
+
+abstract: >
+  Touched by my clients concern for me.
+
 ---
 Whenever a client hires me, I make it a very specific point not to bring baggage to the table. Whether it's other project scheduling issues, family schedules, strong toolset opinions, or any other demands on a freelancer's time or mental-space. Some clients will gracefully deal with a freelancer's baggage, but I've found that most clients would rather not have to concern themselves with it. As a result I work hard to guard my clients from that stress.
 

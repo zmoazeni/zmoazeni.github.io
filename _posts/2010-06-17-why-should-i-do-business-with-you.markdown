@@ -15,10 +15,6 @@ wordpress_id: 335
 wordpress_url: !binary |-
   aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTMzNQ==
 date: 2010-06-17 08:58:36.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- highlighted
 comments: []
 ---
 > All things being equal, people want to do business with their friends.
