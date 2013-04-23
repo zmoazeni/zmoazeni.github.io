@@ -43,38 +43,38 @@ An example of use:
     hash2 = { :b => nil }
     hash1.depth_merge(hash2, true) #=> { :a => "foo" }
 
-Again a very simple utility, however it comes in handy with testing. 
+Again a very simple utility, however it comes in handy with testing.
 
     # In Model
     class Foo < ActiveRecord::Base
       validates_presence_of :col1, :col2
     end
-    
+
     # In Unit Test
     ...
     def setup
       @default_attributes = { :col1 => "foo", :col2 => "bar" }
     end
-    
+
     def test_missing_important_fields
       # A model with not only col1 == nil, but nil is never passed to the setter
       model = create_model(:col1 => nil)
       # do some checking on validity
-      
+
       model = create_model(:col2 => nil)
       # again checking on validity
     end
-    
+
     def test_something_else
       model = create_model
     end
-    
+
     private
-      def create_model(opts = {}) 
-        SomeModel.new(@default_attributes.depth_merge(opts, true))
+      def create_model(opts = {})
+	SomeModel.new(@default_attributes.depth_merge(opts, true))
       end
     ...
-  
+
 
 Having a the depth part of the merge many not be handy in that scenario, but in functional tests they can help with composing the `get`/`post`
 
@@ -82,28 +82,28 @@ Having a the depth part of the merge many not be handy in that scenario, but in 
     ...
     def setup
       ...
-      @default_params = { 
-        :id => 5, 
-        :foo => {
-          :col1 => "foo",
-          :col2 => "bar"
-        }
+      @default_params = {
+	:id => 5,
+	:foo => {
+	  :col1 => "foo",
+	  :col2 => "bar"
+	}
       }
     end
-    
+
     def test_something
       post :some_action, params(:foo => { :col1 => nil })
       ...
     end
-    
+
     def test_something_else
       post :some_action, params
       ...
     end
-    
+
     private
       def params(opts = {})
-        @default_params.depth_merge(opts, true)
+	@default_params.depth_merge(opts, true)
       end
     ...
 

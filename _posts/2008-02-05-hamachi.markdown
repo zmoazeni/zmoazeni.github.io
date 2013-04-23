@@ -21,8 +21,8 @@ tags:
 - elevatorup
 comments: []
 ---
-Me and a few buddies play [Command and Conquer Generals](http://en.wikipedia.org/wiki/Command_&_Conquer:_Generals). It's a decent RTS, but has problematic networking issues. Before giving up, I came across [Hamachi](https://secure.logmein.com/products/hamachi/vpn.asp?lang=en) which is an awesome VPN app. 
+Me and a few buddies play [Command and Conquer Generals](http://en.wikipedia.org/wiki/Command_&_Conquer:_Generals). It's a decent RTS, but has problematic networking issues. Before giving up, I came across [Hamachi](https://secure.logmein.com/products/hamachi/vpn.asp?lang=en) which is an awesome VPN app.
 
-It's free for small networks, and it is brain-dead easy to setup. Once all of us had it installed, we connected to the same network and were able to play as if we were in a LAN party. I was expecting some type of network latency going through the software, but I was pleasantly surprised at the results. I couldn't tell a difference. 
+It's free for small networks, and it is brain-dead easy to setup. Once all of us had it installed, we connected to the same network and were able to play as if we were in a LAN party. I was expecting some type of network latency going through the software, but I was pleasantly surprised at the results. I couldn't tell a difference.
 
 Soon I'll probably install it on our office Media / File Server so we can transfer files and screen share remotely using bonjour without touching our router.

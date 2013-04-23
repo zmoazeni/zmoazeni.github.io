@@ -58,7 +58,7 @@ comments:
     <p>I''ve been involved with several client libraries on github connecting tumblr''s
     api service and have on several occasions emailed their support staff about issues
     and feature requests.  Every time I get the low level response "we''ll forward
-    your response to a developer" and never hear back.  Most notably I found an issue
+    your response to a developer" and never hear back.	Most notably I found an issue
     with their authenticated reads not pulling private posts correctly.</p>
 
 
@@ -75,20 +75,20 @@ It wasn't the details of the change that caught my eye, it was that prior to the
 Here's the email, posted with permission from Harvest:
 
 >> Hi Zach
->> 
+>>
 >> I'm reaching out early, before the official notification about this, to ask a question about your Harvest client: http://simplechatter.com/2010/04/harvested-a-new-ruby-api-wrapper/
->> 
+>>
 >> In a couple of weeks Harvest will be implementing SSL across the board for all Harvest accounts. Accounts can opt-out of SSL (through Harvest support) but HTTPS will become the default for all Harvest access.
->> 
+>>
 >> The net effect for accounts currently using non-SSL HTTP will be an HTTP 301 redirect from http://subdomain.harvestapp.com to https://subdomain.harvestapp.com when this change goes into effect for everyone.
->> 
+>>
 >> Does your client support this 301 redirect, and SSL in general? If not, we'd like to work with you to support this, to avoid any issues for your access, or for anyone using your client.
->> 
+>>
 >> Please let me know and feel free to contact me for any details, or if I can help in any way.
->> 
+>>
 >> Thanks!
 
-The fact that the company not only keeps tabs on the current software community around their product, and intentionally reaches out to them for potential issues, **and** offers to help out to fix those issues _speaks volumes_. Fostering a community and enabling evangelists around your product is often overlooked and under-prioritized. 
+The fact that the company not only keeps tabs on the current software community around their product, and intentionally reaches out to them for potential issues, **and** offers to help out to fix those issues _speaks volumes_. Fostering a community and enabling evangelists around your product is often overlooked and under-prioritized.
 
 Kudos guys, and keep up the good work.
 

@@ -55,6 +55,6 @@ That math only leaves a remainder of *3 hours a day*. (24 - 8 - 10 - 3 = 3)
 
 My weekends are extremely valuable, and there's no doubt I've been using them ineffectively. If I had to guess, my typical weekend boils down to watching T.V. playing mindless games, and catching up on work. Well, not anymore.
 
-So I hope you enjoy this upcoming Memorial Day. Whether it's to relax with the family, crack open a new book, or just have "alone time". 
+So I hope you enjoy this upcoming Memorial Day. Whether it's to relax with the family, crack open a new book, or just have "alone time".
 
 I know I'm planning on making it count.

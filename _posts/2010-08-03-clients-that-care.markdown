@@ -59,7 +59,7 @@ I talked with each of my clients individually and I was relieved that they all t
 > "Obviously, do what you need to do for yourself. If that's work I'll be happy to keep you busy... We'd like to send some flowers..." (In response to me mentioning I may work on a feature to keep my mind busy)
 
 > "Take care and as much time as you need."
- 
+
 > "Please take the time you need."
 
 > "Nothing comes before family. Take your time, when you're ready to start back up just let me know. No rush."

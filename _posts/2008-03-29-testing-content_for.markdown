@@ -25,7 +25,7 @@ comments: []
 After we started writing [view specs](/2008/2/16/ascribe-a-case-study-on-view-specs) we came across views similar to this:
 
 	<p>Stuff in the main content area</p>
-	
+
 	<% content_for "secondary_content" do %>
 	  <p>Stuff that will go in an side panel in the view </p>
 	<% end %>
@@ -36,12 +36,12 @@ Obviously when rendering the view inside the spec, only the blurb about `main co
 	  def do_render
 	    render "/path/to/view"
 	  end
-	  
+
 	  it "should have blurb about main content" do
 	    do_render
 	    response.should have_text(/main content/i)
 	  end
-	  
+
 	  ##
 	  # This won't pass.
 	  ##
@@ -63,12 +63,12 @@ And rewrite your spec like this:
 	  def do_render
 	    render "/path/to/view"
 	  end
-	  
+
 	  it "should have blurb about main content" do
 	    do_render
 	    response.should have_text(/main content/i)
 	  end
-	  
+
 	  ##
 	  # This will now pass
 	  ##

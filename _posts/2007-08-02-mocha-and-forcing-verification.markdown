@@ -30,29 +30,29 @@ Looking at the code:
 
     class Car
       def initialize(parts = [])
-        @parts = parts
+	@parts = parts
       end
-  
+
       def start
-        started = true
-        @parts.each do | part |
-          # commenting out for failure
-          # started = started && part.start
-        end
-  
-        started
+	started = true
+	@parts.each do | part |
+	  # commenting out for failure
+	  # started = started && part.start
+	end
+
+	started
       end
-  
+
     end
-  
+
     class SomeTest < Test::Unit::TestCase
-  
+
       def test_start
-        engine_mock = mock("engine_mock")
-        car = Car.new([engine_mock])
-  
-        engine_mock.expects(:start).returns(false)
-        assert !car.start
+	engine_mock = mock("engine_mock")
+	car = Car.new([engine_mock])
+
+	engine_mock.expects(:start).returns(false)
+	assert !car.start
       end
     end
 
@@ -77,43 +77,43 @@ I must put up some disclaimers, I did **NOT** engineer this code, and I take no 
 
     require "mocha"
     require "test/unit"
-  
+
     class Test::Unit::TestCase
-  
+
       def mocha_force_verify
-        mocha_verify
+	mocha_verify
       end
-  
+
       if method_defined?(:teardown) then
-        alias_method :old_teardown, :teardown
-        define_method(:new_teardown) do
-          begin
-            mocha_force_verify
-          ensure
-            old_teardown
-          end
-        end
+	alias_method :old_teardown, :teardown
+	define_method(:new_teardown) do
+	  begin
+	    mocha_force_verify
+	  ensure
+	    old_teardown
+	  end
+	end
       else
-        define_method(:new_teardown) do
-          mocha_force_verify
-        end
+	define_method(:new_teardown) do
+	  mocha_force_verify
+	end
       end
       alias_method :teardown, :new_teardown
-  
+
       def self.method_added(method) #:nodoc:
-        case method
-        when :teardown
-          unless method_defined?(:user_teardown)
-            alias_method :user_teardown, :teardown
-            define_method(:teardown) do
-              begin
-                new_teardown 
-              ensure
-                user_teardown
-              end
-            end
-          end
-        end
+	case method
+	when :teardown
+	  unless method_defined?(:user_teardown)
+	    alias_method :user_teardown, :teardown
+	    define_method(:teardown) do
+	      begin
+		new_teardown
+	      ensure
+		user_teardown
+	      end
+	    end
+	  end
+	end
       end
     end
 
@@ -136,56 +136,56 @@ After banging my head trying to have both the Fixtures source and my code to sit
 
     require 'mocha'
     require 'mocha/expectation_error'
-  
+
     module Mocha
       module ForceVerifyTestCaseAdapter
-        def self.included(base)
-          base.class_eval do
-  
-            def run(result)
-              yield(Test::Unit::TestCase::STARTED, name)
-              @_result = result
-              begin
-                mocha_setup
-                begin
-                  setup
-                  __send__(@method_name)
-                  mocha_verify { add_assertion }
-                rescue Mocha::ExpectationError => e
-                  added_mocha_failure = true
-                  add_failure(e.message, e.backtrace)
-                rescue Test::Unit::AssertionFailedError => e
-                  add_failure(e.message, e.backtrace)
-                rescue StandardError, ScriptError
-                  add_error($!)
-                ensure
-                  begin
-                    teardown
-                  rescue Test::Unit::AssertionFailedError => e
-                    add_failure(e.message, e.backtrace)
-                  rescue StandardError, ScriptError
-                    add_error($!)
-                  end
-                end
-              ensure
-                unless added_mocha_failure
-                  begin
-                    mocha_verify
-                  rescue
-                    add_error($!)
-                  end
-                end
-                mocha_teardown
-              end
-              result.add_run
-              yield(Test::Unit::TestCase::FINISHED, name)
-            end
-                  
-          end
-        end
+	def self.included(base)
+	  base.class_eval do
+
+	    def run(result)
+	      yield(Test::Unit::TestCase::STARTED, name)
+	      @_result = result
+	      begin
+		mocha_setup
+		begin
+		  setup
+		  __send__(@method_name)
+		  mocha_verify { add_assertion }
+		rescue Mocha::ExpectationError => e
+		  added_mocha_failure = true
+		  add_failure(e.message, e.backtrace)
+		rescue Test::Unit::AssertionFailedError => e
+		  add_failure(e.message, e.backtrace)
+		rescue StandardError, ScriptError
+		  add_error($!)
+		ensure
+		  begin
+		    teardown
+		  rescue Test::Unit::AssertionFailedError => e
+		    add_failure(e.message, e.backtrace)
+		  rescue StandardError, ScriptError
+		    add_error($!)
+		  end
+		end
+	      ensure
+		unless added_mocha_failure
+		  begin
+		    mocha_verify
+		  rescue
+		    add_error($!)
+		  end
+		end
+		mocha_teardown
+	      end
+	      result.add_run
+	      yield(Test::Unit::TestCase::FINISHED, name)
+	    end
+
+	  end
+	end
       end
     end
-  
+
     class Test::Unit::TestCase
       include Mocha::ForceVerifyTestCaseAdapter
     end

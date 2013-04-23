@@ -22,7 +22,7 @@ tags:
 - elevatorup
 comments: []
 ---
-One of the things I like about working with Rails is test fixtures. However when the data model becomes more complex, the fixtures can become rather large. Worse yet, tests that require fixtures among two or more models feel clunky. 
+One of the things I like about working with Rails is test fixtures. However when the data model becomes more complex, the fixtures can become rather large. Worse yet, tests that require fixtures among two or more models feel clunky.
 
 I wrote a plugin to help organize fixtures called [fixture_groups](http://source.elevatorfight.com/public/fixture_groups).
 
@@ -37,7 +37,7 @@ Example:
     class BlahTest
       fixture_group :group1
       fixtures :foo, :bar
-      
+
       ...
     end
 

@@ -21,6 +21,6 @@ tags:
 - elevatorup
 comments: []
 ---
-We've moved to our awesome new office in the Zeeland Clock Tower building. 
+We've moved to our awesome new office in the Zeeland Clock Tower building.
 
 Aaron's Wife took some pretty neat [pictures](http://www.flickr.com/photos/jodimichelle/sets/72157600322332017/).

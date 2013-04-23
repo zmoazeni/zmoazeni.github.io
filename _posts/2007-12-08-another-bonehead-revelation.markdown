@@ -28,7 +28,7 @@ I've tried more than a few times to get a local version of [RDoc](http://ruby-do
 
 Last night at Borders, I had an idea. What if I tried generating the docs from the source, rather than the installation? 'Lo and behold, that was exactly it. Gah, chalk another one up for me.
 
-Hopefully I can garner a little respect by pointing others in the right direction who can't figure it out, and are as embarrassed as I was about asking for help. 
+Hopefully I can garner a little respect by pointing others in the right direction who can't figure it out, and are as embarrassed as I was about asking for help.
 
 ### Steps to recreate docs
 

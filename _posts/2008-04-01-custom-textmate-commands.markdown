@@ -38,22 +38,22 @@ Here is an example of code block toggling for Markdown.
 
 	#!/usr/bin/env ruby
 	$: << ENV['TM_SUPPORT_PATH'] + '/lib'
-	
+
 	s = STDIN.read
 	ends_with_newline = s != s.chomp
 	lines = s.split("\n")
 	lines.each_with_index do |s, index|
 	  s =~ /^(\t)?(.*)/
-	  
+
 	  if $1
 	    print "#{$2}"
 	  else
 	    print "\t#{$2}"
 	  end
-	  
+
 	  print "\n" if index != lines.size - 1
 	end
-	
+
 	print "\n" if ends_with_newline
 
 And a screenshot to include the Textmate command options:

@@ -50,8 +50,8 @@ comments:
     MjAxMC0wMy0wOSAwODoyMzoyNCAtMDUwMA==
   date_gmt: !binary |-
     MjAxMC0wMy0wOSAxMzoyMzoyNCAtMDUwMA==
-  content: ! '<p>Loved the presentation Zach.   Now I have to find time to dig into
-    rails.  Maybe I will have to only get 5 hours of sleep a day now.   </p>
+  content: ! '<p>Loved the presentation Zach.	Now I have to find time to dig into
+    rails.  Maybe I will have to only get 5 hours of sleep a day now.	</p>
 
 
     <p>Thanks

@@ -46,7 +46,7 @@ Here's an example of using Cucumber to describe my intentions:
        Then 'app/controllers/customers_controller.rb' should be created
        And 'spec/controllers/customers_controller_spec.rb' should be created
        And all the tests should pass
-       
+
 And here's the backing steps to accomplish the feature:
 
     Given(/^I'm using a (.*) code base$/) do |key|
@@ -73,7 +73,7 @@ And here's the backing steps to accomplish the feature:
       output.should match(/0 failures/i)
       $?.exitstatus.should == 0
     end
-    
+
 *I have all the code in [github](http://github.com/zmoazeni/my_styles/tree/master) if you want to see the working example of code.*
 
 Pretty straightforward and sexy.

@@ -34,19 +34,19 @@ I had my fun with FlexMock and was moving onto Mocha, when I encountered a stran
     require "test/unit"
     require "mocha"
     require "others"
-  
+
     class OthersTest < Test::Unit::TestCase
-  
+
       def test_foo
-        person = mock("person")
+	person = mock("person")
       end
     end
 
-I kept getting 
+I kept getting
 
     E
     Finished in 0.000419 seconds.
-  
+
       1) Error:
     test_foo(OthersTest):
     NoMethodError: undefined method `mock' for #<OthersTest:0x110b5c4>
@@ -67,7 +67,7 @@ Still having problems. So I tweaked the test case a little to
     require "others"
 
 
-Success! ... if you ignore the Deprecation Warning from rubygems. `Warning: require_gem is obsolete.  Use gem instead.` Being a perfectionist, that irked me. 
+Success! ... if you ignore the Deprecation Warning from rubygems. `Warning: require_gem is obsolete.  Use gem instead.` Being a perfectionist, that irked me.
 
 Wondering how this gem could hate me in particular yet spare everyone else it's wrath, I stepped back and noticed the forest for the trees. The test's filename was `mocha.rb`. An innocuous file name from a sleepy eyed programmer at 8 a.m. in the morning. (More support that coders shouldn't touch a keyboard before 10 a.m.)
 

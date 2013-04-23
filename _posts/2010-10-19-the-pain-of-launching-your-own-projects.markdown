@@ -22,7 +22,7 @@ comments: []
 ---
 Ask anyone who has redesigned their own website or released an open source project, pushing something live can be painful. I think there are two primary reasons for this:
 
-1. concern about making a great first impressions 
+1. concern about making a great first impressions
 1. the lack of constraints that are normally in place when working on client projects.
 
 Launching and redesigning your own website is _mentally tough_. It's rarely a technical problem. Since it's your own site and no one paying you to build it, it can be very easy to keep adding features and polishing. Both of which delay the launch date.

@@ -33,7 +33,7 @@ Working with subdomains with rails can be easy, especially with [`url_for_domain
 Example:
 
 
-    assert_redirect_url(:subdomain => "test-subdomain", 
+    assert_redirect_url(:subdomain => "test-subdomain",
       :controller => "test-controller", :action => "test-action")
 
 

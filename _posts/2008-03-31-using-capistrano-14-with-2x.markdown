@@ -23,21 +23,21 @@ comments: []
 ---
 I typically use [Capistrano](http://www.capify.org/) for deploying our applications. Though I do have a bookmark to investigate [Vlad](http://rubyhitsquad.com/Vlad_the_Deployer.html) when I get some time.
 
-We've been a bit slow to upgrade to Capistrano 2.x, and have a lot of existing applications that depend upon Capistrano 1.4 for deployment. 
+We've been a bit slow to upgrade to Capistrano 2.x, and have a lot of existing applications that depend upon Capistrano 1.4 for deployment.
 
 One tactic we've taken is to write a custom script to explicitly use 1.4 in conjunction with 2.x. A minor hack from the original, and we have:
 
 	#!/usr/bin/env ruby
-	
+
 	begin
 	  require 'rubygems'
 	  gem 'capistrano', '<= 1.4.1'
 	rescue LoadError
 	  # no rubygems to load, so we fail silently
 	end
-	
+
 	require 'capistrano/cli'
-	
+
 	Capistrano::CLI.execute!
 
 I threw this into a script called `cap1.4` in `/usr/local` and can now do:

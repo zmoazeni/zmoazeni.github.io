@@ -218,7 +218,7 @@ I _chose_ this path. I wasn't forced to go independent as a result of a layoff o
 
 This reminds me of a blog post a friend shared years ago, that has now been lost, which described an Entrepreneur's move from the Midwest to the West Coast. He too was taken back at the differences in reactions. Generally a Midwest-ern would say something out of pity or look at him as if he were jobless. While the people he talked to in the West Coast would get excited and share their own dreams of starting something new.
 
-I am far from unemployed and so are the plethora of other software freelancers out there. Sure we may have downtime, but that is just one part of our world. So the next time you are talking to someone who mentions they are independent, and you feel sorry for them, mentally check yourself. If you like the guy or gal, ask for their business card and pass it to someone you think would need their services or tweet/blog about the great interaction you had with them. 
+I am far from unemployed and so are the plethora of other software freelancers out there. Sure we may have downtime, but that is just one part of our world. So the next time you are talking to someone who mentions they are independent, and you feel sorry for them, mentally check yourself. If you like the guy or gal, ask for their business card and pass it to someone you think would need their services or tweet/blog about the great interaction you had with them.
 
 I appreciate that way more than sympathetic encouragement.
 

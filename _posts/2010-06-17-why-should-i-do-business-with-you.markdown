@@ -27,7 +27,7 @@ comments: []
 
 _- Jeffrey Gitomer in [The Little Red Book of Selling](http://www.amazon.com/Little-Red-Book-Selling-Principles/dp/1885167601)_
 
-I love this quote and [this book](http://www.amazon.com/Little-Red-Book-Selling-Principles/dp/1885167601). [Brandon Keepers](http://opensoul.org/) posed a question over a couple beers (well OK, maybe more than a couple beers): 
+I love this quote and [this book](http://www.amazon.com/Little-Red-Book-Selling-Principles/dp/1885167601). [Brandon Keepers](http://opensoul.org/) posed a question over a couple beers (well OK, maybe more than a couple beers):
 
 > If a client asks you: "Why should I do business with you?", how would you answer?
 

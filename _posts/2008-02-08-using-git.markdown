@@ -24,7 +24,7 @@ comments: []
 ---
 Janson and I have been using [Git](http://git.or.cz/) for a few months now at work. We're still keeping an open mind with regards to [Mercurial](http://www.selenic.com/mercurial/wiki/) and [Bazaar](http://bazaar-vcs.org/) however its clear that we'll be moving to a distributed version control.
 
-Working with git, I've come across a few gotchas and a few takeaways, especially in regards to git-svn. 
+Working with git, I've come across a few gotchas and a few takeaways, especially in regards to git-svn.
 
 ### Some terminology
 

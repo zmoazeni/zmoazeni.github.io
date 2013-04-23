@@ -48,7 +48,7 @@ All of us at [Elevator Up](http://elevatorup.com) are very familiar with [IRC](h
 
 Last Monday [Janson](http://whycurious.tumblr.com/) came across [EtherPad](http://etherpad.com/) and oh boy it's a gem.
 
-When collaborating on a document we've been using a combination of Writeboards/Campfire chats. They do the job, but there's a ton of "Okay, I saved. Reload." or "Hrm, I'd rephrase it this way. Lemme copy/paste" which gets rather annoying. 
+When collaborating on a document we've been using a combination of Writeboards/Campfire chats. They do the job, but there's a ton of "Okay, I saved. Reload." or "Hrm, I'd rephrase it this way. Lemme copy/paste" which gets rather annoying.
 
 [EtherPad](http://etherpad.com/) on the other hand allows multiple people to be editing text at the same time. As far as I know, it's very similar to [SubEthaEdit](http://www.codingmonkeys.de/subethaedit/) but through the browser instead of with a client. It's helped us out tremendously especially when writing user stories.
 

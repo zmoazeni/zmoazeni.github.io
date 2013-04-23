@@ -24,7 +24,7 @@ I've heard the argument "it takes Resources to provide good Client Satisfaction"
 
 ## Bargains ##
 
-When most people think about making their clients happy, they think about bargains. A bargain is simply the same services at a reduced price. And that certainly is one factor in making clients happy, since who doesn't like saving money? Sadly, I think bargains are the first to come mind because they are so easy compared to the alternatives. "I'll just slash my prices and more clients will come." However there are other ways to provide value and make clients happier without taking a hit on price. 
+When most people think about making their clients happy, they think about bargains. A bargain is simply the same services at a reduced price. And that certainly is one factor in making clients happy, since who doesn't like saving money? Sadly, I think bargains are the first to come mind because they are so easy compared to the alternatives. "I'll just slash my prices and more clients will come." However there are other ways to provide value and make clients happier without taking a hit on price.
 
 ## Craftsmanship ##
 

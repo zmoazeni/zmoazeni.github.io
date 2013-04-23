@@ -31,7 +31,7 @@ Suppose we have a Rails ActiveRecord model for a book:
     end
 
 
-Some people suggest testing the validation of the title by just checking to see if either A) `validates_presence_of(:title)` was called or B) whatever the side effect of `validates_presence_of(:title)` is present in the object (e.g. creating a method, adding an object to an array of validators, etc.) I believe their objective is to both DRY up their tests as well as not worrying about testing `validates_presence_of`, since that should already be tested by the framework. 
+Some people suggest testing the validation of the title by just checking to see if either A) `validates_presence_of(:title)` was called or B) whatever the side effect of `validates_presence_of(:title)` is present in the object (e.g. creating a method, adding an object to an array of validators, etc.) I believe their objective is to both DRY up their tests as well as not worrying about testing `validates_presence_of`, since that should already be tested by the framework.
 
 I tend to disagree with this approach, and would much rather we test the behavior of a book. Let's instantiate a book without a title, and assert that it is in fact invalid.
 
@@ -42,12 +42,12 @@ I tend to disagree with this approach, and would much rather we test the behavio
       assert !book.valid?
       assert book.errors.on(:title)
     end
-    
+
     # for rspec
     describe Book do
       it "should require titles" do
-        book = Book.new(:title => nil)
-        book.should have(1).error_on(:title)
+	book = Book.new(:title => nil)
+	book.should have(1).error_on(:title)
       end
     end
 
@@ -69,9 +69,9 @@ Suppose we had a controller for library on a college campus that only allowed St
 
     class LibraryController < ApplicationController
       before_filter :requires_students_or_faculty
-      
+
       def checkout
-        ... implementation of the action ...
+	... implementation of the action ...
       end
     end
 
@@ -82,18 +82,18 @@ First I would assert that the library checks people, but I don't want to worry a
     describe LibraryController, "filters" do
       should_have_before_filter(:requires_students_or_faculty)
     end
-    
+
     describe LibraryController, "something to do with checkout" do
       stub_all_filters!
-      
+
       it "should redirect the patron outside after checking out a book" do
-        ... implementation of the test ...
+	... implementation of the test ...
       end
     end
 
 
 Minor Note - `stub_all_filters!` runs through all filters and stubs them out so they all return `true`, making them irrelevant.
 
-I'm not doing this in order to remove the responsibility of testing the the filter itself. I whole heartedly believe it should be tested too, but separating the tests can help avoid clunky tests with a lot of noise. 
+I'm not doing this in order to remove the responsibility of testing the the filter itself. I whole heartedly believe it should be tested too, but separating the tests can help avoid clunky tests with a lot of noise.
 
 Another way to look at it, is to consider this perspective of "behavior". While I do agree that the filters contribute to the overall behavior of a controller, when I want to test a specific behavior (in this case, `checkout`), I don't want my tests to have to satisfy preconditions `requires_students_or_faculty`. For example, checking if a user is a student or faculty could be complex, and there's no reason to care about that when testing `checkout`

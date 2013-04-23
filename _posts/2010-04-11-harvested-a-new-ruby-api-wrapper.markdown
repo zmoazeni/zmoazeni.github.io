@@ -49,14 +49,14 @@ A couple quick examples of how to use this API:
 
     require "harvested"
     harvest = Harvest.hardy_client('yoursubdomain', 'yourusername', 'userpassword', :ssl => false)
-    
+
     # Print out all users, clients, and projects on the account
     puts "Users:"
     harvest.users.all.each {|u| p u }
-    
+
     puts "Clients:"
     harvest.clients.all.each {|c| p c }
-    
+
     puts "Projects:"
     harvest.projects.all.each {|project| p project }
 

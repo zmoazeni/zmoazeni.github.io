@@ -22,7 +22,7 @@ tags:
 - elevatorup
 comments: []
 ---
-At Elevator Up I spend roughly 90% of my time buried in TextMate coding in Ruby. Initially I used grep when searching for text out of command line habit. I also toyed with TextMate's built in searching, but that took too long, especially when I froze Rails. 
+At Elevator Up I spend roughly 90% of my time buried in TextMate coding in Ruby. Initially I used grep when searching for text out of command line habit. I also toyed with TextMate's built in searching, but that took too long, especially when I froze Rails.
 
 Then I came across [ack](http://petdance.com/ack/). All I can say is wow. I'm not a big fan of perl, but this little script does a great job. It even ignores those pesky `.svn` directories.
 

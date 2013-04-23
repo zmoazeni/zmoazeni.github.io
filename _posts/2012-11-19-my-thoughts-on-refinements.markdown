@@ -168,7 +168,7 @@ uses. It's difficult to convince developers to use your runtime if you
 have to change a large swath of code in the process.
 
 This doesn't mean JRuby/Rubinius developers are fully biased against new
-ideas.  It just means to me that they are heavily incentivized to fight
+ideas.	It just means to me that they are heavily incentivized to fight
 highly experimental features coming from a different runtime. Like
 refinements.
 

@@ -38,7 +38,7 @@ Examples of things I typically install via a Package or Ports
 
 I noticed when I installed MySQL 5.0.45 from the [package distribution](http://dev.mysql.com/downloads/mysql/5.0.html#macosx-dmg) I had some problems compiling against other libraries. It turns out that mysql will install itself in `/usr/local/mysql/`, and it's libraries in `/usr/local/mysql/lib` which is typical.
 
-However I noticed I had problems compiling a lot of software that depended upon MySQL because they looked for those libraries in `/usr/local/mysql/lib/mysql`. 
+However I noticed I had problems compiling a lot of software that depended upon MySQL because they looked for those libraries in `/usr/local/mysql/lib/mysql`.
 
 Two solutions:
 

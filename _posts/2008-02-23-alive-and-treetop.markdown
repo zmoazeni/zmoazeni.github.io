@@ -36,7 +36,7 @@ To give some context to the site, OKWU wanted to parse direct twitter messages a
     tag : message
 
 
-Now I could obviously use regular expressions to parse out both the tag and the message, but what fun is that? 
+Now I could obviously use regular expressions to parse out both the tag and the message, but what fun is that?
 
 ### Treetop to the rescue
 
@@ -45,23 +45,23 @@ Treetop is structured to take a grammar file, that can be brought into ruby code
 
     grammar Twitter
       rule status
-        tag delimiter message
+	tag delimiter message
       end
-   
+
       rule tag
-        [a-zA-Z_0-9-]+
+	[a-zA-Z_0-9-]+
       end
-   
+
       rule message
-        .*
+	.*
       end
-   
+
       rule delimiter
-        space* ':' space*
+	space* ':' space*
       end
-   
+
       rule space
-        ' '
+	' '
       end
     end
 
@@ -74,10 +74,10 @@ The coolness comes in with the consumption of the grammar. Here's the code that 
 
     require "treetop"
     Treetop.load "twitter"
-    
+
     parser = TwitterParser.new
     parsed_results = parser.parse("awesomified : you won't believe it's that easy")
-    
+
     tag = parsed_results.get_tag
     message = parsed_results.get_message
     puts "message: #{message} classified under: #{tag}"
@@ -91,31 +91,31 @@ Well, I didn't exactly show the entire grammar. Here's the final one:
 
     grammar Twitter
       rule status
-        tag delimiter message {
-          def get_tag
-            tag.text_value
-          end
-   
-          def get_message
-            message.text_value
-          end
-        }
+	tag delimiter message {
+	  def get_tag
+	    tag.text_value
+	  end
+
+	  def get_message
+	    message.text_value
+	  end
+	}
       end
-   
+
       rule tag
-        [a-zA-Z_0-9-]+
+	[a-zA-Z_0-9-]+
       end
-   
+
       rule message
-        .*
+	.*
       end
-   
+
       rule delimiter
-        space* ':' space*
+	space* ':' space*
       end
-   
+
       rule space
-        ' '
+	' '
       end
     end
 
@@ -134,59 +134,59 @@ Here's a grammar modified with those exact requests:
 
     grammar Twitter
       rule status
-        (tags delimiter)? text {
-          def get_tags
-            if self.class.method_defined? "tags"
-              tags.get_tags
-            else
-              []
-            end
-          end
-  
-          def get_message
-            text.text_value
-          end
-        }
+	(tags delimiter)? text {
+	  def get_tags
+	    if self.class.method_defined? "tags"
+	      tags.get_tags
+	    else
+	      []
+	    end
+	  end
+
+	  def get_message
+	    text.text_value
+	  end
+	}
       end
-  
+
       rule tags
-        tag optional_tags:(optional_tag*) {
-          def get_tags
-            [tag.get_tag] + optional_tags.elements.map { |e| e.get_tag }
-          end
-        }
+	tag optional_tags:(optional_tag*) {
+	  def get_tags
+	    [tag.get_tag] + optional_tags.elements.map { |e| e.get_tag }
+	  end
+	}
       end
-  
+
       rule optional_tag
-        tag_delimiter tag {
-          def get_tag
-            tag.text_value
-          end
-        }
+	tag_delimiter tag {
+	  def get_tag
+	    tag.text_value
+	  end
+	}
       end
-  
+
       rule tag
-        [a-zA-Z_0-9-]+ {
-          def get_tag
-            text_value
-          end
-        }
+	[a-zA-Z_0-9-]+ {
+	  def get_tag
+	    text_value
+	  end
+	}
       end
-  
+
       rule text
-        .*
+	.*
       end
-  
+
       rule delimiter
-        space* ':' space*
+	space* ':' space*
       end
-  
+
       rule space
-        ' '
+	' '
       end
-  
+
       rule tag_delimiter
-        space* ',' space* / space+
+	space* ',' space* / space+
       end
     end
 
@@ -194,21 +194,21 @@ Here's a grammar modified with those exact requests:
 Some examples and their output:
 
     results = parser.parse("tag1 : the message")
-    results.get_tags      # => ["tag1"]
+    results.get_tags	  # => ["tag1"]
     results.get_message   # => "the message"
-    
+
     results = parser.parse("tag1 tag2, tag3 : the message")
-    results.get_tags      # => ["tag1", "tag2", "tag3"]
+    results.get_tags	  # => ["tag1", "tag2", "tag3"]
     results.get_message   # => "the message"
-    
+
     results = parser.parse("the message")
-    results.get_tags      # => []
+    results.get_tags	  # => []
     results.get_message   # => "the message"
-    
+
     results = parser.parse(": the message")
-    results.get_tags      # => []
+    results.get_tags	  # => []
     results.get_message   # => ": the message"
-    
+
     # Yea, well not bad for only 15 min, lets chalk the last one up to user-error.
 
 

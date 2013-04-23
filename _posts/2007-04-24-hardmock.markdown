@@ -22,66 +22,66 @@ tags:
 - elevatorup
 comments: []
 ---
-Most ruby developers who use mock libraries are familiar with either [Mocha](http://mocha.rubyforge.org/) or [Flex Mock](http://onestepback.org/software/flexmock/). However not many are familiar with the mock library that I use, [Hardmock](http://hardmock.rubyforge.org/). 
+Most ruby developers who use mock libraries are familiar with either [Mocha](http://mocha.rubyforge.org/) or [Flex Mock](http://onestepback.org/software/flexmock/). However not many are familiar with the mock library that I use, [Hardmock](http://hardmock.rubyforge.org/).
 
 Hardmock takes mocking one step further to assert order between mocks, much like the Java mocking library [EasyMock](http://www.easymock.org/)
 
     class Person
       def initialize(car, wallet)
-        @car = car
-        @wallet = wallet
+	@car = car
+	@wallet = wallet
       end
-  
+
       def go_to_movies
-        @car.drive_to_movies
-        @wallet.pay_for_ticket("10.00")
-        @car.drive_home
+	@car.drive_to_movies
+	@wallet.pay_for_ticket("10.00")
+	@car.drive_home
       end
     end
-    
+
     ...
-    
+
     # in tests
     def setup
       create_mocks :car_mock, :wallet_mock
       @person = Person.new(@car_mock, @wallet_mock)
     end
-    
+
     # This test will pass
     def test_go_to_movies
       @car_mock.expects.drive_to_movies
       @wallet_mock.expects.pay_for_ticket("10.00")
       @car_mock.expects.drive_home
-      
+
       @person.go_to_movies
     end
-    
-    # This test will fail since we 
+
+    # This test will fail since we
     # drive home before we paid for the ticket
     def test_go_to_movies_failure
       @car_mock.expects.drive_to_movies
       @car_mock.expects.drive_home
       @wallet_mock.expects.pay_for_ticket("10.00")
-      
+
       @person.go_to_movies
     end
 
-Another one of my favorite perks of Hardmock is the open assertions of parameters. For the most part, parameters are expected to equal what is given in the initial assertions, however sometimes there's complications on asserting the parameters given.  
-  
+Another one of my favorite perks of Hardmock is the open assertions of parameters. For the most part, parameters are expected to equal what is given in the initial assertions, however sometimes there's complications on asserting the parameters given.
+
     def test_allow_any_money_for_ticket
       @car_mock.expects.drive_to_movies
       @wallet_mock.expects.pay_for_ticket do | amount |
-        # this will be executed when "pay_for_ticket" is called on the mock
-        
-        # Only allow dollar amounts
-        assert_match(/^\d+\.\d{2}$/, amount)
-        
-        # of course the last value in this block 
-        # with be returned from the mock to the caller
-        "the ticket"
+	# this will be executed when "pay_for_ticket" is called on the mock
+
+	# Only allow dollar amounts
+	assert_match(/^\d+\.\d{2}$/, amount)
+
+	# of course the last value in this block
+	# with be returned from the mock to the caller
+	"the ticket"
       end
       @car_mock.expects.drive_home
-      
+
       @person.go_to_movies
     end
 

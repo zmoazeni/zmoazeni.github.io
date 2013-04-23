@@ -22,46 +22,46 @@ tags:
 - elevatorup
 comments: []
 ---
-Previously I spoke about [Hardmock](/2007/4/10/hardmock), a mocking library. Most of the time I try to develop using Dependency Injection or at least keep instantiation of objects together. However, sometimes the real world kicks in and I can't or don't have time to refactor the code. 
+Previously I spoke about [Hardmock](/2007/4/10/hardmock), a mocking library. Most of the time I try to develop using Dependency Injection or at least keep instantiation of objects together. However, sometimes the real world kicks in and I can't or don't have time to refactor the code.
 
 Enter [Hardstub](http://source.elevatorfight.com/public/hardstub/). This will replace the definition of a class with a mock. Again, I'm not promoting testing in this manner, but this may open possibilities that may have been previously discounted.
 
     class Person
       def initialize(car)
-        @car = car
-        @wallet = Wallet.new
+	@car = car
+	@wallet = Wallet.new
       end
-  
+
       def go_to_movies
-        @car.drive_to_movies
-        @wallet.pay_for_ticket("10.00")
-        @car.drive_home
+	@car.drive_to_movies
+	@wallet.pay_for_ticket("10.00")
+	@car.drive_home
       end
     end
-    
+
     class Wallet
       # not fully implemented yet
     end
-    
+
     ...
     # in tests
-    
+
     def setup
       stub(Wallet)
       create_mock :car_mock, :wallet_mock
     end
-    
+
     def teardown
       # this is needed
       revert_stubs
     end
-    
+
     def test_go_to_movies
       Wallet.expects.new.returns(@wallet_mock)
       @car_mock.expects.drive_to_movies
       @wallet_mock.expects.pay_for_ticket("10.00")
       @car_mock.expects.drive_home
-    
+
       person = Person.new(@car_mock)
       person.go_to_movies
     end
@@ -76,6 +76,6 @@ There's currently an issue that is keeping Hardmock from auto verifying, so unti
       verify_mocks
     ensure
       revert_stubs
-  
+
       # Other teardown code
     end

@@ -59,9 +59,9 @@ Examples of what we would not test:
 
 #### "Additional rigidity for changing views"
 
-To discuss this, it may help to lend insight to our team. There was [Janson](http://whycurious.tumblr.com/) and me, both developers who wrote and maintained ruby, all specs, and html / css. We also had [Aaron](http://theparagon.org/) who is not a developer, but is really knowledgeable about html / css. One of our concerns was every time Aaron would want to make a change to the design, either we would have to be there with him, or we would have to teach him how to run, fix, and create view specs. 
+To discuss this, it may help to lend insight to our team. There was [Janson](http://whycurious.tumblr.com/) and me, both developers who wrote and maintained ruby, all specs, and html / css. We also had [Aaron](http://theparagon.org/) who is not a developer, but is really knowledgeable about html / css. One of our concerns was every time Aaron would want to make a change to the design, either we would have to be there with him, or we would have to teach him how to run, fix, and create view specs.
 
-We ended up opting for a completely different approach. We told him to ignore the specs in all regards save one. If he was going to add rhtml calls (typically anything with `<%= %>`) we asked if he would open up the spec for the view and create a pending statement. 
+We ended up opting for a completely different approach. We told him to ignore the specs in all regards save one. If he was going to add rhtml calls (typically anything with `<%= %>`) we asked if he would open up the spec for the view and create a pending statement.
 
     it "should have a link to the dashboard"
 
@@ -95,10 +95,10 @@ That being said, as we worked on Ascribe, I kept a list of successes that I felt
 * Incorrect usage of named routes
 * Renaming / Refactoring Routes
 * Ensuring render partials have correct locals
-* Better confidence in refactoring views into partials / or helpers	
+* Better confidence in refactoring views into partials / or helpers
 * Ensuring correct usage of helpers `link_to`, `link_to_remote`, `form_for`
 * Better testing-as-documentation for RJS
-* Using pending tasks as view centric TODOs 
+* Using pending tasks as view centric TODOs
 
 ### Summary
 

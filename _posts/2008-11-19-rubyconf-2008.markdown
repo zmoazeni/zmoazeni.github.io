@@ -61,13 +61,13 @@ An explicit receive example with Ruby:
     while message = receive
       # do something with the message and then re-loop
     end
-    
+
 An implicit receive example:
 
     def some_method
       # this will get called when a message is sent
     end
-    
+
 The second example doesn't look too foreign, and that's because it's not. The entire class becomes an API, and the messaging framework calls the appropriate method. When I worked with Erlang, I liked the Actor model, but I didn't like the boilerplate code that was copy-pasted for every Actor.
 
 I don't expect everyone to prefer this type of messaging, but for me it makes the concurrency model more transparent, and the actors easier to read as well as easier to test.

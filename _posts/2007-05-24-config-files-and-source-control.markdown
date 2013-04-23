@@ -22,11 +22,11 @@ tags:
 - elevatorup
 comments: []
 ---
-Environment specific configuration files can be a pain in version control. Especially when multiple developers keeps clobbering each other on updates. 
+Environment specific configuration files can be a pain in version control. Especially when multiple developers keeps clobbering each other on updates.
 
 At Elevator Up we use Subversion almost exclusively. One useful approach is to first `svn:ignore` each config file. With Rails applications I usually ignore:
 
-* `database.yml` - Database connection for Rails 
+* `database.yml` - Database connection for Rails
 * `deploy.rb` - Capistrano Deployment Recipe
 * `httpd.conf` - Apache VHost configuration
 * `mongrel_cluster.yml` - Mongrel Cluster Config
@@ -38,7 +38,7 @@ Then I save specific names for the environments they are used in. Most times wit
 * Pre-Production Machine
 * Production Machine
 
-I append the environment as an extension to the file, and throw those into version control. 
+I append the environment as an extension to the file, and throw those into version control.
 
 * `database.yml.zach`
 * `database.yml.preprod`

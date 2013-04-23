@@ -37,7 +37,7 @@ comments:
 
 
     <p>As for the pacing, one thing I tried doing was to rely more on the textbook
-    (or labs).  For example, in the Intro to Java course, I didn''t say anything about
+    (or labs).	For example, in the Intro to Java course, I didn''t say anything about
     the ++ or -- operators.  I let them play with them in the lab, never quizzed on
     them, and then used i++ in for loops.  Lectures I inherited from my colleagues
     spent several slides talking about the pre- and post-increment/decrement variations.  It
@@ -84,7 +84,7 @@ Some instructors mention that students don't take advantage of their office hour
 
 I know students fall asleep in class. I even remember times when I did it. But boy is it a shock to be mid-sentence and spot one student nodding off and see another drooling. I think it took all of my willpower to stay focused on the lecture.
 
-To other new teachers, don't take it as an insult. Evening classes in warm rooms can bring down even the most alert. And mentally prepare yourself, because I was completely taken aback. 
+To other new teachers, don't take it as an insult. Evening classes in warm rooms can bring down even the most alert. And mentally prepare yourself, because I was completely taken aback.
 
 ### I love Kinkos ###
 

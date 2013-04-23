@@ -21,7 +21,7 @@ tags:
 - elevatorup
 comments: []
 ---
-After finding out today that pgp keys can have multiple email addresses, I revoked all but public key and combined all emails into [one key](/assets/2008/2/19/zach.pub). 
+After finding out today that pgp keys can have multiple email addresses, I revoked all but public key and combined all emails into [one key](/assets/2008/2/19/zach.pub).
 
 ### How
 
@@ -38,7 +38,7 @@ Add name and email address. Then remember to set a primary uid:
     Command> primary
     Command> save
 
-Should be all good. Remember to revoke the old keys and re-export the public key. 
+Should be all good. Remember to revoke the old keys and re-export the public key.
 
 ### Additional Tip
 

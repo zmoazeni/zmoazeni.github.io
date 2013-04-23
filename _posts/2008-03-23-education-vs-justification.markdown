@@ -22,7 +22,7 @@ tags:
 - elevatorup
 comments: []
 ---
-Aaron, Janson and I were at Applebees a month ago discussing an estimate for a client. We started talking about a particular part of the estimate that would require us to take more time than usual. We worked on their project previously, and used a few testing practices that we've stopped since. I wanted the estimate to include the refactoring of the code, but not publicize the fact. Aaron wanted to communicate with the client our exact intent. 
+Aaron, Janson and I were at Applebees a month ago discussing an estimate for a client. We started talking about a particular part of the estimate that would require us to take more time than usual. We worked on their project previously, and used a few testing practices that we've stopped since. I wanted the estimate to include the refactoring of the code, but not publicize the fact. Aaron wanted to communicate with the client our exact intent.
 
 Now keep in mind, I have no qualms about transparency with clients. And I don't go to great lengths to keep clients in the dark, as some of my previous work environments have. My point was that refactoring the code and the tests was a necessary step of development. I didn't want to publicize those specific intentions because I didn't want to come across that they were optional. In other words, I didn't want our client to think that the one of our  [values](http://weblog.raganwald.com/2006/08/difference-between-values-and.html), quality software in this case, was negotiable.
 

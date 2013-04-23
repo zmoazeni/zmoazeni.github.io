@@ -26,7 +26,7 @@ One of the useful features of Rails servers (Webrick, Lighttpd, and Mongrel) is 
 
 I had to dip into a few applications using pre Rails 1.2, and having a separate terminal open for the log became annoying. This minor change keeps you from `tailing` in another terminal.
 
-In `RAILS_ROOT/config/environments` create a new environment called `mongrel.rb`. Copy the contents of `development.rb` into it and throw this line at the bottom. 
+In `RAILS_ROOT/config/environments` create a new environment called `mongrel.rb`. Copy the contents of `development.rb` into it and throw this line at the bottom.
 
 `config.logger = Logger.new(STDOUT)`
 

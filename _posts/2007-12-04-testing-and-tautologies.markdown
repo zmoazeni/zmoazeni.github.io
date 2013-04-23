@@ -24,7 +24,7 @@ comments: []
 ---
 A question that I'm asked frequently, especially in regards to mock testing is: "I know it seems worth it to test, but isn't it just a tautology? I mean when your code changes you have to change your tests."
 
-I have a couple responses to this. It is true that there are times when the code changes, that I have to update the tests too, however that's not always true, even with mock testing. I've found the more I use mocks, the more I end up refactoring and decomposing code into simpler bits. Tests can be one of the loudest critics of your code, if you know how to listen. 
+I have a couple responses to this. It is true that there are times when the code changes, that I have to update the tests too, however that's not always true, even with mock testing. I've found the more I use mocks, the more I end up refactoring and decomposing code into simpler bits. Tests can be one of the loudest critics of your code, if you know how to listen.
 
 Tautologies is an interesting topic. At the last [XP West Michigan](http://xpwestmichigan.org/pages/November2007) Scott Miller mentioned that a fellow coworker of his Bill Bereza brought up the idea of [double entry bookkeeping](http://en.wikipedia.org/wiki/Double_entry_bookkeeping) in accounting. And that when it applied to software development, he really didn't have a problem with it. I never thought about testing in that light. Whenever I would try to answer the question before, though I would fail to find an adequate reason why testing was not just like double entry bookkeeping. But in reality I've just never encountered a problem with it.
 
