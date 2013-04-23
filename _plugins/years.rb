@@ -7,7 +7,7 @@ module Jekyll
       context.stack do
         years.map do |year|
           context['year'] = year
-          context['yearloop'] = {'posts' => year_groups[year] }
+          context['yearloop'] = {'posts' => year_groups[year].sort_by(&:date).reverse }
           render_all(@nodelist, context)
         end
       end
