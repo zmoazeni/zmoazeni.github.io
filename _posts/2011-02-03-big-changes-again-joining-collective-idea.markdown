@@ -56,6 +56,11 @@ comments:
     <p>Enjoy!</p>
 
 '
+
+abstract: >
+  Hanging my freelancer hat and joining the awesome crew at
+  CollectiveIdea.
+
 ---
 Last year I felt compelled to start [Connection Required](/blog/2010/05/big-changes-going-independent/). Not because I was forced to, but because I wanted to prove to myself that I could start and sustain a business. There is a sense of pride that comes with helping clients and making money from your efforts. I've encountered many surprises over the past year, mostly positive. This month, I'm going to be making another big transition and I'm joining [Collective Idea](http://collectiveidea.com/).
 

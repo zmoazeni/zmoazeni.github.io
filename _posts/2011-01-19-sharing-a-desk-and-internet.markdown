@@ -34,6 +34,9 @@ comments:
     my wife)!</p>
 
 '
+abstract: >
+  When I leased an office in Elk Rapids, I opened it up for traveling
+  coworkers.
 ---
 After two months in the new office, I realized we're going to need to a lot more stuff to fill up the space: couch, big screen, etc. You know, the essentials?
 
