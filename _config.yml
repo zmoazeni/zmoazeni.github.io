@@ -5,6 +5,7 @@ pygments: true
 exclude:
   - Gemfile
   - Gemfile.lock
+  - TODO.md
 sass:
   syntax: scss
   style: nested
