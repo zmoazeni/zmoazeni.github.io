@@ -2,6 +2,9 @@ auto: true
 markdown: rdiscount
 permalink: /blog/:year/:month/:title
 pygments: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
 sass:
   syntax: scss
   style: nested
