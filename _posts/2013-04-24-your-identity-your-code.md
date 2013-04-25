@@ -2,7 +2,7 @@
 layout: post
 tags: [highlighted]
 abstract: >
-  We are more than our code.
+  We are more than our code2.
 ---
 
 _This was originally posted on [March 16,
