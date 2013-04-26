@@ -20,6 +20,10 @@ layout: nil
    <link href="http://connectionrequired.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://connectionrequired.com{{ post.id }}</id>
+   <author>
+     <name>Zach Moazeni</name>
+     <email>zach.moazeni@gmail.com</email>
+   </author>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
