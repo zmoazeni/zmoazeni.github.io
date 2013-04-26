@@ -12,7 +12,7 @@ currently writes Ruby by day and Haskell by night. He knows how to laugh
 at himself and loves to ship software. He is also a father of two
 wonderful kids and a husband to a fantastic wife.
 
-[zach.moazeni@gmail.com](mailto:zach.moazeni@gmail.com)
+[email](mailto:zach.moazeni@gmail.com) ⚡ [twitter](https://twitter.com/zmoazeni) ⚡ [github](https://github.com/zmoazeni)
 
 ### Notable Projects ###
 
