@@ -1,52 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Reflections of an Adjunct Professor
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 234
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTIzNA==
 date: 2010-04-06 22:51:59.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments:
-- id: 89
-  author: Jeremy D. Frens
-  author_email: !binary |-
-    amRmcmVuc0BnbWFpbC5jb20=
-  author_url: !binary |-
-    aHR0cDovL3d3dy5ub3JlY2Vzcy5vcmcv
-  date: !binary |-
-    MjAxMC0wNC0wNyAxNzoxMDozNCAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMC0wNC0wNyAyMjoxMDozNCAtMDQwMA==
-  content: ! '<p>I''m first going to piggyback on your blog entry here to say that
-    I <em>never</em> found the time spent only JUnit (or any testing framework) to
-    be wasted time.  It <em>always</em> paid back dividends.  Although you do have
-    to push on the students to make sure that they get a green bar on all of their
-    tests.</p>
-
-
-    <p>As for the pacing, one thing I tried doing was to rely more on the textbook
-    (or labs).	For example, in the Intro to Java course, I didn''t say anything about
-    the ++ or -- operators.  I let them play with them in the lab, never quizzed on
-    them, and then used i++ in for loops.  Lectures I inherited from my colleagues
-    spent several slides talking about the pre- and post-increment/decrement variations.  It
-    <em>was</em> important for my students to see the difference; they just didn''t
-    need me lecturing on it.  I hoped I could get my students to learn more substantial
-    things this way, but I left teaching before I really pushed on this, so I''m not
-    sure of how to do this.</p>
-
-'
 ---
 This past semester I had the opportunity to teach the Advanced Java course at [GRCC](http://www.grcc.edu/). Teaching at the college level has been something I've wanted to experience for a while and it is also quite aligned with [my values](/vision-statement). While I was excited to start the semester, I was a bit nervous at how my first class would turn out. As the semester progressed, I kept a list of failures and successes that would help me grow as a teacher. I hope this list helps other instructors as they start their career.
 

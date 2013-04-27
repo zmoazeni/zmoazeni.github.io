@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Paranoid Testing
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 54
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD01NA==
 date: 2007-05-22 23:09:12.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 I had the opportunity to attend the [XP West Michigan](http://xpwestmichigan.org/) meeting tonight, and listen to the energetic speaker [Elisabeth Hendrickson](http://www.testobsessed.com/category/rumination/) from [Quality Tree Software](http://www.qualitytree.com/).
 

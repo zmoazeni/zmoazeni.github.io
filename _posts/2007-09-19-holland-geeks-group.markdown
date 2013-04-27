@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Holland Geeks Group
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 84
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD04NA==
 date: 2007-09-19 21:54:36.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- elevatorup
-comments: []
 ---
 Last night's Geeks Group was pretty awesome. It's definitely a night I look forward to every month. The biggest problem is heading home and starting work the next day. Janson Hartliep and I chatted about this heading out.
 

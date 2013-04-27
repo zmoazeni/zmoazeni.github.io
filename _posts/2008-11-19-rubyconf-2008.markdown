@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: RubyConf 2008
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 146
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xNDY=
 date: 2008-11-19 22:11:42.000000000 -05:00
-categories:
-- Uncategorized
-tags:
-- code
-comments: []
 ---
 I was lucky enough to attend [RubyConf 2008](http://rubyconf.org/). I really enjoyed last year's conference, and I felt this year was better.
 

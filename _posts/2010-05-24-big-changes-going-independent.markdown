@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Big Changes. Going Independent.
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 305
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTMwNQ==
 date: 2010-05-24 13:30:12.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 ## What's the news? ##
 

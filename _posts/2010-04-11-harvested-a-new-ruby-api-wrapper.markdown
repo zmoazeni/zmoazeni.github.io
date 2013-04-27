@@ -1,35 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: ! 'Harvested: A New Ruby API Wrapper'
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 268
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTI2OA==
 date: 2010-04-11 14:17:02.000000000 -04:00
-comments:
-- id: 90
-  author: Wes Garrison
-  author_email: !binary |-
-    d2VzLmdhcnJpc29uQGdtYWlsLmNvbQ==
-  author_url: !binary |-
-    aHR0cDovL3dlc2dhcnJpc29uLnVz
-  date: !binary |-
-    MjAxMC0wNC0xMiAxMDoyMTo0OCAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMC0wNC0xMiAxNToyMTo0OCAtMDQwMA==
-  content: ! '<p>Interesting.  I''ll be checking this out. I use the aiaio-harvest
-    gem now, so it''ll be neat to see how someone else tackled it.</p>
-
-'
 ---
 I've used [Harvest Time Tracking](http://www.getharvest.com/) for well over 3 years, and they have a quality product. They have also had a published API for quite some time. The past couple weeks I've been working on Ruby API wrapper for it, and today I've pushed the first release.
 

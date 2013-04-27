@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: The Pain of Launching Your Own Projects
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 425
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDI1
 date: 2010-10-19 09:35:04.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 Ask anyone who has redesigned their own website or released an open source project, pushing something live can be painful. I think there are two primary reasons for this:
 

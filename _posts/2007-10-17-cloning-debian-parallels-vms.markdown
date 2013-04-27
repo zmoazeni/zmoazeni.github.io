@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Cloning Debian Parallels VMs
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 92
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD05Mg==
 date: 2007-10-17 01:26:24.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- elevatorup
-comments: []
 ---
 We're in the process of migrating our servers onto a new infrastructure. Namely beefy servers running [Virtuozzo](http://www.swsoft.com/products/virtuozzo/). I've been a fan of Parallels for a while, and recently fired up a Debian VM, playing with [grsecurity](http://grsecurity.net). Since this involved recompiling the kernel, and I'm not the most savvy admin, I pragmatically cloned the VM so I could backup in case crap happened.
 

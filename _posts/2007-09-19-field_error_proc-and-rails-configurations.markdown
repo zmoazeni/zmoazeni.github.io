@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: field_error_proc and Rails Configurations
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 82
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD04Mg==
 date: 2007-09-19 21:39:51.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 I came across something in Rails that's fixed an issue that has seriously irked me.
 

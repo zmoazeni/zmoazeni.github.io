@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: First night at RubyConf
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 96
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD05Ng==
 date: 2007-11-02 02:36:34.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- elevatorup
-comments: []
 ---
 Ok so not really. RubyConf officially starts tomorrow, but I still had a blast. The highlight of the night, other than meeting some rockstars in the Ruby community like Chad Fowler, Ezra Zygmuntowicz, Marcel Molina, was playing [Werewolf (also known as Mafia)](http://en.wikipedia.org/wiki/Mafia_%28game%29). Talk a complete mind-fuck.
 

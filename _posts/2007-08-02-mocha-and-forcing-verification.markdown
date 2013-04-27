@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Mocha and Forcing Verification
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 72
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD03Mg==
 date: 2007-08-02 22:26:18.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 I switched to [Mocha](http://mocha.rubyforge.org) about 5 months ago, and after getting over my preference for strict ordering, really enjoyed the library.
 

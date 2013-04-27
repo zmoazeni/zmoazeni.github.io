@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Using Capistrano 1.4 with 2.x
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 136
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMzY=
 date: 2008-03-31 10:48:41.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-comments: []
 ---
 I typically use [Capistrano](http://www.capify.org/) for deploying our applications. Though I do have a bookmark to investigate [Vlad](http://rubyhitsquad.com/Vlad_the_Deployer.html) when I get some time.
 

@@ -1,23 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: ! 'New Traverse City User Group: Northern Michigan Web and Mobile Meetup'
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 418
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDE4
 date: 2010-10-15 09:48:05.000000000 -04:00
-categories:
-- Uncategorized
-comments: []
 ---
 After we moved back home in Elk Rapids Michigan, one thing that I acutely missed was the number of user groups we had in West Michigan. Don't get me wrong, West Michigan doesn't have nearly as many compared to a metropolitan hub. In Chicago they even have a [VIM Usergroup](http://groups.google.com/group/vimchicago). But West Michigan did a lot of events going on, and active communities around them.
 

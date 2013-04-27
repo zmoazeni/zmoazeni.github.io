@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: ! 'My First Introduction to Haskell Extensions: FlexibleInstances'
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 210
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTIxMA==
 date: 2009-07-26 20:28:53.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 I've been tinkering with Haskell lately, and I came across an odd issue. Let's say I want to create a class that takes Integers, Characters, and Strings and returns an Integer.
 

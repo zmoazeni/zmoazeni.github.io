@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Config Files and Source Control
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 56
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD01Ng==
 date: 2007-05-24 01:33:01.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 Environment specific configuration files can be a pain in version control. Especially when multiple developers keeps clobbering each other on updates.
 

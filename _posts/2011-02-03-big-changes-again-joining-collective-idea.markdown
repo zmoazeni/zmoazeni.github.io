@@ -1,62 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Big Changes Again. Joining Collective Idea.
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 486
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDg2
 date: 2011-02-03 11:08:50.000000000 -05:00
-categories:
-- Uncategorized
-tags: []
-comments:
-- id: 145
-  author: Aaron Schaap
-  author_email: !binary |-
-    c2NoYWFweUBnbWFpbC5jb20=
-  author_url: !binary |-
-    aHR0cDovL3d3dy5kb3duc3RyZWFtYXBwLmNvbQ==
-  date: !binary |-
-    MjAxMS0wMi0wMyAxMToyMTo1MCAtMDUwMA==
-  date_gmt: !binary |-
-    MjAxMS0wMi0wMyAxNjoyMTo1MCAtMDUwMA==
-  content: ! '<p>Congrats :-)</p>
-
-
-    <p>It''s great to see alumni continuing to succeed.</p>
-
-'
-- id: 148
-  author: Torey Heinz
-  author_email: !binary |-
-    dG9yZXlAaWhzd2ViZGVzaWduLmNvbQ==
-  author_url: !binary |-
-    aHR0cDovL2loc3dlYmRlc2lnbi5jb20=
-  date: !binary |-
-    MjAxMS0wMi0yNSAxMTozMzowMSAtMDUwMA==
-  date_gmt: !binary |-
-    MjAxMS0wMi0yNSAxNjozMzowMSAtMDUwMA==
-  content: ! '<p>Zach, by the time I realized "how few hours you actually have in
-    a day/month/year" and started hiring I was at the point of no return.</p>
-
-
-    <p>Running a business is not for everyone, but I think you would make a great
-    boss.</p>
-
-
-    <p>Enjoy!</p>
-
-'
-
 abstract: >
   Hanging my freelancer hat and joining the awesome crew at
   CollectiveIdea.

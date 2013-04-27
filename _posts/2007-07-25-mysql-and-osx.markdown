@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: MySQL and OSX
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 68
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD02OA==
 date: 2007-07-25 00:07:49.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 I have some weird logic in determining what I compile and what I install via [ports](http://www.macports.org/)
 

@@ -1,19 +1,6 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Client Satisfaction and Resources
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 353
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTM1Mw==
 date: 2010-08-24 10:47:20.000000000 -04:00
 tags:
 - highlighted

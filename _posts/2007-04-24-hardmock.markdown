@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Hardmock
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 31
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0zMQ==
 date: 2007-04-24 22:03:09.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 Most ruby developers who use mock libraries are familiar with either [Mocha](http://mocha.rubyforge.org/) or [Flex Mock](http://onestepback.org/software/flexmock/). However not many are familiar with the mock library that I use, [Hardmock](http://hardmock.rubyforge.org/).
 

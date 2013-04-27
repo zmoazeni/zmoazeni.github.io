@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: My Vacation Reading
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 289
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTI4OQ==
 date: 2010-05-15 10:41:06.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- books
-comments: []
 ---
 Every time I go on an extended vacation I end up ripping through a half dozen books. It's probably because of a need to catch up on long overdue reading. Though I have noticed that it mentally refreshes me much more than watching episodes of [LOST](http://en.wikipedia.org/wiki/Lost_(TV_series)).
 

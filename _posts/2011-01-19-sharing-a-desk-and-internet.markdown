@@ -1,35 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Sharing a desk and internet
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 481
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDgx
 date: 2011-01-19 15:31:05.000000000 -05:00
-comments:
-- id: 144
-  author: Derek Kastner
-  author_email: !binary |-
-    ZGthc3RuZXJAZ21haWwuY29t
-  author_url: !binary |-
-    aHR0cDovL3R3aXR0ZXIuY29tL2RrYXN0bmVy
-  date: !binary |-
-    MjAxMS0wMS0yMCAxNTowNTo0MiAtMDUwMA==
-  date_gmt: !binary |-
-    MjAxMS0wMS0yMCAyMDowNTo0MiAtMDUwMA==
-  content: ! '<p>Oh, yes! I''m sure I''ll be paying a visit after school''s out (for
-    my wife)!</p>
-
-'
 abstract: >
   When I leased an office in Elk Rapids, I opened it up for traveling
   coworkers.

@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Hamachi
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 114
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMTQ=
 date: 2008-02-05 23:48:11.000000000 -05:00
-categories:
-- Uncategorized
-tags:
-- elevatorup
-comments: []
 ---
 Me and a few buddies play [Command and Conquer Generals](http://en.wikipedia.org/wiki/Command_&_Conquer:_Generals). It's a decent RTS, but has problematic networking issues. Before giving up, I came across [Hamachi](https://secure.logmein.com/products/hamachi/vpn.asp?lang=en) which is an awesome VPN app.
 

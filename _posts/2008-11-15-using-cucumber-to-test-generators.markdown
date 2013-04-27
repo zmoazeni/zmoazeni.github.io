@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Using Cucumber to test Generators
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 144
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xNDQ=
 date: 2008-11-15 01:01:09.000000000 -05:00
-categories:
-- Uncategorized
-tags:
-- code
-comments: []
 ---
 I've been developing in Ruby (and Rails) for the past 2.5 years. Over time, I've molded my own flavor of CRUD controllers and resulting specs. Unfortunately, it's so different than the Rails and RSpec generated code that it takes me as long to alter the code as it does to create it from scratch. However, in laziness, I've pushed off writing my own generators. Until yesterday.
 

@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Nginx is extremely performant
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 332
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLzIwMTAvMDYvbmdpbngtaXMtZXh0
-  cmVtZWx5LXBlcmZvcm1hbnQv
 date: 2010-06-11 13:10:16.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 A couple days ago I wrote an article about [perceptions I've encountered as a freelancer](/2010/06/i-am-far-from-unemployed). The article took off on [Hacker News](http://news.ycombinator.com/), which a great feeling.
 

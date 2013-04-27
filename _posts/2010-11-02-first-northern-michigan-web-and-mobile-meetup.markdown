@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: First Northern Michigan Web and Mobile Meetup
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 443
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDQz
 date: 2010-11-02 09:31:07.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 Last Thursday we had our first [Northern Michigan Web and Mobile Meetup](http://www.meetup.com/nmich-web-mobile/) meeting. While eating pizza, we watched [an interview with Jason Fried](http://bigthink.com/ideas/18516) and discussed it afterwards.
 

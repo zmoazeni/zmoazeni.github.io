@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Liquids leaking from a Developer
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 76
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD03Ng==
 date: 2007-08-02 23:59:26.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 After eyeing [Liquid](http://www.liquidmarkup.org/) for quite some time, we decided to use it on a project to allow a customer template his app from the admin side. After seeing a lot of documentation for Designers and Templaters, I felt there was something needed from a developer's perspective.
 

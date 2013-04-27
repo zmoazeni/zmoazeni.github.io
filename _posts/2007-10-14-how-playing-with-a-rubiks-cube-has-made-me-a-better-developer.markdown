@@ -1,27 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: How playing with a Rubik's Cube has made me a better developer
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 86
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD04Ng==
 date: 2007-10-14 12:24:52.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-- highlighted
-
 abstract: >
   Sometimes you make strange correlations with software.
 

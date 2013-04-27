@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: The Daily Commute
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 88
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD04OA==
 date: 2007-10-14 13:53:34.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- elevatorup
-- family
-comments: []
 ---
 On average, I drive 150 miles roundtrip each day for work. Obviously there a helluva lot of negatives with that commute. However this was a great "opportunity" to turn a negative into a positive. (Yes, I'm using quotes because it wasn't easy).
 

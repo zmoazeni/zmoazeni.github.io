@@ -1,53 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Contributing to RailsBridge
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 171
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTE3MQ==
 date: 2009-05-17 15:17:55.000000000 -04:00
-categories:
-- Uncategorized
-tags: []
-comments:
-- id: 79
-  author: Melvin Ram
-  author_email: !binary |-
-    bXJAbWVsdmlucmFtLmNvbQ==
-  author_url: !binary |-
-    aHR0cDovL3JhaWxzbm90ZXMuY29t
-  date: !binary |-
-    MjAwOS0wNS0yMSAxMjowODowMiAtMDQwMA==
-  date_gmt: !binary |-
-    MjAwOS0wNS0yMSAxNzowODowMiAtMDQwMA==
-  content: ! '<p>I''m working on an open source SaaS starter app (Jetpack) and I would
-    love to get a second pair of eyes to look at certain parts of it so I will likely
-    take you up on it when it''s 0.1.  Are you familiar with cucumber &amp; rspec?</p>
-
-'
-- id: 80
-  author: Zach Moazeni
-  author_email: !binary |-
-    emFjaEBzaW1wbGVjaGF0dGVyLmNvbQ==
-  author_url: !binary |-
-    aHR0cDovLw==
-  date: !binary |-
-    MjAwOS0wNS0yMSAxMjoyNDowNSAtMDQwMA==
-  date_gmt: !binary |-
-    MjAwOS0wNS0yMSAxNzoyNDowNSAtMDQwMA==
-  content: ! '<p>Yep, I''ve worked with both cucumber and rspec quite a bit.  Ping
-    me whenever you want some feedback.</p>
-
-'
 ---
 ## Need Code Help?
 

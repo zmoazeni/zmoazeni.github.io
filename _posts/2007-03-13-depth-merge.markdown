@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Depth Merge
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 17
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xNw==
 date: 2007-03-13 14:00:48.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 [Merge](http://www.ruby-doc.org/core/classes/Hash.html#M002908) is rather useful, but it has the limitation of staying shallow. Here is a simple extension of an implemented depth merge, with one caveat. Passing in `true` to `delete_nils` will remove the key if the value is `nil`.
 

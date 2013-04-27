@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Using Git
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 116
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMTY=
 date: 2008-02-08 02:07:42.000000000 -05:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 Janson and I have been using [Git](http://git.or.cz/) for a few months now at work. We're still keeping an open mind with regards to [Mercurial](http://www.selenic.com/mercurial/wiki/) and [Bazaar](http://bazaar-vcs.org/) however its clear that we'll be moving to a distributed version control.
 

@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Custom Textmate Commands
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 138
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMzg=
 date: 2008-04-01 15:31:20.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-comments: []
 ---
 [Textmate](http://macromates.com/) is a pretty decent editor for OSX. I'm not in love with it, but I use it frequently.
 

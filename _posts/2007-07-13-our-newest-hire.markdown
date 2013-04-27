@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Our Newest Hire
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 66
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD02Ng==
 date: 2007-07-13 21:38:09.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- elevatorup
-comments: []
 ---
 Aaron and I have been talking a lot the past couple weeks about the overwhelming about of work we have at Elevator Up. It really is a good thing, and I'm not complaining at all. Busy startups are longer lived startups.
 

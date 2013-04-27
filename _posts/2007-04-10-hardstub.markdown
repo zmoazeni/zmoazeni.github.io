@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Hardstub
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 33
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0zMw==
 date: 2007-04-10 21:31:26.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 Previously I spoke about [Hardmock](/2007/4/10/hardmock), a mocking library. Most of the time I try to develop using Dependency Injection or at least keep instantiation of objects together. However, sometimes the real world kicks in and I can't or don't have time to refactor the code.
 

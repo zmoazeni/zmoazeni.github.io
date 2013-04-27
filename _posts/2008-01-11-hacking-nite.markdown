@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Hacking Nite
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 106
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMDY=
 date: 2008-01-11 01:50:00.000000000 -05:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 So I've been itching for a Ruby Hacking Nite for a while. Elevator Up's going to host a night at our [offices](http://maps.google.com/maps?f=q&hl=en&geocode=&time=&date=&ttype=&q=201+E+Washington+Ave,+Zeeland,+MI+49464&sll=43.416605,-85.582686&sspn=0.007871,0.017037&ie=UTF8&ll=42.813993,-86.014001&spn=0.007949,0.017037&z=16&iwloc=addr&om=1) on Tues the 22nd starting around 6ish, where we'll supply some Pizza, Brew and Dew.
 

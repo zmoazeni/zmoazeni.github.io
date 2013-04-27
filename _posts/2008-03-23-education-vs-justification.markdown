@@ -1,26 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Education vs Justification
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 126
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMjY=
 date: 2008-03-23 20:23:10.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- code
-- elevatorup
-comments: []
 ---
 Aaron, Janson and I were at Applebees a month ago discussing an estimate for a client. We started talking about a particular part of the estimate that would require us to take more time than usual. We worked on their project previously, and used a few testing practices that we've stopped since. I wanted the estimate to include the refactoring of the code, but not publicize the fact. Aaron wanted to communicate with the client our exact intent.
 

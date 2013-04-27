@@ -1,25 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: New House
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 64
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD02NA==
 date: 2007-07-19 21:32:42.000000000 -04:00
-categories:
-- Uncategorized
-tags:
-- family
-comments: []
 ---
 I've been rather quiet the past few weeks due to Brittany and I buying our first house. After 3 years of renting, we felt we were finally stable enough to make a commitment with our own home.
 

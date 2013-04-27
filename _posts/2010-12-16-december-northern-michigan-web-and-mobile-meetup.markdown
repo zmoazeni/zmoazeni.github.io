@@ -1,27 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: December Northern Michigan Web and Mobile Meetup
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-excerpt: ! "Last night we had our [December Michigan Web and Mobile Meetup](http://www.meetup.com/nmich-web-mobile/calendar/15499042/).
-  We only had a couple guys due to family commitments, but that's understandable since
-  we're only a week away from Christmas. \r\n\r\n"
-wordpress_id: 463
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDYz
 date: 2010-12-16 11:37:53.000000000 -05:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 Last night we had our [December Michigan Web and Mobile Meetup](http://www.meetup.com/nmich-web-mobile/calendar/15499042/). We only had a couple guys due to family commitments, but that's understandable since we're only a week away from Christmas.
 

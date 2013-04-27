@@ -1,21 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: ! 'New iPad App Deployed: Spatik'
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 476
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDc2
 date: 2010-12-23 12:40:23.000000000 -05:00
-comments: []
 ---
 For the past few months I've been helping [Nicholas Patten](http://twitter.com/#!/nicholaspatten) take his vision and translate it into an iPad App. I'm proud to announce [Spatik](http://itunes.apple.com/us/app/spatik/id411006823?mt=8) was accepted today and is now available in the App Store.
 

@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Subdomain Assertions
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 13
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xMw==
 date: 2007-03-08 20:36:36.000000000 -05:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 Working with subdomains with rails can be easy, especially with [`url_for_domain`](http://wiki.rubyonrails.org/rails/pages/Url+for+domain). However testing can be a pain.
 

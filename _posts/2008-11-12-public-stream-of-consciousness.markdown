@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Public Stream of Consciousness
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 142
-wordpress_url: !binary |-
-  aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8/cD0xNDI=
 date: 2008-11-12 20:30:33.000000000 -05:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 I've heard a few people on [Twitter](http://twitter.com/) not sure about the etiquette on following others. Particularly:
 

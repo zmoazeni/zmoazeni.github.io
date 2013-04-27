@@ -1,24 +1,7 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Tweetstream is now Web Scale
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 472
-wordpress_url: !binary |-
-  aHR0cDovL2Nvbm5lY3Rpb25yZXF1aXJlZC5jb20vP3A9NDcy
 date: 2010-12-22 14:14:51.000000000 -05:00
-categories:
-- Uncategorized
-tags: []
-comments: []
 ---
 Over the past few months, I have been working with [Downstream](http://downstreamapp.com) on one of their products [Tweetstream](http://tweetstreamapp.com). In addition to building features, we have experienced a significant issue with the infrastructure.
 

@@ -1,53 +1,9 @@
 ---
-layout: !binary |-
-  cG9zdA==
-status: !binary |-
-  cHVibGlzaA==
-published: true
+layout: post
 title: Clients that Care
-author: !binary |-
-  WmFjaCBNb2F6ZW5p
-author_login: !binary |-
-  YWRtaW4=
-author_email: !binary |-
-  emFjaC5tb2F6ZW5pQGdtYWlsLmNvbQ==
-wordpress_id: 341
-wordpress_url: !binary |-
-  aHR0cDovL3NpbXBsZWNoYXR0ZXIuY29tLz9wPTM0MQ==
 date: 2010-08-03 11:08:25.000000000 -04:00
-categories:
-- Uncategorized
 tags:
 - highlighted
-comments:
-- id: 109
-  author: Torey Heinz
-  author_email: !binary |-
-    dG9yZXloZWluekBnbWFpbC5jb20=
-  author_url: !binary |-
-    aHR0cDovL2loc3dlYmRlc2lnbi5jb20=
-  date: !binary |-
-    MjAxMC0wOC0wNSAxNzo1Mjo0NCAtMDQwMA==
-  date_gmt: !binary |-
-    MjAxMC0wOC0wNSAyMTo1Mjo0NCAtMDQwMA==
-  content: ! '<p>I agree Zach, I have been very fortunate to have some great clients
-    who are very understanding.</p>
-
-
-    <p>Like you I try hard to not let my personal issues (of which I have plenty)
-    get in the way of client work.  At the same time, when it has shown through to
-    my clients that things are not quite well, they care, and want to help in any
-    way they can.</p>
-
-
-    <p>I am very grateful to be able to work for "clients that care", and hopeful
-    I can spot the ones who don''t before it is too late.</p>
-
-
-    <p>Torey</p>
-
-'
-
 abstract: >
   Touched by my clients concern for me.
 
