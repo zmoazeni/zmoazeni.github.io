@@ -12,8 +12,8 @@ title: Highlighted Articles
       <span class="separator">⚡</span>
       <cite><a href="{{ post.url }}">{{ post.title }}</a></cite>
 
-      {% if post.abstract %}
-        <blockquote>{{ post.abstract }}</blockquote>
+      {% if post.excerpt %}
+        <blockquote>{{ post.excerpt }}</blockquote>
       {% endif %}
     </div>
   {% endfor %}
