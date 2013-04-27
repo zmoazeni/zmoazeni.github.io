@@ -6,6 +6,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - TODO.md
+  - README.md
 sass:
   syntax: scss
   style: nested
