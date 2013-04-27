@@ -2,6 +2,7 @@
 title: Why csscss doesn't remove duplication for you
 layout: post
 excerpt: Reasons behind csscss's design.
+tags: [highlighted]
 ---
 
 After I released [csscss](http://zmoazeni.github.io/csscss/), I've been asked numerous times:
