@@ -29,8 +29,8 @@ my code.
 
 "Is this necessary?"
 
-"Have I already defined a structure that defines this? Do I need to
-extend existing structures?"
+"Have I already defined a structure for this? Do I need to extend
+existing structures?"
 
 "Is there a better way to define the same rules?"
 
