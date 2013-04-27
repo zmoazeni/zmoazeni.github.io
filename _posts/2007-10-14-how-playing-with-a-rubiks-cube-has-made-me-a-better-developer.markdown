@@ -2,7 +2,8 @@
 layout: post
 title: How playing with a Rubik's Cube has made me a better developer
 date: 2007-10-14 12:24:52.000000000 -04:00
-abstract: >
+tags: [highlighted]
+excerpt: >
   Sometimes you make strange correlations with software.
 
 ---

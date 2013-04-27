@@ -2,10 +2,9 @@
 layout: post
 title: Muscle Memory
 date: 2010-04-14 21:48:01.000000000 -04:00
-tags:
-- highlighted
+tags: [highlighted]
 
-abstract: >
+excerpt: >
   I gave the Dvorak keyboard layout an honest attempt. For years.
 ---
 Two years ago, I made the commitment to switch the [Dvorak Layout](http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard) and I think my wrists thank me. When I first started, I heard a lot of concern from others that learning Dvorak would harm their [Qwerty](http://en.wikipedia.org/wiki/QWERTY) typing. But I dismissed it as lazy FUD.

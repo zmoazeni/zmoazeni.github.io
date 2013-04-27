@@ -2,6 +2,7 @@
 layout: post
 title: Another bonehead revelation
 date: 2007-12-08 23:35:55.000000000 -05:00
+excerpt: Yep, I'm an idiot sometimes
 ---
 ### Ok, so I'm an idiot..
 

@@ -2,6 +2,7 @@
 layout: post
 title: A couple perspectives on testing common scenarios
 date: 2007-12-06 00:23:26.000000000 -05:00
+excerpt: Testing the behavior of ActiveRecord models
 ---
 ### One Perspective
 

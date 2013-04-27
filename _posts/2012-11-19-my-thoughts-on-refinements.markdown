@@ -2,10 +2,9 @@
 title: My Thoughts on Refinements
 date: 2012-11-19 23:37:26.000000000 -05:00
 layout: post
-tags:
-  - highlighted
+tags: [highlighted]
 
-abstract: >
+excerpt: >
   Ruby 2.0 refinements have been a hot topic lately. Here are my
   thoughts on the debate.
 

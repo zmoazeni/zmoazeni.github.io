@@ -2,6 +2,7 @@
 layout: post
 title: Commonly overlooked usage of named routes
 date: 2008-03-30 14:06:58.000000000 -04:00
+excerpt: Routing fun
 ---
 Given a route :
 

@@ -2,7 +2,7 @@
 layout: post
 title: Big Changes Again. Joining Collective Idea.
 date: 2011-02-03 11:08:50.000000000 -05:00
-abstract: >
+excerpt: >
   Hanging my freelancer hat and joining the awesome crew at
   CollectiveIdea.
 

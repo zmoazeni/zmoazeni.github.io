@@ -2,6 +2,7 @@
 layout: post
 title: Big Changes. Going Independent.
 date: 2010-05-24 13:30:12.000000000 -04:00
+excerpt: Embarking on the life of a freelancer
 ---
 ## What's the news? ##
 

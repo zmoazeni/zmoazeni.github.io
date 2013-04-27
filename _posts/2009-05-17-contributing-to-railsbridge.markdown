@@ -2,6 +2,7 @@
 layout: post
 title: Contributing to RailsBridge
 date: 2009-05-17 15:17:55.000000000 -04:00
+excerpt: Voluntering my time to help RailsBridge
 ---
 ## Need Code Help?
 
