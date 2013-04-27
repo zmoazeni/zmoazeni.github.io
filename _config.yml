@@ -1,4 +1,3 @@
-auto: true
 markdown: rdiscount
 permalink: /blog/:year/:month/:title
 pygments: true
@@ -10,4 +9,3 @@ exclude:
 sass:
   syntax: scss
   style: nested
-
