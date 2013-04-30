@@ -41,9 +41,9 @@ All of these answers reduce duplication, but more importantly, they
 force me to consider the design of my code. And I don't think there is a
 single algorithm that satisfies all cases.
 
-It is always easy to do this without an automated tool for a small
-number of rules. But as your site/application grows it is extremely
-difficult to do all this mental juggling.
+Now you can obviously do this without an automated tool. And it is easy
+for a small number of rules. However as your site/application grows it is
+extremely difficult to continue this mental juggling.
 
 I like to think of csscss as a tool that helps **extend my intuition**,
 not replace it.
@@ -60,7 +60,7 @@ though I still enjoy using it. The coffeescript I write and the
 javascript I debug are different. Luckily, in that case I can follow the
 flow enough to jump back to coffeescript to fix my bugs.
 
-However the point of csscss is not to optimize code, it is to help you
+However the point of csscss is not to optimize code, it is to help
 inform you about areas improvement. If csscss did this for you I expect
 the gulf between original source and browser CSS to be rather large.
 
