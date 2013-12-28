@@ -9,7 +9,7 @@ title: Highlighted Articles
   {% for post in site.tags.highlighted %}
     <div class="post">
       <time datetime="{{post.date | date_to_xmlschema}}">{{ post.date | date_to_string }}</time>
-      <span class="separator">⚡</span>
+      <span class="separator">ϟ</span>
       <cite><a href="{{ post.url }}">{{ post.title }}</a></cite>
 
       {% if post.excerpt %}
