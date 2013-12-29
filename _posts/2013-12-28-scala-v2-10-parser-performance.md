@@ -27,7 +27,7 @@ The problem comes up when parsing in scala because `subSequence` (which depends 
 
 In the [scala bug](https://issues.scala-lang.org/browse/SI-7710), the reporter mentioned writing a custom `CharSequence` that behaved the way same `String` used to to reclaim the performance.
 
-Here is an snippet that did the trick for me:
+Here is a snippet that did the trick for me:
 
 {% highlight scala %}
 import java.lang.CharSequence
