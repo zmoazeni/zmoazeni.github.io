@@ -119,6 +119,14 @@ cite { font-style: normal }
   display: block;
 }
 
-.highlight, pre {
-  width: 600px;
+.highlight {
+  width: 90%;
+
+  pre {
+    overflow: scroll;
+  }
+}
+
+blockquote {
+  font-family: "Inconsolata", monospace;
 }
