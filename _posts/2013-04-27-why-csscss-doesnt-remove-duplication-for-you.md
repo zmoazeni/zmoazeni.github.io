@@ -61,7 +61,7 @@ javascript I debug are different. Luckily, in that case I can follow the
 flow enough to jump back to coffeescript to fix my bugs.
 
 However the point of csscss is not to optimize code, it is to help
-inform you about areas improvement. If csscss did this for you I expect
+inform you about areas improvement. If csscss did this for you, I expect
 the gulf between original source and browser CSS to be rather large.
 
 ## Improving the CSS landscape ##
@@ -69,7 +69,7 @@ the gulf between original source and browser CSS to be rather large.
 None of this is a knock against other developers working on the same
 problem. In fact, I think different perspectives and trial/error in this
 field can only be a good thing. CSS has been around for over a decade
-and it surprising to me that we don't have more tools. So I commend
+and it is surprising to me that we don't have more tools. So I commend
 anyone spending time to contribute. csscss is my contribution based on
 my opinions.
 
