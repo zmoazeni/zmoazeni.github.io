@@ -1,7 +1,7 @@
 ---
-title: Dynamically Detecting Scala Classes at Runtime
+title: Detecting Scala Extension Classes at Runtime
 layout: post
-excerpt: An example of how to detect classes at runtime to implement a convention-over-configuration extension framework in Scala (or Java).
+excerpt: An example of how to detect classes at runtime to implement a convention-over-configuration extension strategy in Scala (or Java).
 ---
 
 Years ago, when I left Java for Ruby and Rails, I found Rails's opinions on [convention over configuration](http://en.wikipedia.org/wiki/Convention_over_configuration) very refreshing. I was tired of all the XML files needed for even the simplest Java architectures.
