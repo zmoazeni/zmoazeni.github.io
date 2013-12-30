@@ -1,6 +1,7 @@
 ---
 title: Detecting Scala Extension Classes at Runtime
 layout: post
+tags: [highlighted]
 excerpt: An example of how to detect classes at runtime to implement a convention-over-configuration extension strategy in Scala (or Java).
 ---
 
