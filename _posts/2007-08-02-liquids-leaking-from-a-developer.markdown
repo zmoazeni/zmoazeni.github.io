@@ -172,7 +172,7 @@ These are a neat concept that is only used for the `include` tags. You set a "fi
     Liquid::Template.file_system = MyFileSystem.new
 
 
-Liquid will then pass all `{% include 'some_include' %}` to the filesystem specified, which allows you to customize where the partial actually resides. For instance, to allow users to create templates from an interface and retrieve them from the database, you can implement a similar `filesystem`.
+Liquid will then pass all {% raw %}`{% include 'some_include' %}`{% endraw %} to the filesystem specified, which allows you to customize where the partial actually resides. For instance, to allow users to create templates from an interface and retrieve them from the database, you can implement a similar `filesystem`.
 
     class MyFileSystem
       def read_template_file(template_name)

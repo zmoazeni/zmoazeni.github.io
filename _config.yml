@@ -1,11 +1,10 @@
 markdown: rdiscount
 permalink: /blog/:year/:month/:title
-pygments: true
+highlighter: pygments
 exclude:
   - Gemfile
   - Gemfile.lock
   - TODO.md
   - README.md
 sass:
-  syntax: scss
-  style: nested
+  style: :nested
