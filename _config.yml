@@ -1,6 +1,5 @@
 markdown: rdiscount
 permalink: /blog/:year/:month/:title
-highlighter: pygments
 exclude:
   - Gemfile
   - Gemfile.lock

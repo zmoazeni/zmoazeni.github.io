@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'github-pages'
-gem 'therubyracer'
+gem 'rdiscount'
 
-gem 'directory_watcher', '1.4.1'
+# gem 'directory_watcher', '1.4.1'
