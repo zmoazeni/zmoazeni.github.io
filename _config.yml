@@ -6,3 +6,11 @@ exclude:
   - README.md
 sass:
   style: :nested
+
+defaults:
+  -
+    scope:
+      path: "v2013"
+    values:
+      version: "v2013"
+      layout: "v2013/layout"

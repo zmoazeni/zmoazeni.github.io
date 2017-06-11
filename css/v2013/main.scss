@@ -1,0 +1,142 @@
+---
+---
+
+html {
+  padding: 0px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+$font-size: 16px;
+body {
+  font-family: Verdana, "Lucida Grande", Helvetica, sans-serif;
+  color: #002b36;
+  font-size: $font-size;
+  line-height: 28px;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  display: block;
+  padding-top: 1px;
+}
+
+$h1-font-size: $font-size + 10;
+h1 {
+  font-size: $h1-font-size;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: $h1-font-size - 4;
+  border-bottom: 1px solid #738b91;
+}
+
+h3 { font-size: $h1-font-size - 8; }
+
+
+a {
+  color: #cb4b16;
+  font-style: normal;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px dashed;
+  }
+}
+
+nav {
+  background-color: #002b36;
+  border-bottom: 3px solid #738b91;
+  position: absolute;
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+  padding: 5px 0;
+  text-transform: lowercase;
+  color: #eee8d5;
+
+  a {
+    color: #eee8d5;
+  }
+
+  ul {
+    margin: 0;
+    list-style:none;
+
+    li {
+      float: left;
+      + li {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+#main {
+  margin-top: 60px;
+  padding: 0px 100px 25px;
+  width: 80%;
+}
+
+footer {
+  padding: 20px;
+  color: #9aabaf;
+  clear: both;
+}
+
+time {
+  font-style: italic;
+}
+
+.separator {
+  font-size: 22px;
+  margin: 0 5px;
+}
+
+cite { font-style: normal }
+
+#posts {
+  h2 {
+    ~ h2 {
+      margin-top: 50px;
+    }
+  }
+
+  .post {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  time {
+    display: inline-block;
+    width: 120px;
+  }
+}
+
+#profilepic {
+  float: left;
+  margin-right: 40px;
+  display: block;
+}
+
+.highlight {
+  width: 90%;
+  font-size: $font-size - 2;
+  line-height: $font-size;
+
+  pre {
+    overflow: scroll;
+  }
+}
+
+code {
+
+  font-family: "Inconsolata", "Menlo", "Monaco", sans-serif;
+}
+
+blockquote {
+  font-family: "Inconsolata", monospace;
+}
