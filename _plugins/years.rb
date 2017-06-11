@@ -1,7 +1,7 @@
 module Jekyll
   class YearsBlock < Liquid::Block
     def render(context)
-      year_groups = context.registers[:site].posts.group_by {|post| post.date.year }
+      year_groups = context.registers[:site].posts.docs.group_by {|post| post.date.year }
       years = year_groups.keys.sort.reverse
       context.stack do
         years.map do |year|
