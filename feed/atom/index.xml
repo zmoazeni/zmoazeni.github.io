@@ -4,10 +4,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Connection ϟ Required</title>
- <link href="http://connectionrequired.com/feed/atom/" rel="self"/>
- <link href="http://connectionrequired.com/"/>
+ <link href="{{ site.baseurl }}/feed/atom/" rel="self"/>
+ <link href="{{ site.baseurl }}/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://connectionrequired.com/</id>
+ <id>{{ site.baseurl }}/</id>
  <author>
    <name>Zach Moazeni</name>
    <email>zach.moazeni@gmail.com</email>
@@ -17,9 +17,9 @@
  {% for post in site.posts limit:40 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://connectionrequired.com{{ post.url }}"/>
+   <link href="{{ site.baseurl }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://connectionrequired.com{{ post.id }}</id>
+   <id>{{ site.baseurl }}{{ post.id }}</id>
    <author>
      <name>Zach Moazeni</name>
      <email>zach.moazeni@gmail.com</email>

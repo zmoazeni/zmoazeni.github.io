@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Paranoid Testing </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Paranoid Testing</cite></h1>
+    <time datetime="2007-05-22T23:09:12-04:00">22 May 2007</time>
+
+    <p>I had the opportunity to attend the <a href="http://xpwestmichigan.org/">XP West Michigan</a> meeting tonight, and listen to the energetic speaker <a href="http://www.testobsessed.com/category/rumination/">Elisabeth Hendrickson</a> from <a href="http://www.qualitytree.com/">Quality Tree Software</a>.</p>
+
+<p>It was a great talk about the common mistakes in Agile Development. Hopefully her presentation will be available online soon. It’s easy for agile developers to get puffed up and pat ourselves on the back because we write automated tests. Elisabeth highlighted important issues that agile development doesn’t solve.</p>
+
+<p>I especially liked her point about developers being on two sides of a scale. Either their too confident: in code, in deployment or in users interactions. Or they’re too paranoid, writing tests to cover all possible scenarios. Striking a balance is difficult.</p>
+
+<p>I definitely have followed the path of the paranoid developer, trying to test as much as possible. Even in writing <a href="http://www.eventable.com">Eventable</a> I have had to scale back the testing intensity. My problem always seems to be the test code becomes a weight dragging down the agility of the code. In essence more time is spent maintaining test code than the actual production code.</p>
+
+<p>I’ve tried following a few principles when writing tests.</p>
+
+<h3 id="test-names-should-be-close-to-readable-sentences">Test names should be close to readable sentences.</h3>
+
+<p>RSpec and BDD hit this right on the mark. Don’t be scared of especially long method names. <code class="highlighter-rouge">test_users_should_have_multiple_emails</code> is extremely descriptive. And if you lose track of what you’re really testing, the name will put you back on track. When trying to fix failing tests, expressive test names give me a good picture as to what functionality is broken.</p>
+
+<h3 id="keep-the-tests-short">Keep the tests short.</h3>
+
+<p>Tests should be the documentation for the code, and large tests are difficult to grok. I try to keep my tests under or around 5 lines. When it starts pushing 10 - 15 something needs to be abstracted, even if it’s moving most related assertions into a method call used only by that one test.</p>
+
+<h3 id="fire-copy-and-paste">Fire Copy and Paste</h3>
+
+<p>Copy and Paste are scam artists. They have no business in software development. If there was ever a gluttonous act for coders, it’s to duplicate code and change only bare essentials. Be it production or test code (the latter being just as important) if you find yourself copying and pasting to add in a quick test, a flag should be raised.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="update-52407">Update 5/24/07</h2>
+
+<p>Here are the <a href="http://xpwestmichigan.org/files/Hendrickson_Bugs_We_Miss_v3.pdf">slides for her presentation</a>.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

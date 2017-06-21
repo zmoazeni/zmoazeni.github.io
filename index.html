@@ -10,7 +10,7 @@ layout: default
       <div class="post">
         <time datetime="{{post.date | date_to_xmlschema}}">{{ post.date | date_to_string }}</time>
         <span class="separator">ϟ</span>
-        <cite><a href="{{ post.url }}">{{ post.title }}</a></cite>
+        <cite><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></cite>
 
         {% if post.excerpt %}
           <blockquote>{{ post.excerpt }}</blockquote>

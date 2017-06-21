@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Problems with Pound infront of Mongrel </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Problems with Pound infront of Mongrel</cite></h1>
+    <time datetime="2007-07-25T00:18:32-04:00">25 July 2007</time>
+
+    <p>Working on a custom CMS, I was tasked to add a feature that allowed users to mark pages as secure. This allowed them to take sensitive data, and then turn around and email it plain text. Go figure.</p>
+
+<p>My logic was simple.</p>
+
+<ul>
+  <li>Allow the users to specify which pages are un/secure</li>
+  <li>When visiting a page:
+** If the page is secure, and they’re not in a secure page redirect to https
+** Else if the page is not secure and they’re at a secure page redirect to http (Don’t want any unnecessary encryption)
+** Otherwise we’re dandy</li>
+</ul>
+
+<p>Well to develop this, I placed <a href="http://www.apsis.ch/pound/">Pound</a> a really neat little load balancer, infront of a single Mongrel server, and created a self signed certificate. So far so good.</p>
+
+<p>Then I spent the next few hours trying to figure out why my code was redirecting to the correct url, but the browser stayed in a tailspin.</p>
+
+<p>First I thought maybe an obscure bug in Rails (I was using a pretty old version of the framework). Tests showed otherwise, and so did a sample dummy project using 1.2.3.</p>
+
+<p>Then I suspected some crazy caching in firefox. Other browsers reproduced the same effect.</p>
+
+<p>Finally, throwing up my hands I decided to just configure Apache to sit infront of a single Mongrel server. Works just fine.</p>
+
+<p>I hope I can narrow down exactly what the issue is with Pound and Mongrel that doesn’t allow Rails to redirect to the same url (except a change in the protocol), but as swamped as I am at work, that’s a lofty goal.</p>
+
+<p>I’m willing to bet that this behavior is only prominent when Pound sits directly infront of Mongrel(s), and not when Pound is infront of other servers like Apache, Lighttpd, Nginx, etc (which in turn sit infront of the Mongrel(s)). And I’m doubtful that there are many production deployments consisting of just Pound and Mongrel, but man it makes debugging a pain in the ass.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

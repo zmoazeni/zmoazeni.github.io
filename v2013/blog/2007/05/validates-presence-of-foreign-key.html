@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Validates Presence Of Foreign Key </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Validates Presence Of Foreign Key</cite></h1>
+    <time datetime="2007-05-14T00:11:44-04:00">14 May 2007</time>
+
+    <p>When reading the Rails documentation for <a href="http://api.rubyonrails.com/classes/ActiveRecord/Validations/ClassMethods.html#M000941">validates_presence_of</a> I eyed the warning pertaining to foreign keys.</p>
+
+<p><a href="http://api.rubyonrails.com/classes/ActiveRecord/Validations/ClassMethods.html#M000941"><img src="/assets/2007/5/14/rails_validation_warnings_1.png" alt="Rails Validation Warnings" title="Rails Documentation for 1.2.3" /></a></p>
+
+<p>I came across <a href="http://blog.teksol.info/articles/2006/03/08/do-not-validate-belongs_to-or-else">this article</a> and when running the examples written, I found the same errors.</p>
+
+<p>Stumped, I started crawling through the Rails code. I documented the behavior <a href="/assets/2007/5/14/foreign_key_validations.tgz">with this small rails app</a> which includes the Rails 1.2.3 frozen in<sup><a href="#fn1">1</a></sup>.</p>
+
+<p>Instead of using <code class="highlighter-rouge">invoice</code> and <code class="highlighter-rouge">line_items</code>, I decided to simply use <code class="highlighter-rouge">parent</code> and <code class="highlighter-rouge">child</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Parent:
+  class Parent &lt; ActiveRecord::Base
+has_many :children
+  end
+
+Child:
+  class Child &lt; ActiveRecord::Base
+belongs_to :parent
+validates_presence_of :parent, :name
+  end
+
+Invalid Code:
+  &gt;&gt; p = Parent.new(:name =&gt; "Dad")
+  =&gt; #&lt;Parent:0x23ac8f4 @attributes={"name"=&gt;"Dad"}, @new_record=true&gt;
+  &gt;&gt; c = p.children.build(:name =&gt; "Son")
+  =&gt; #&lt;Child:0x2367858 @attributes={"name"=&gt;"Son", "parent_id"=&gt;nil}, @new_record=true&gt;
+  &gt;&gt; p.save!
+  ActiveRecord::RecordInvalid: Validation failed: Children is invalid
+      from ./script/../config/../config/../vendor/rails/activerecord/lib/active_record/validations.rb:764:in `save_without_transactions!'
+      from ./script/../config/../config/../vendor/rails/activerecord/lib/active_record/transactions.rb:133:in `save!'
+      from ./script/../config/../config/../vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:59:in `transaction'
+      from ./script/../config/../config/../vendor/rails/activerecord/lib/active_record/transactions.rb:95:in `transaction'
+      from ./script/../config/../config/../vendor/rails/activerecord/lib/active_record/transactions.rb:121:in `transaction'
+      from ./script/../config/../config/../vendor/rails/activerecord/lib/active_record/transactions.rb:133:in `save!'
+      from (irb):3
+
+Valid Code:
+  &gt;&gt; p = Parent.new(:name =&gt; "Dad")
+  =&gt; #&lt;Parent:0x22b9f28 @attributes={"name"=&gt;"Dad"}, @new_record=true&gt;
+  &gt;&gt; c = p.children.build(:name =&gt; "Son", :parent =&gt; p)
+  =&gt; #&lt;Child:0x229626c @attributes={"name"=&gt;"Son", "parent_id"=&gt;nil}, @parent=#&lt;Parent:0x22b9f28 @attributes={"name"=&gt;"Dad"}, @new_record=true, @children=[#&lt;Child:0x229626c ...&gt;]&gt;, @new_record=true&gt;
+  &gt;&gt; p.save!
+  =&gt; true
+</code></pre>
+</div>
+
+<p>What seems to be happening is the validations are called twice. The first time with the parent_id of nil, and then the second with the parent_id (obviously now it’s saved the Parent and is going to actually save the Child).</p>
+
+<p>Perhaps later I will crawl through the Rails code and submit a patch to automate the setting of association variable, but I’m still debating if that’s the correct thing to do.</p>
+
+<p>What gets really odd is if I take out the @validate_presence_of@ from the Child and use the first method, both Parent and Child get saved, and the Child has the foreign key set.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Parent:
+  class Parent &lt; ActiveRecord::Base
+has_many :children
+  end
+
+Child:
+  class Child &lt; ActiveRecord::Base
+belongs_to :parent
+validates_presence_of :name
+  end
+
+Valid Code:
+  &gt;&gt; p = Parent.new(:name =&gt; "Dad")
+  =&gt; #&lt;Parent:0x23ac8f4 @attributes={"name"=&gt;"Dad"}, @new_record=true&gt;
+  &gt;&gt; c = p.children.build(:name =&gt; "Son")
+  =&gt; #&lt;Child:0x2368dfc @attributes={"name"=&gt;"Son", "parent_id"=&gt;nil}, @new_record=true&gt;
+  &gt;&gt; p.save!
+  =&gt; true
+  &gt;&gt; p.children
+  =&gt; [#&lt;Child:0x2368dfc @attributes={"name"=&gt;"Son", "id"=&gt;2, "parent_id"=&gt;2}, @new_record=false, @errors=#&lt;ActiveRecord::Errors:0x233fe84 @errors={}, @base=#&lt;Child:0x2368dfc ...&gt;&gt;&gt;]
+</code></pre>
+</div>
+
+<div id="fn1"><sup>1</sup> To run the example:
+
+    tar xvfz foreign_key_validations.tgz
+    cd foreign_key_validations
+    rake db:migrate
+    rake test
+
+</div>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

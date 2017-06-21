@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Older Rails and Mongrel </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Older Rails and Mongrel</cite></h1>
+    <time datetime="2007-05-21T23:20:09-04:00">21 May 2007</time>
+
+    <p>One of the useful features of Rails servers (Webrick, Lighttpd, and Mongrel) is to see the development log going to standard out. However when using Rails before version 1.2 and Mongrel, you don’t get that nicety.</p>
+
+<p>I had to dip into a few applications using pre Rails 1.2, and having a separate terminal open for the log became annoying. This minor change keeps you from <code class="highlighter-rouge">tailing</code> in another terminal.</p>
+
+<p>In <code class="highlighter-rouge">RAILS_ROOT/config/environments</code> create a new environment called <code class="highlighter-rouge">mongrel.rb</code>. Copy the contents of <code class="highlighter-rouge">development.rb</code> into it and throw this line at the bottom.</p>
+
+<p><code class="highlighter-rouge">config.logger = Logger.new(STDOUT)</code></p>
+
+<p>Then start Rails with <code class="highlighter-rouge">mongrel_rails start -e mongrel</code></p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

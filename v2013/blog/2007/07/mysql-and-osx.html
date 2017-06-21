@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // MySQL and OSX </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>MySQL and OSX</cite></h1>
+    <time datetime="2007-07-25T00:07:49-04:00">25 July 2007</time>
+
+    <p>I have some weird logic in determining what I compile and what I install via <a href="http://www.macports.org/">ports</a></p>
+
+<p>Examples of things I typically compile by hand:</p>
+<ul>
+  <li>Apache</li>
+  <li>Ruby</li>
+  <li>PHP</li>
+  <li>SVN</li>
+  <li>SQLite3</li>
+</ul>
+
+<p>Examples of things I typically install via a Package or Ports</p>
+<ul>
+  <li>MySQL</li>
+  <li>PNG, JPEG, TIFF libraries</li>
+  <li>Other low level libraries</li>
+</ul>
+
+<p>I noticed when I installed MySQL 5.0.45 from the <a href="http://dev.mysql.com/downloads/mysql/5.0.html#macosx-dmg">package distribution</a> I had some problems compiling against other libraries. It turns out that mysql will install itself in <code class="highlighter-rouge">/usr/local/mysql/</code>, and it’s libraries in <code class="highlighter-rouge">/usr/local/mysql/lib</code> which is typical.</p>
+
+<p>However I noticed I had problems compiling a lot of software that depended upon MySQL because they looked for those libraries in <code class="highlighter-rouge">/usr/local/mysql/lib/mysql</code>.</p>
+
+<p>Two solutions:</p>
+
+<ol>
+  <li>Hunt down the config to specify <code class="highlighter-rouge">/usr/local/mysql/lib</code> instead of <code class="highlighter-rouge">/usr/local/mysql/lib/mysql</code></li>
+</ol>
+
+<p>OR</p>
+
+<ol>
+  <li>Just create the <code class="highlighter-rouge">mysql</code> directory in <code class="highlighter-rouge">/usr/local/mysql/lib</code> and inside that directory: <code class="highlighter-rouge">sudo ln -s ../*</code></li>
+</ol>
+
+<p>The lazy in me chose #2</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+
