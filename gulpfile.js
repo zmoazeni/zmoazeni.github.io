@@ -24,27 +24,6 @@ gulp.task('clean-js', function () {
     .pipe(clean());
 });
 
-gulp.task('clean', ['clean-css', 'clean-js']);
-
-gulp.task('watch', function () {
-  gulp.watch('./_css/**/*.scss', ['sass']);
-  gulp.watch('./_js/**/*.js', ['javascript']);
-});
-
-// gulp.task('sass', function () {
-//   return gulp.src('./sass/**/*.scss')
-//     .pipe(plumber({
-//       errorHandler (err) {
-//         gutil.log(err);
-//         this.emit('end')
-//       }
-//     }))
-//     .pipe(sourcemaps.init())
-//       .pipe(sass().on('error', sass.logError))
-//     .pipe(sourcemaps.write("./"))
-//     .pipe(gulp.dest('./css'))
-// });
-
 gulp.task('css', function () {
   return gulp.src('./_css/**/*.scss')
     .pipe(plumber({
@@ -95,5 +74,11 @@ gulp.task('jekyll', () => {
   jekyll.stderr.on('data', jekyllLogger);
 });
 
+gulp.task('clean', ['clean-css', 'clean-js']);
 gulp.task('build', ['clean', 'css', 'javascript']);
 gulp.task('default', ['javascript', 'css', 'jekyll', 'watch']);
+
+gulp.task('watch', function () {
+  gulp.watch('./_css/**/*.scss', ['sass']);
+  gulp.watch('./_js/**/*.js', ['javascript']);
+});
