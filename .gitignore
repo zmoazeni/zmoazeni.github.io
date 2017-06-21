@@ -6,4 +6,5 @@ TODO.md
 node_modules
 .jekyll-metadata
 js
+css
 npm-debug.log
