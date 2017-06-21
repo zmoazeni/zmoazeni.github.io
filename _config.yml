@@ -4,5 +4,8 @@ exclude:
   - Gemfile.lock
   - TODO.md
   - README.md
+  - package.json
+  - node_modules
+  - gulpfile.js
 sass:
   style: :nested

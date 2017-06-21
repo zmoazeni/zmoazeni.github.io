@@ -3,3 +3,7 @@ _tmp
 TODO.md
 .bundle/
 .vscode
+node_modules
+.jekyll-metadata
+js
+npm-debug.log
