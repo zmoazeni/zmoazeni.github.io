@@ -82,6 +82,6 @@ gulp.task('build', ['clean', 'css', 'javascript']);
 gulp.task('default', ['javascript', 'css', 'jekyll', 'watch']);
 
 gulp.task('watch', function () {
-  gulp.watch('./_css/**/*.scss', ['sass']);
+  gulp.watch('./_css/**/*.scss', ['css']);
   gulp.watch('./_js/**/*.js', ['javascript']);
 });
