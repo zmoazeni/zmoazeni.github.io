@@ -2,5 +2,15 @@
 @include foundation-everything(true);
 
 .brand {
+  overflow: hidden;
+  display: block;
   text-align: center;
+
+  span {
+    display: none;
+  }
+
+  svg {
+    width: 30rem;
+  }
 }
