@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Ascribe goes live
 date: 2008-02-05 23:27:54.000000000 -05:00
 ---

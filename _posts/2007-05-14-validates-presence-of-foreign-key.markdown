@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Validates Presence Of Foreign Key
 date: 2007-05-14 00:11:44.000000000 -04:00
 ---

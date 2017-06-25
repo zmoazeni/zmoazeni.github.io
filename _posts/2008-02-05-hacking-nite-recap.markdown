@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hacking Nite Recap
 date: 2008-02-05 23:40:15.000000000 -05:00
 ---

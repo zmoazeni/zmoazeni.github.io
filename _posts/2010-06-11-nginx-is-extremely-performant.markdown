@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Nginx is extremely performant
 date: 2010-06-11 13:10:16.000000000 -04:00
 ---

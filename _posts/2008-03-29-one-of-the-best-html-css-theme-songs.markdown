@@ -1,5 +1,4 @@
 ---
-layout: post
 title: One of the best HTML / CSS theme songs
 date: 2008-03-29 23:03:41.000000000 -04:00
 ---

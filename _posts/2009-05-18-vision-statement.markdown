@@ -1,5 +1,4 @@
 ---
-layout: post
 published: false
 title: Vision Statement
 date: 2009-05-18 16:49:33.000000000 -04:00

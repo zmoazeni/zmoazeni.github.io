@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Using Capistrano 1.4 with 2.x
 date: 2008-03-31 10:48:41.000000000 -04:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Custom Textmate Commands
 date: 2008-04-01 15:31:20.000000000 -04:00
 ---

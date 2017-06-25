@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Muscle Memory
 date: 2010-04-14 21:48:01.000000000 -04:00
 tags: [highlighted]

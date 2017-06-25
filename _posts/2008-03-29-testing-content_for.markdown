@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Testing content_for
 date: 2008-03-29 12:57:00.000000000 -04:00
 ---

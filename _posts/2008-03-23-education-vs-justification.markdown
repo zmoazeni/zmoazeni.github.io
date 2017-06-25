@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Education vs Justification
 date: 2008-03-23 20:23:10.000000000 -04:00
 ---

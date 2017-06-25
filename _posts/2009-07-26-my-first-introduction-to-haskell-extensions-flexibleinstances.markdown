@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ! 'My First Introduction to Haskell Extensions: FlexibleInstances'
 date: 2009-07-26 20:28:53.000000000 -04:00
 ---

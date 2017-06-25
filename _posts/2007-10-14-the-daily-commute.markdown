@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The Daily Commute
 date: 2007-10-14 13:53:34.000000000 -04:00
 ---

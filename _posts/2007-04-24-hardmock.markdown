@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hardmock
 date: 2007-04-24 22:03:09.000000000 -04:00
 ---

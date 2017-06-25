@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Subdomain Assertions
 date: 2007-03-08 20:36:36.000000000 -05:00
 ---

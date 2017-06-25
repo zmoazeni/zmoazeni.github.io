@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Reflections of an Adjunct Professor
 date: 2010-04-06 22:51:59.000000000 -04:00
 ---

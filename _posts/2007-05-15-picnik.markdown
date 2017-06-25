@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Picnik
 date: 2007-05-15 00:22:38.000000000 -04:00
 ---

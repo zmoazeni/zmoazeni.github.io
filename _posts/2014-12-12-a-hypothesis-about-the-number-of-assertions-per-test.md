@@ -1,6 +1,5 @@
 ---
 title: A hypothesis about the number of assertions in a test
-layout: post
 excerpt: We have been discussing testing styles at work. My team's preference is split on one-assertion-per-test. This describes a hypothesis I have about developers in both camps.
 ---
 

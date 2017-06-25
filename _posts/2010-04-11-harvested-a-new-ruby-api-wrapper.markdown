@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ! 'Harvested: A New Ruby API Wrapper'
 date: 2010-04-11 14:17:02.000000000 -04:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Config Files and Source Control
 date: 2007-05-24 01:33:01.000000000 -04:00
 ---

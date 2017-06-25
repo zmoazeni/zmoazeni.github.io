@@ -1,5 +1,4 @@
 ---
-layout: post
 title: New Company, New Look
 date: 2010-10-14 07:37:13.000000000 -04:00
 ---

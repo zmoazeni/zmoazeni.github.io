@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Dumb Moments
 date: 2007-04-17 10:19:20.000000000 -04:00
 ---

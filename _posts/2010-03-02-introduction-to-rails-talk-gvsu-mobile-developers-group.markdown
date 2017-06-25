@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ! 'Introduction to Rails Talk: GVSU Mobile Developers Group'
 date: 2010-03-02 20:23:59.000000000 -05:00
 ---

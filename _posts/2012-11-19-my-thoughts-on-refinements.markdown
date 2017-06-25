@@ -1,7 +1,6 @@
 ---
 title: My Thoughts on Refinements
 date: 2012-11-19 23:37:26.000000000 -05:00
-layout: post
 tags: [highlighted]
 
 excerpt: >

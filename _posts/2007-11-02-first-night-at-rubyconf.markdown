@@ -1,5 +1,4 @@
 ---
-layout: post
 title: First night at RubyConf
 date: 2007-11-02 02:36:34.000000000 -04:00
 ---

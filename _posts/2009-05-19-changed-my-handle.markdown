@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Changed My Handle
 date: 2009-05-19 08:34:27.000000000 -04:00
 ---

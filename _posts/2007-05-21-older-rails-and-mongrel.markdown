@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Older Rails and Mongrel
 date: 2007-05-21 23:20:09.000000000 -04:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Combined PGP Keys Into One
 date: 2008-02-18 23:18:11.000000000 -05:00
 ---

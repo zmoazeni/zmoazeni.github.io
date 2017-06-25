@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ! 'New Traverse City User Group: Northern Michigan Web and Mobile Meetup'
 date: 2010-10-15 09:48:05.000000000 -04:00
 ---

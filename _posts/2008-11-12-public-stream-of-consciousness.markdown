@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Public Stream of Consciousness
 date: 2008-11-12 20:30:33.000000000 -05:00
 ---

@@ -1,7 +1,40 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required {% if page.title %} // {{ page.title }} {% endif %}</title>
 
-  <section id="main">
-    {{ content }}
-  </section>
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
 
-{% include footer.html %}
+  <link href="{{ site.baseurl }}/css/main.min.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="{{ site.baseurl }}/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{{ site.baseurl }}/">Connection Required</a></li>
+    </ul>
+  </nav>
+
+
+  {% if page.type == "post" %}
+    <article id="main">
+      <h1><cite>{{ page.title }}</cite></h1>
+      <time datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time>
+
+      {{ content }}
+    </article>
+  {% else %}
+    <section id="main">
+      {{ content }}
+    </section>
+  {% endif %}
+
+<footer>
+  &copy; 2007-{% thisyear %} Zach Moazeni
+</footer>
+
+<script src="{{ site.baseurl }}/js/main.min.js"></script>
+</body>
+</html>
+

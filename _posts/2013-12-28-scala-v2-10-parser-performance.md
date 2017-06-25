@@ -1,6 +1,5 @@
 ---
 title: Scala parser performance with v2.10.x
-layout: post
 excerpt: A quick fix to a performance issue with Scala v2.10.x and JDK 7+
 ---
 

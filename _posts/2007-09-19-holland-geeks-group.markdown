@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Holland Geeks Group
 date: 2007-09-19 21:54:36.000000000 -04:00
 ---

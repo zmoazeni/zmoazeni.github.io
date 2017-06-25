@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Cool Dates
 date: 2007-06-05 15:32:39.000000000 -04:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: You're running a marathon
 date: 2010-08-30 15:50:28.000000000 -04:00
 ---

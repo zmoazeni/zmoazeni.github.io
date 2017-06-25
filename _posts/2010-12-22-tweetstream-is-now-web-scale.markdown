@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tweetstream is now Web Scale
 date: 2010-12-22 14:14:51.000000000 -05:00
 ---

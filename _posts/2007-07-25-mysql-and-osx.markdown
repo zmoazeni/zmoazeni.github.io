@@ -1,5 +1,4 @@
 ---
-layout: post
 title: MySQL and OSX
 date: 2007-07-25 00:07:49.000000000 -04:00
 ---

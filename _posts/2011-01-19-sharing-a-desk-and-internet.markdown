@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Sharing a desk and internet
 date: 2011-01-19 15:31:05.000000000 -05:00
 abstract: >

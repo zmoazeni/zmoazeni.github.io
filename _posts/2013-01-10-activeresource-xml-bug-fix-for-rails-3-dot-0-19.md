@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ActiveResource XML bug fix for Rails 3.0.19"
 date: 2013-01-10T15:24:49+00:00
 author: zach@getharvest.com

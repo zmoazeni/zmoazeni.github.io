@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Git Stash is Sweet
 date: 2008-02-16 18:37:17.000000000 -05:00
 ---

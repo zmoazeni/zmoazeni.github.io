@@ -1,5 +1,4 @@
 ---
-layout: post
 title: I am far from unemployed
 date: 2010-06-09 08:13:55.000000000 -04:00
 ---

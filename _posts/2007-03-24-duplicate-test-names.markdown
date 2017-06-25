@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Duplicate Test Names
 date: 2007-03-24 04:32:52.000000000 -04:00
 ---

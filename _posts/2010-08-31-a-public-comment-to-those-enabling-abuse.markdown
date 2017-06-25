@@ -1,5 +1,4 @@
 ---
-layout: post
 title: A Public Comment To Those Enabling Abuse
 date: 2010-08-31 10:01:16.000000000 -04:00
 ---

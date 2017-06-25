@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Great perspective on incentive and value
 date: 2010-05-20 12:08:03.000000000 -04:00
 ---

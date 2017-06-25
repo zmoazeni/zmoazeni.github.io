@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Paranoid Testing
 date: 2007-05-22 23:09:12.000000000 -04:00
 ---

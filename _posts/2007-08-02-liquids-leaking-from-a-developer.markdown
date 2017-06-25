@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Liquids leaking from a Developer
 date: 2007-08-02 23:59:26.000000000 -04:00
 ---

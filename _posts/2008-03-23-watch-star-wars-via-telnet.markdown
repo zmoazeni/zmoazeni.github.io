@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Watch Star Wars via Telnet
 date: 2008-03-23 02:05:26.000000000 -04:00
 ---

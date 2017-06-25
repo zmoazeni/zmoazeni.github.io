@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Cloning Debian Parallels VMs
 date: 2007-10-17 01:26:24.000000000 -04:00
 ---

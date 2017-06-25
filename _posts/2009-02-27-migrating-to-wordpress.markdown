@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Migrating to Wordpress
 date: 2009-02-27 17:43:03.000000000 -05:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: New feed URL
 date: 2009-02-27 17:51:12.000000000 -05:00
 ---

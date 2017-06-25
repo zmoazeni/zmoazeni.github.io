@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Code Reviews at Harvest"
 date: 2014-10-02T15:29:02+00:00
 author: zach.moazeni@gmail.com

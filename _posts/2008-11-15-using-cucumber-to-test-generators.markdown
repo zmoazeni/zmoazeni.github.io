@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Using Cucumber to test Generators
 date: 2008-11-15 01:01:09.000000000 -05:00
 ---

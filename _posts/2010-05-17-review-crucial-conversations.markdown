@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ! 'Review: Crucial Conversations'
 date: 2010-05-17 21:55:08.000000000 -04:00
 ---

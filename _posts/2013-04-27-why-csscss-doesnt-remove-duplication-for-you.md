@@ -1,6 +1,5 @@
 ---
 title: Why csscss doesn't remove duplication for you
-layout: post
 excerpt: Reasons behind csscss's design.
 tags: [highlighted]
 ---

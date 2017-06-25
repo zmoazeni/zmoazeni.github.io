@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The Pain of Launching Your Own Projects
 date: 2010-10-19 09:35:04.000000000 -04:00
 ---

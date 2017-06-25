@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Testing and Tautologies
 date: 2007-12-04 00:47:16.000000000 -05:00
 ---

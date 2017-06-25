@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Mocha and Forcing Verification
 date: 2007-08-02 22:26:18.000000000 -04:00
 ---

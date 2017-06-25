@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Working at Panera
 date: 2007-05-17 13:21:40.000000000 -04:00
 ---

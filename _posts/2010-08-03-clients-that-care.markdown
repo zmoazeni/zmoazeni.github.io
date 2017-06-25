@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Clients that Care
 date: 2010-08-03 11:08:25.000000000 -04:00
 tags: [highlighted]

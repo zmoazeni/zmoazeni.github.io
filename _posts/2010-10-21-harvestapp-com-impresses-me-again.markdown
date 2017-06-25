@@ -1,5 +1,4 @@
 ---
-layout: post
 title: HarvestApp.com Impresses Me Again
 date: 2010-10-21 17:12:44.000000000 -04:00
 ---

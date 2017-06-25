@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Ascribe - A Case Study on View Specs
 date: 2008-02-16 18:00:40.000000000 -05:00
 excerpt: Reflections on using using view specs for a project

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: First Northern Michigan Web and Mobile Meetup
 date: 2010-11-02 09:31:07.000000000 -04:00
 ---

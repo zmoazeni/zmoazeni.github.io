@@ -1,5 +1,4 @@
 ---
-layout: post
 title: I think Twitter's OAuth-only Access is a Waste of Time
 date: 2010-09-03 15:41:57.000000000 -04:00
 ---

@@ -1,6 +1,5 @@
 ---
 title: Simple Memoization in Scala
-layout: post
 excerpt: An example of memoizing an expensive operation in Scala, similar to Ruby.
 ---
 

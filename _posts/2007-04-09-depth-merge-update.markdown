@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Depth Merge Update
 date: 2007-04-09 20:40:35.000000000 -04:00
 ---

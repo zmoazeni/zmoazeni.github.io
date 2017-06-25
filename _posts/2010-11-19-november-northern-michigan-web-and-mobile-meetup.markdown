@@ -1,5 +1,4 @@
 ---
-layout: post
 title: November Northern Michigan Web and Mobile Meetup
 date: 2010-11-19 09:06:46.000000000 -05:00
 ---

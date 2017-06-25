@@ -1,6 +1,5 @@
 ---
 title: Your Identity ≠ Your Code
-layout: post
 tags: [highlighted]
 excerpt: We are more than our code.
 ---

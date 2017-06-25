@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Client Satisfaction and Resources
 date: 2010-08-24 10:47:20.000000000 -04:00
 tags: [highlighted]

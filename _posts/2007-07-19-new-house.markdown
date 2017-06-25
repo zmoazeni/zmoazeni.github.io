@@ -1,5 +1,4 @@
 ---
-layout: post
 title: New House
 date: 2007-07-19 21:32:42.000000000 -04:00
 ---

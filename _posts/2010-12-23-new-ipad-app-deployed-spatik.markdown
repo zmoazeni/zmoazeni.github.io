@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ! 'New iPad App Deployed: Spatik'
 date: 2010-12-23 12:40:23.000000000 -05:00
 ---

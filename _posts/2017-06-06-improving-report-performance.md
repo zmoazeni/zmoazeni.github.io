@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Improving Report Performance"
 date: 2017-06-06T14:00:00+00:00
 author: zach@getharvest.com

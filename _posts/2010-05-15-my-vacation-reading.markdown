@@ -1,5 +1,4 @@
 ---
-layout: post
 title: My Vacation Reading
 date: 2010-05-15 10:41:06.000000000 -04:00
 ---

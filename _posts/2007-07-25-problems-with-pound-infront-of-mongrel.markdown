@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Problems with Pound infront of Mongrel
 date: 2007-07-25 00:18:32.000000000 -04:00
 ---

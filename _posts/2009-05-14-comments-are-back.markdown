@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Comments are back
 date: 2009-05-14 21:48:06.000000000 -04:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Liquid Forms
 date: 2007-08-25 18:44:39.000000000 -04:00
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Using Git
 date: 2008-02-08 02:07:42.000000000 -05:00
 ---

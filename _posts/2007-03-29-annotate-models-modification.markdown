@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Annotate Models Modification
 date: 2007-03-29 15:30:43.000000000 -04:00
 ---

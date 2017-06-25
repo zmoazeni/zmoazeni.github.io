@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Brandon Keepers leading another Rails Session
 date: 2008-01-13 13:30:00.000000000 -05:00
 ---

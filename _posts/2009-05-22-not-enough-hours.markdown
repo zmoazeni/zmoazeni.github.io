@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Not Enough Hours
 date: 2009-05-22 12:30:42.000000000 -04:00
 ---

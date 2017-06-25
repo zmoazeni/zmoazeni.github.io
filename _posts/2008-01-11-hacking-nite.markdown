@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hacking Nite
 date: 2008-01-11 01:50:00.000000000 -05:00
 ---

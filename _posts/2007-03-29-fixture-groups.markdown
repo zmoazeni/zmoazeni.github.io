@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Fixture Groups
 date: 2007-03-29 15:00:57.000000000 -04:00
 ---

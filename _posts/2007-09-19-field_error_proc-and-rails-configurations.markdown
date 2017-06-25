@@ -1,5 +1,4 @@
 ---
-layout: post
 title: field_error_proc and Rails Configurations
 date: 2007-09-19 21:39:51.000000000 -04:00
 ---

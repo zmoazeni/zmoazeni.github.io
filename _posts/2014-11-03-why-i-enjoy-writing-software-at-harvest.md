@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Why I enjoy writing software at Harvest"
 date: 2014-11-03T17:04:00+00:00
 author: zach.moazeni@gmail.com

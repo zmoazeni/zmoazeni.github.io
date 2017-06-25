@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tools for Remote Collaboration
 date: 2008-12-21 17:50:15.000000000 -05:00
 ---

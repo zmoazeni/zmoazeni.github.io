@@ -9,3 +9,18 @@ exclude:
   - gulpfile.js
 sass:
   style: :nested
+
+liquid:
+  error_mode: strict
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      type: "post"

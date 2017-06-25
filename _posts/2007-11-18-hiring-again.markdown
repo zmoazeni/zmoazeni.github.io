@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hiring Again
 date: 2007-11-18 04:35:36.000000000 -05:00
 ---

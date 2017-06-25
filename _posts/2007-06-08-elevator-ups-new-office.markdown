@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Elevator Up's New Office
 date: 2007-06-08 08:16:35.000000000 -04:00
 ---

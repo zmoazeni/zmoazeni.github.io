@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Our Newest Hire
 date: 2007-07-13 21:38:09.000000000 -04:00
 ---
