@@ -10,15 +10,20 @@ $header-styles: (
   medium: (
     'h1': ('font-size': 32), // default 48
     'h2': ('font-size': 28), // default 40
-    'h3': ('font-size': 24), // default 31
+    'h3': ('font-size': 22), // default 31
     'h4': ('font-size': 20), // default 25
     'h5': ('font-size': 18), // default 20
     'h6': ('font-size': 16), // default 16
   ),
 );
+$global-font-size: 10px;
 
 @import '../node_modules/foundation-sites/scss/foundation.scss';
 @include foundation-everything(true);
+
+body {
+  font-size: 1.6rem;
+}
 
 .brand {
   overflow: hidden;
@@ -31,5 +36,13 @@ $header-styles: (
 
   svg {
     width: 30rem;
+  }
+}
+
+.post {
+  padding: 1rem;
+
+  @include breakpoint(small only) {
+    font-size: 1rem;
   }
 }
