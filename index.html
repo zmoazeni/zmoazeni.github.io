@@ -1,8 +1,10 @@
 ---
 ---
-<div id="posts">
+<div>
   {% years %}
-    <h2>{{year}}</h2>
+    <div class="row align-center">
+      <h2>{{year}}</h2>
+    </div>
     {% for post in yearloop.posts %}
       <div class="post">
         <time datetime="{{post.date | date_to_xmlschema}}">{{ post.date | date_to_string }}</time>

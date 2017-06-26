@@ -1,3 +1,22 @@
+$header-styles: (
+  small: (
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
+  ),
+  medium: (
+    'h1': ('font-size': 32), // default 48
+    'h2': ('font-size': 28), // default 40
+    'h3': ('font-size': 24), // default 31
+    'h4': ('font-size': 20), // default 25
+    'h5': ('font-size': 18), // default 20
+    'h6': ('font-size': 16), // default 16
+  ),
+);
+
 @import '../node_modules/foundation-sites/scss/foundation.scss';
 @include foundation-everything(true);
 
