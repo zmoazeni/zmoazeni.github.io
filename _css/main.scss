@@ -41,6 +41,16 @@ body {
   }
 }
 
+@include breakpoint(medium) {
+  .year {
+    margin-top: 2rem;
+  }
+}
+
+.year ~ .year {
+  margin-top: 2rem;
+}
+
 .post {
   margin: 1rem 0;
   overflow-wrap: break-word;
