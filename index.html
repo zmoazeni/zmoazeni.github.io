@@ -9,13 +9,15 @@
     <div class="row align-left">
       {% for post in yearloop.posts %}
         <div class="post columns small-12 medium-6 large-4">
-          <h3><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h3>
+          <div class="cell cell-{% cycle 1, 2, 3, 4, 5 %}">
+            <h3><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h3>
 
-          {% if post.excerpt %}
-            <blockquote>{{ post.excerpt }}</blockquote>
-          {% endif %}
+            {% if post.excerpt %}
+              <blockquote>{{ post.excerpt }}</blockquote>
+            {% endif %}
 
-          <time datetime="{{post.date | date_to_xmlschema}}">{{ post.date | date_to_string }}</time>
+            <time datetime="{{post.date | date_to_xmlschema}}">{{ post.date | date_to_string }}</time>
+          </div>
         </div>
       {% endfor %}
     </div>
