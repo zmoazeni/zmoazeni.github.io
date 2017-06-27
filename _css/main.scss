@@ -17,12 +17,19 @@ $header-styles: (
   ),
 );
 $global-font-size: 10px;
+$body-font-family: 'Open Sans', sans-serif;
+
+$font-weight-semibold: 600;
 
 @import '../node_modules/foundation-sites/scss/foundation.scss';
 @include foundation-everything(true);
 
 body {
   font-size: 1.6rem;
+}
+
+h2, h3, h4, h5 {
+  font-weight: $font-weight-semibold;
 }
 
 .brand {
@@ -54,6 +61,11 @@ body {
 .post {
   margin: 1rem 0;
   overflow-wrap: break-word;
+
+  time {
+    font-style: italic;
+    opacity: 0.5;
+  }
 
   @include breakpoint(small only) {
     font-size: 1rem;
