@@ -1,4 +1,5 @@
 permalink: /blog/:year/:month/:title
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -7,8 +8,7 @@ exclude:
   - package.json
   - node_modules
   - gulpfile.js
-sass:
-  style: :nested
+  - bin
 
 liquid:
   error_mode: strict
