@@ -28,7 +28,7 @@ body {
   font-size: 1.6rem;
 }
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
   font-weight: $font-weight-semibold;
 }
 
@@ -62,11 +62,6 @@ h2, h3, h4, h5 {
   margin: 1rem 0;
   overflow-wrap: break-word;
 
-  time {
-    font-style: italic;
-    opacity: 0.5;
-  }
-
   @include breakpoint(small only) {
     font-size: 1rem;
   }
@@ -81,4 +76,19 @@ h2, h3, h4, h5 {
   .cell-3 { background-color: rgba(#d9e2cf, .35); }
   .cell-4 { background-color: rgba(#a7a98e, .18); }
   .cell-5 { background-color: rgba(#4d4c31, .18); }
+}
+
+time {
+  font-style: italic;
+  opacity: 0.5;
+}
+
+article {
+  svg {
+    margin: 2rem 0;
+  }
+}
+
+.header {
+  margin-bottom: 2rem;
 }

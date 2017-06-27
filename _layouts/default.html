@@ -12,30 +12,43 @@
   <link rel="alternate" type="application/atom+xml" title="Connection Required" href="{{ site.baseurl }}/feed/atom/" />
 </head>
 <body>
-  <nav class="row align-center">
-    <div class="small-12 columns">
-      <a class="brand" href="{{ site.baseurl }}/">{% include svg/brand.svg %} <span>Connection Required</span></a>
-    </div>
-  </nav>
+  <header>
+    <nav class="row align-center">
+      <div class="small-12 columns">
+        <a class="brand" href="{{ site.baseurl }}/">{% include svg/brand.svg %} <span>Connection Required</span></a>
+      </div>
+    </nav>
+  </header>
 
-  {% if page.type == "post" %}
-    <article id="main">
-      <h1><cite>{{ page.title }}</cite></h1>
-      <time datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date_to_long_string }}</time>
+  <main>
+    {% if page.type == "post" %}
+      <article>
+        <div class="header">
+          <div class="row">
+            <h1 class="column">{{ page.title }}</h1>
+          </div>
 
+          <div class="row">
+            <p class="column"><time datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+          </div>
+        </div>
+
+        <div class="row align-left">
+          <div class="column">
+            {{ content }}
+          </div>
+        </div>
+      </article>
+    {% else %}
       {{ content }}
-    </article>
-  {% else %}
-    <section id="main">
-      {{ content }}
-    </section>
-  {% endif %}
+    {% endif %}
+  </main>
 
-<footer>
-  &copy; 2007-{% thisyear %} Zach Moazeni
-</footer>
+  <footer class="row">
+    <p class="column">&copy; 2007-{% thisyear %} Zach Moazeni</p>
+  </footer>
 
-<script src="{{ site.baseurl }}/js/main.min.js"></script>
+  <script src="{{ site.baseurl }}/js/main.min.js"></script>
 </body>
 </html>
 
