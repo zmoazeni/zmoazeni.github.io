@@ -18,6 +18,8 @@ $header-styles: (
 );
 $global-font-size: 10px;
 $body-font-family: 'Open Sans', sans-serif;
+$offcanvas-size: 50rem;
+$offcanvas-background: white;
 
 $font-weight-semibold: 600;
 
@@ -125,4 +127,32 @@ footer {
 
 .content p {
   margin: 2rem 0;
+}
+
+.sidebar-true {
+  text-align: center;
+
+  h2 {
+    margin-top: 8rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  img {
+    margin-top: 3rem;
+  }
+}
+
+.sidebar-false {
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+@include breakpoint(small only) {
+  .position-left {
+    width: 30rem;
+  }
 }

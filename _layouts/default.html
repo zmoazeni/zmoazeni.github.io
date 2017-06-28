@@ -17,10 +17,16 @@
       <div class="small-12 columns">
         <a class="brand text-center" href="{{ site.baseurl }}/">{% include svg/brand.svg %} <span>Connection Required</span></a>
       </div>
+
+      <a href="#" class="about" data-toggle="offCanvas" onclick="return false">about</a>
     </nav>
   </header>
 
-  <main>
+  <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="overlap">
+    {% include about.html sidebar=true %}
+  </div>
+
+  <main class="off-canvas-content" data-off-canvas-content>
     {% if page.type == "post" %}
       <article>
         <div class="header">
@@ -43,6 +49,7 @@
       {{ content }}
     {% endif %}
   </main>
+
 
   <footer class="row align-center text-center">
     <p class="column">&copy; 2007-{% thisyear %} Zach Moazeni</p>
