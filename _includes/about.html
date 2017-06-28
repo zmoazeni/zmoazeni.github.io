@@ -1,4 +1,4 @@
-<div class="sidebar-{{include.sidebar}}">
+<div class="sidebar">
   <button class="close-button" aria-label="Close menu" type="button" data-close>
     <span aria-hidden="true">&times;</span>
   </button>
@@ -8,12 +8,6 @@
   </div>
 
   <div class="row">
-    {% unless include.sidebar %}
-      <div class="columns medium-2">
-        <img src="/uploads/me.jpg" alt="Picture of Zach" />
-      </div>
-    {% endunless %}
-
     <div class="columns">
       <div class="row">
         <p class="columns">Zach is a software developer who has worked on a range of projects. He currently writes Ruby by day for <a href="https://www.getharvest.com/">Harvest</a> and plays with other languages by night (currently Haskell, Scala, Clojure, and Rust). He knows how to laugh at himself and loves to ship software. He is a father of two wonderful kids and a husband to a fantastic wife.</p>
@@ -37,9 +31,7 @@
     </div>
   </div>
 
-  {% if include.sidebar %}
-    <div class="row columns">
-      <img src="/uploads/me.jpg" alt="Picture of Zach" />
-    </div>
-  {% endif %}
+  <div class="row columns">
+    <img src="/uploads/me.jpg" alt="Picture of Zach" />
+  </div>
 </div>
