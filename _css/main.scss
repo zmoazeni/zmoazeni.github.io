@@ -101,7 +101,7 @@ article {
 }
 
 footer {
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0 10rem 0;
   font-style: italic;
 }
 
@@ -115,3 +115,14 @@ footer {
 }
 
 @import 'pygments-github.scss';
+
+.about {
+  position: fixed;
+  left: -1rem;
+  top: 50%;
+  transform:rotate(-90deg);
+}
+
+content p {
+  margin: 2rem 0;
+}
