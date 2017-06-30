@@ -5,4 +5,4 @@ set -e
 rm -rf _site
 npm run gulp build
 bundle exec jekyll build
-rsync -avz _site/ connectionrequired.com:connectionrequired.com/
+rsync -avz --delete _site/ connectionrequired.com:connectionrequired.com/
