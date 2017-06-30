@@ -9,6 +9,7 @@ exclude:
   - node_modules
   - gulpfile.js
   - bin
+  - zach-moazeni-cv.odt
 
 liquid:
   error_mode: strict
