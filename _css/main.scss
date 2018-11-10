@@ -18,7 +18,10 @@ $header-styles: (
 );
 $global-font-size: 10px;
 $body-font-family: 'Open Sans', sans-serif;
-$offcanvas-size: 50rem;
+$offcanvas-sizes: (
+  small: 100%,
+  medium: 50rem
+);
 $offcanvas-background: white;
 
 $font-weight-semibold: 600;
@@ -85,7 +88,11 @@ time {
 }
 
 main {
-  padding: 0 2rem;
+  padding: 0 8rem;
+
+  @include breakpoint(small only) {
+    padding: 0 3rem;
+  }
 
   h2, h3, h4, h5 {
     margin-top: 3rem;
@@ -142,11 +149,5 @@ footer {
 
   img {
     margin-top: 3rem;
-  }
-}
-
-@include breakpoint(small only) {
-  .position-left {
-    width: 30rem;
   }
 }
