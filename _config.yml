@@ -1,3 +1,4 @@
+destination: docs
 permalink: /blog/:year/:month/:title
 
 exclude:
