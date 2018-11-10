@@ -5,17 +5,17 @@
   {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 
   {% for year in postsByYear %}
-    <div class="row align-center year">
-      <h2>{{year.name}}</h2>
+    <div class="grid-x year">
+      <h2 class="cell">{{year.name}}</h2>
     </div>
 
-    <div class="row align-left">
+    <div class="grid-x grid-margin-x align-left">
       {% for post in year.items %}
-        <div class="post columns small-12 medium-6 large-4">
-          <div class="cell cell-{% cycle 1, 2, 3, 4, 5 %} flex-container flex-dir-column">
+        <div class="post cell small-12 medium-6 large-4">
+          <div class="cell-{% cycle 1, 2, 3, 4, 5 %} flex-container flex-dir-column">
             <h3><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h3>
 
-            <blockquote class="flex-child-grow">{{ post.excerpt }}</blockquote>
+            <blockquote class="flex-child-grow">{{ post.excerpt | strip_html | truncatewords: 30 }}</blockquote>
 
             <div>
               <time class="float-right" datetime="{{post.date | date_to_xmlschema}}">{{ post.date | date: "%Y-%m-%d" }}</time>

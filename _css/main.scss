@@ -70,9 +70,11 @@ h1, h2, h3, h4, h5 {
     font-size: 1rem;
   }
 
-  .cell {
+  .cell-1, .cell-2, .cell-3, .cell-4, .cell-5 {
     padding: 1.5rem;
-    height: 100%;
+    @include breakpoint(medium) {
+      height: 300px;
+    }
   }
 
   .cell-1 { background-color: rgba(#6da0c5, .18); }
@@ -92,10 +94,6 @@ main {
 
   @include breakpoint(small only) {
     padding: 0 3rem;
-  }
-
-  h2, h3, h4, h5 {
-    margin-top: 3rem;
   }
 }
 
