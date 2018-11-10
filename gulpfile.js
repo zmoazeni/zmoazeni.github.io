@@ -11,8 +11,7 @@ let gulp = require('gulp'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
-    uglify = require('gulp-uglify'),
-    child = require('child_process');
+    uglify = require('gulp-uglify');
 
 gulp.task('clean-css', function () {
   return gulp.src("./css", {read: false})
@@ -57,29 +56,9 @@ gulp.task('javascript', function () {
     .pipe(gulp.dest('./js/'));
 });
 
-gulp.task('jekyll', () => {
-  const jekyll = child.spawn('bundle', [
-    'exec',
-    'jekyll',
-    'serve',
-    '--watch',
-    '--incremental',
-    '--drafts'
-  ]);
-
-  const jekyllLogger = (buffer) => {
-    buffer.toString()
-      .split(/\n/)
-      .forEach((message) => gutil.log('Jekyll: ' + message));
-  };
-
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
-});
-
 gulp.task('clean', ['clean-css', 'clean-js']);
 gulp.task('build', ['clean', 'css', 'javascript']);
-gulp.task('default', ['javascript', 'css', 'jekyll', 'watch']);
+gulp.task('default', ['build', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./_css/**/*.scss', ['css']);
