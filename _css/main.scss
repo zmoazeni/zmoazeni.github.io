@@ -143,11 +143,17 @@ footer {
     margin-top: 8rem;
   }
 
+  h3 {
+    margin-top: 2rem;
+  }
+
   li {
     list-style: none;
   }
 
-  img {
+  .profile-picture {
     margin-top: 3rem;
+    border-radius: 30px;
+    border: 2px solid gray;
   }
 }

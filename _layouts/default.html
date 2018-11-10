@@ -13,8 +13,8 @@
 </head>
 <body>
   <header>
-    <nav class="row align-center">
-      <div class="small-12 columns">
+    <nav class="grid-x align-center">
+      <div class="small-12 cell">
         <a class="brand text-center" href="{{ site.baseurl }}/">{% include svg/brand.svg %} <span>Connection Required</span></a>
       </div>
 
@@ -30,17 +30,17 @@
     {% if page.type == "post" %}
       <article>
         <div class="header">
-          <div class="row">
-            <h1 class="column">{{ page.title }}</h1>
+          <div class="grid-x">
+            <h1 class="cell">{{ page.title }}</h1>
           </div>
 
-          <div class="row">
-            <p class="column"><time datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+          <div class="grid-x">
+            <p class="cell"><time datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
           </div>
         </div>
 
-        <div class="row align-left">
-          <div class="column content">
+        <div class="grid-x align-left">
+          <div class="cell content">
             {{ content }}
           </div>
         </div>
@@ -50,8 +50,8 @@
     {% endif %}
   </main>
 
-  <footer class="row align-center text-center">
-    <p class="column">&copy; 2007-{{ 'now' | date: "%Y" }} Zach Moazeni</p>
+  <footer class="grid-x align-center text-center">
+    <p class="cell">&copy; 2007-{{ 'now' | date: "%Y" }} Zach Moazeni</p>
   </footer>
 
   <script src="{{ site.baseurl }}/js/main.min.js"></script>
