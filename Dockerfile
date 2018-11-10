@@ -7,7 +7,19 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 
 RUN apt-get update && apt-get install -y zsh
 
-RUN echo '#!/bin/bash\nbundle install && npm install && bundle exec jekyll server -H 0.0.0.0 --watch --incremental --drafts\n'\
-  >> /usr/local/bin/docker-entrypoint.sh \
-  && chmod +x /usr/local/bin/docker-entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+# Jekyll/Sass require this for UTF8
+# https://github.com/jekyll/jekyll/issues/4268#issuecomment-167406574
+# Install program to configure locales
+RUN apt-get install -y locales
+RUN dpkg-reconfigure locales && \
+  locale-gen C.UTF-8 && \
+  /usr/sbin/update-locale LANG=C.UTF-8
+
+# Install needed default locale for Makefly
+RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && \
+  locale-gen
+
+# Set default locale for the environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8

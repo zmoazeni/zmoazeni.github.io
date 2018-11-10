@@ -1,13 +1,16 @@
 ---
 ---
 <div>
-  {% years %}
+
+  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+  {% for year in postsByYear %}
     <div class="row align-center year">
-      <h2>{{year}}</h2>
+      <h2>{{year.name}}</h2>
     </div>
 
     <div class="row align-left">
-      {% for post in yearloop.posts %}
+      {% for post in year.items %}
         <div class="post columns small-12 medium-6 large-4">
           <div class="cell cell-{% cycle 1, 2, 3, 4, 5 %} flex-container flex-dir-column">
             <h3><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></h3>
@@ -21,5 +24,5 @@
         </div>
       {% endfor %}
     </div>
-  {% endyears %}
+  {% endfor %}
 </div>
