@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Fixture Groups </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Fixture Groups</cite></h1>
+    <time datetime="2007-03-29T15:00:57-04:00">29 March 2007</time>
+
+    <p>One of the things I like about working with Rails is test fixtures. However when the data model becomes more complex, the fixtures can become rather large. Worse yet, tests that require fixtures among two or more models feel clunky.</p>
+
+<p>I wrote a plugin to help organize fixtures called <a href="http://source.elevatorfight.com/public/fixture_groups">fixture_groups</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>./script/plugin install \
+  http://source.elevatorfight.com/public/fixture_groups
+</code></pre>
+</div>
+
+<p>Example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class BlahTest
+  fixture_group :group1
+  fixtures :foo, :bar
+
+  ...
+end
+</code></pre>
+</div>
+
+<p>This will look in <code class="highlighter-rouge">RAILS_ROOT/test/fixtures/group1</code> for the fixtures. If a fixture_group isn’t specified, then the fixtures will use the normal folder.</p>
+
+<p>h3. Update 8/10/07</p>
+
+<p>For the most part, I’ve given up on fixtures in my tests. Although I have it in my mind to check out <a href="http://code.google.com/p/fixture-scenarios/">fixture scenarios</a> soon.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

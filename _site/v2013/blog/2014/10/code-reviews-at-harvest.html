@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Code Reviews at Harvest </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Code Reviews at Harvest</cite></h1>
+    <time datetime="2014-10-02T11:29:02-04:00">02 October 2014</time>
+
+    <p><em>Originally posted to <a href="http://techtime.getharvest.com/blog/code-reviews-at-harvest">http://techtime.getharvest.com/blog/code-reviews-at-harvest</a>.</em></p>
+
+<p>Let’s face it — code reviews can be tough. Even if your team fully adheres to a certain <a href="https://github.com/bbatsov/ruby-style-guide">style guide</a>, programming is so subjective that smart people can argue great points on conflicting approaches.</p>
+
+<p>We use <a href="https://help.github.com/articles/using-pull-requests">GitHub Pull Requests</a> heavily at Harvest and we require code reviews for everything meaningful that goes into production. Here’re a few guidelines that we’ve developed for reviewing each other’s changes so we can stay productive and focused on what’s important — launching code.</p>
+
+<h2 id="our-current-process">Our current process</h2>
+
+<p>Every company has a different deployment process, but here at Harvest it looks a little something like this:</p>
+
+<ol>
+  <li>We discuss what needs to be built, changed, or fixed.</li>
+  <li>A developer/designer creates a branch off of master.</li>
+  <li>They work on their branch. When it’s complete they push it up to GitHub and create a Pull Request tagging an appropriate person or team to review it.</li>
+  <li>One or more tagged people from that team will review the code and give a +1 when they feel it’s ready to be deployed.</li>
+  <li>The original submitter will then merge it into master and deploy it.</li>
+</ol>
+
+<p>Multiple posts could be written about each of these steps. However I’m only going to talk about #3 and #4.</p>
+
+<p>We use code reviews at Harvest to help communicate with the team what’s going into production, to help each other learn new tricks and techniques as things evolve, and to point out specific areas to investigate that we may unintentionally break.</p>
+
+<h2 id="if-it-fixes-a-serious-bug-just-let-it-go">If it fixes a serious bug, just let it go</h2>
+
+<p>We might disagree on approach, but if there’s a serious issue in Harvest that’s affecting a customer, and someone on the team has a <a href="/blog/find-bugs-once-and-the-joy-of-bug-fixing">fix for it</a>, we will always let it ship. We can always circle back and fix it better or more thoroughly later.</p>
+
+<h2 id="know-whats-blocking-your-code">Know what’s blocking your code</h2>
+
+<p>Code reviews can feel unproductive because they don’t have a clear goal. We’ve put together a survey we call <a href="http://harvesthq.github.io/fias/?v1=1&amp;v2=1&amp;v3=1">FIAS (the Filler Impact Assessment Survey)</a>, a tongue-in-cheek acronym named after <a href="https://www.getharvest.com/about/meet-the-team#patrick-filler">Patrick Filler</a>, the Harvester who proposed the idea.</p>
+
+<p>The idea is simple: take an educated guess at ranking three questions on a scale of one to ten:</p>
+
+<ul>
+  <li>How much of the app is affected?</li>
+  <li>How much of this change is mysterious to you?</li>
+  <li>How easy is it for you to imagine this performs in an unexpected way after deployment?</li>
+</ul>
+
+<p>Then add up the scores for each question.</p>
+
+<ul>
+  <li>If the score is less than fifteen, you only need one person to give you a +1.</li>
+  <li>If the score is fifteen to twenty, you need two people to give you a +1.</li>
+  <li>If the score is over twenty, you need two people and full QA.</li>
+</ul>
+
+<p><em>QA is different for each team. Harvest has staging environments that mirror production and we have scripts for each section that we manually test.</em></p>
+
+<p>This isn’t perfect and the results may not make sense for other teams. For example, another team may want three people to +1 or always QA above ten points. However, the point is that, when a Pull Request begins review, we have a clear idea what it will take to launch it to production.</p>
+
+<p>We also don’t always follow the FIAS. For example, even if we only need one +1, the submitter may still override the FIAS and ask for two to three +1s because they know their changes involve a particularly tough part of the codebase.</p>
+
+<p>Now that we have a set goal, we can work backwards. If some of the changes makes a reviewer uncomfortable, can that part be segmented out and the rest launched instead? Can this branch be merged even if there’s a heated discussion over using the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle</a> vs a single clear object?</p>
+
+<p>With a simple process, we’ve removed the ambiguity that most code reviews start with.</p>
+
+<h2 id="communicate-clearly-to-reviewers-whats-going-on">Communicate clearly to reviewers what’s going on</h2>
+
+<p>FIAS is a great tool to get a general sense of how large (and risky) a change is to you — but it isn’t always the best tool for communicating to your reviewers what the change actually entails. Sometimes, <a href="http://www.schneems.com/post/41104255619/use-gifs-in-your-pull-request-for-good-not-evil/">GIFs</a> or annotated before and after images (made with tools like <a href="http://monosnap.com/welcome">Monosnap</a>) can be more effective. Pre-commenting certain areas in your own Pull Request is also helpful: “I know this line seems unrelated, but it is because…”</p>
+
+<p>Clearly communicating the change starts the code review on the right foot. The submitter may have invested days working on a change, but the people reviewing it have not.</p>
+
+<h2 id="clarify-blocking-comments">Clarify blocking comments</h2>
+
+<p>Not every comment or question has to be resolved. Text doesn’t always convey emotion, and it’s easy to misread someone’s intent. It’s perfectly fine to ask a reviewer, “Is this a blocking issue?” Often it isn’t, or it can be handled separately.</p>
+
+<p>Pull Requests can also end up being a lightning rod for debate. Discussions among the team can continue on a Pull Request, but they can also be moved elsewhere — to a separate issue, internal tool, or even a meeting.</p>
+
+<p>Our reviewers will normally prefix comments with “[NB]” for non-blocking comments: “[NB] This works, but here’s a quick snippet that’s a little more clear”. A simple prefix like that can help speed along code reviews.</p>
+
+<h2 id="face-to-face-meetings">Face-to-face meetings</h2>
+
+<p>We often raise a white flag and ask for an impromptu face-to-face meeting or a quick chat, usually by spinning up a <a href="https://www.google.com/+/learnmore/hangouts/">Google Hangout</a> or conversation in <a href="https://www.hipchat.com/">HipChat</a>. This seems like an obvious tip. However recognizing the need for these meetings can be tricky. If two people have posted back and forth at least once on the same topic, it will likely be easier to just hash it out face-to-face. If you find yourself writing two paragraphs, some of your concerns will likely get lost. You may be able to convey your thoughts better over audio.</p>
+
+<p>It’s nice to see a comment history of how decisions were made. However, you can still accomplish this by posting a quick recap of what was decided in the meeting.</p>
+
+<h2 id="dont-limit-the-number-of-reviewers">Don’t limit the number of reviewers</h2>
+
+<p>Everyone on the team pitches in with code reviews and we don’t have official reviewers here at Harvest. We may purposefully ping someone who we know has had a lot of experience in a particular area, but we never wait on one person to go through all the reviews.</p>
+
+<p>This becomes a bigger deal as the team grows. With an application as large as Harvest, it’s extremely difficult to keep everything in your head. And even if you do feel good about a certain area, it will likely change over time as other people help out with maintenance.</p>
+
+<p>We also notify people to give them a heads-up without expecting them to review the pull request. We do this by prefixing “/cc” before their name  “/cc @zmoazeni this might affect your work on reports”.</p>
+
+<h2 id="not-a-perfect-process">Not a perfect process</h2>
+
+<p>We don’t have any delusions  that our process is perfect. However all of these points help speed along our code reviews. Taking some of these tips and morphing it to fit your organization may help out your team too — or, if you think your process could help out our team, write up your process and <a href="mailto:zach@getharvest.com">send us a link</a>! We’re always looking to improve.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

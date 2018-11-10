@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Improving Report Performance - Connection Required</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="/css/main.min.css?v=4" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/feed/atom/" />
+</head>
+<body>
+  <header>
+    <nav class="row align-center">
+      <div class="small-12 columns">
+        <a class="brand text-center" href="/"><svg id="svg3542" height="21.913mm" width="168.74mm" version="1.1" viewBox="0 0 597.91431 77.643914">
+ <defs id="defs3544">
+  <filter id="filter6021" style="color-interpolation-filters:sRGB">
+   <feFlood id="feFlood6023" result="flood" flood-opacity=".49804" flood-color="rgb(0,0,0)"/>
+   <feComposite id="feComposite6025" operator="in" result="composite1" in2="SourceGraphic" in="flood"/>
+   <feGaussianBlur id="feGaussianBlur6027" stdDeviation="3" result="blur" in="composite1"/>
+   <feOffset id="feOffset6029" result="offset" dx="6" dy="6"/>
+   <feComposite id="feComposite6031" operator="over" result="composite2" in2="offset" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g id="layer1" transform="translate(-623.9 295.03)">
+  <g id="g6014" transform="translate(-153.57 1274.5)" filter="url(#filter6021)">
+   <text id="text3365-6-5-6" style="word-spacing:0px;letter-spacing:0px" font-weight="600" font-size="50px" font-style="italic" y="-1510.3744" x="824.00177" font-family="&apos;Open Sans&apos;" xml:space="preserve"><tspan id="tspan3373-3-1-62" font-weight="600" font-size="50px" font-style="italic" y="-1510.3744" x="824.00177" font-family="&apos;Open Sans&apos;">Connec   ion </tspan></text>
+   <path id="path3395-8-6-2-7" d="m1031.5-1538.9-15.848 0.076c-0.3921 0-0.6466-0.5346-0.4683-0.9871l8.7598-22.221c0.2634-0.6681-0.3814-1.314-0.8142-0.8157l-27.274 31.402c-0.35829 0.4126-0.13598 1.1803 0.34336 1.1855l14.468 0.1604c0.3772 0 0.6274 0.508 0.4739 0.9545l-7.3598 21.41c-0.2282 0.6636 0.3997 1.2649 0.8225 0.7874l27.243-30.763c0.3656-0.4127 0.139-1.1922-0.346-1.1899z"/>
+   <text id="text3365-9-6-9-7" style="word-spacing:0px;letter-spacing:0px" font-weight="600" font-size="50px" font-style="italic" y="-1510.3744" x="1120.1641" font-family="&apos;Open Sans&apos;" xml:space="preserve"><tspan id="tspan3373-5-4-7-6" font-weight="600" font-size="50px" font-style="italic" y="-1510.3744" x="1120.1641" font-family="&apos;Open Sans&apos;">Required</tspan></text>
+  </g>
+ </g>
+</svg>
+ <span>Connection Required</span></a>
+      </div>
+
+      <a href="#" class="about" data-toggle="offCanvas" onclick="return false">about</a>
+    </nav>
+  </header>
+
+  <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="overlap">
+    <div class="sidebar">
+  <button class="close-button" aria-label="Close menu" type="button" data-close>
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+  <div class="row">
+    <h2 class="columns">About Zach</h2>
+  </div>
+
+  <div class="row">
+    <div class="columns">
+      <div class="row">
+        <p class="columns">Zach is a software developer who has worked on a range of projects. He currently writes Ruby by day for <a href="https://www.getharvest.com/">Harvest</a> and plays with other languages by night (currently Haskell, Scala, Clojure, and Rust). He knows how to laugh at himself and loves to ship software. He is a father of two wonderful kids and a husband to a fantastic wife.</p>
+      </div>
+
+      <div class="row">
+        <p class="columns">
+          <a href="mailto:zach.moazeni@gmail.com">email</a> ϟ <a href="https://github.com/zmoazeni">github</a> ϟ <a href="https://twitter.com/zmoazeni">twitter</a> ϟ <a href="https://www.linkedin.com/in/zmoazeni/">linkedin</a>
+        </p>
+      </div>
+
+      <h3 class="row columns">Notable Projects</h3>
+
+      <div class="row">
+        <ul class="columns">
+          <li><a href="http://zmoazeni.github.io/csscss/">csscss</a></li>
+          <li><a href="http://zmoazeni.github.io/harvested/">harvested</a></li>
+          <li><a href="http://zmoazeni.github.io/gitspective/">gitspective</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row columns">
+    <img src="/uploads/me.jpg" alt="Picture of Zach" />
+  </div>
+</div>
+
+  </div>
+
+  <main class="off-canvas-content" data-off-canvas-content>
+    
+      <article>
+        <div class="header">
+          <div class="row">
+            <h1 class="column">Improving Report Performance</h1>
+          </div>
+
+          <div class="row">
+            <p class="column"><time datetime="2017-06-06T14:00:00+00:00">2017-06-06</time></p>
+          </div>
+        </div>
+
+        <div class="row align-left">
+          <div class="column content">
+            <p><em>Originally posted to <a href="http://techtime.getharvest.com/blog/improving-report-performance">http://techtime.getharvest.com/blog/improving-report-performance</a>.</em></p>
+
+<p>Last year, I <a href="https://www.getharvest.com/blog/2016/12/a-gift-of-time/">made a promise</a> to share the gritty details of how we improved our reporting performance dramatically, anywhere from a factor of 4x to 10x. I spent over a year on this project and I am very pleased with the results. I want to share some of our wins with you all in case they help anyone else.</p>
+
+<p>First, you have to know a little about our data model for these gains to make sense. Our customers have users in their account track time for tasks on projects they’re assigned to.</p>
+
+<svg version="1.2" viewBox="0 0 17780 12700" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="17780" height="12700" />
+  </clipPath>
+ </defs>
+ <defs class="TextShapeIndex">
+  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15" />
+ </defs>
+ <defs class="EmbeddedBulletChars">
+  <g id="bullet-char-template(57356)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z" />
+  </g>
+  <g id="bullet-char-template(57354)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 8,1128 L 1137,1128 1137,0 8,0 8,1128 Z" />
+  </g>
+  <g id="bullet-char-template(10146)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 174,0 L 602,739 174,1481 1456,739 174,0 Z M 1358,739 L 309,1346 659,739 1358,739 Z" />
+  </g>
+  <g id="bullet-char-template(10132)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 2015,739 L 1276,0 717,0 1260,543 174,543 174,936 1260,936 717,1481 1274,1481 2015,739 Z" />
+  </g>
+  <g id="bullet-char-template(10007)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 0,-2 C -7,14 -16,27 -25,37 L 356,567 C 262,823 215,952 215,954 215,979 228,992 255,992 264,992 276,990 289,987 310,991 331,999 354,1012 L 381,999 492,748 772,1049 836,1024 860,1049 C 881,1039 901,1025 922,1006 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 C 774,196 753,168 711,139 L 727,119 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 C 142,-110 111,-127 72,-127 30,-127 9,-110 8,-76 1,-67 -2,-52 -2,-32 -2,-23 -1,-13 0,-2 Z" />
+  </g>
+  <g id="bullet-char-template(10004)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 41,549 55,616 82,672 116,743 169,778 240,778 293,778 328,747 346,684 L 369,508 C 377,444 397,411 428,410 L 1163,1116 C 1174,1127 1196,1133 1229,1133 1271,1133 1292,1118 1292,1087 L 1292,965 C 1292,929 1282,901 1262,881 L 442,47 C 390,-6 338,-33 285,-33 Z" />
+  </g>
+  <g id="bullet-char-template(9679)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 223,773 276,916 383,1023 489,1130 632,1184 813,1184 992,1184 1136,1130 1245,1023 1353,916 1407,772 1407,592 1407,412 1353,268 1245,161 1136,54 992,0 813,0 Z" />
+  </g>
+  <g id="bullet-char-template(8226)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z" />
+  </g>
+  <g id="bullet-char-template(8211)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M -4,459 L 1135,459 1135,606 -4,606 -4,459 Z" />
+  </g>
+ </defs>
+ <defs class="TextEmbeddedBitmaps" />
+ <g>
+  <g id="id2" class="Master_Slide">
+   <g id="bg-id2" class="Background" />
+   <g id="bo-id2" class="BackgroundObjects" />
+  </g>
+ </g>
+ <g class="SlideGroup">
+  <g>
+   <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+    <g class="Page">
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id3">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6349" y="7619" width="5083" height="5083" />
+       <path fill="rgb(255,99,71)" stroke="none" d="M 8890,12700 L 6350,12700 6350,7620 11430,7620 11430,12700 8890,12700 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 8890,12700 L 6350,12700 6350,7620 11430,7620 11430,12700 8890,12700 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="6854" y="10406"><tspan fill="rgb(0,0,0)" stroke="none">Time Entry</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id4">
+       <rect class="BoundingBox" stroke="none" fill="none" x="-1" y="-1" width="5083" height="5083" />
+       <path fill="rgb(60,179,113)" stroke="none" d="M 2540,5080 L 0,5080 0,0 5080,0 5080,5080 2540,5080 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 2540,5080 L 0,5080 0,0 5080,0 5080,5080 2540,5080 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="1679" y="2786"><tspan fill="rgb(0,0,0)" stroke="none">User</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id5">
+       <rect class="BoundingBox" stroke="none" fill="none" x="12699" y="-1" width="5083" height="5083" />
+       <path fill="rgb(192,192,192)" stroke="none" d="M 15240,5080 L 12700,5080 12700,0 17780,0 17780,5080 15240,5080 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 15240,5080 L 12700,5080 12700,0 17780,0 17780,5080 15240,5080 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="14383" y="2786"><tspan fill="rgb(0,0,0)" stroke="none">Task</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id6">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6349" y="-1" width="5083" height="5083" />
+       <path fill="rgb(255,255,102)" stroke="none" d="M 8890,5080 L 6350,5080 6350,0 11430,0 11430,5080 8890,5080 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 8890,5080 L 6350,5080 6350,0 11430,0 11430,5080 8890,5080 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="7582" y="2786"><tspan fill="rgb(0,0,0)" stroke="none">Project</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id7">
+       <rect class="BoundingBox" stroke="none" fill="none" x="11430" y="5079" width="3812" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 15240,5080 L 11788,7381" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 11430,7620 L 11888,7495 11721,7246 11430,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id8">
+       <rect class="BoundingBox" stroke="none" fill="none" x="11430" y="7547" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="11680" y="8256"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id9">
+       <rect class="BoundingBox" stroke="none" fill="none" x="15182" y="5080" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="15432" y="5789"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id10">
+       <rect class="BoundingBox" stroke="none" fill="none" x="8613" y="5079" width="301" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 8763,5080 L 8763,7190" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 8763,7620 L 8913,7170 8613,7170 8763,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id11">
+       <rect class="BoundingBox" stroke="none" fill="none" x="1720" y="5080" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="1970" y="5789"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id12">
+       <rect class="BoundingBox" stroke="none" fill="none" x="8832" y="5083" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="9082" y="5792"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id13">
+       <rect class="BoundingBox" stroke="none" fill="none" x="8799" y="6604" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="9049" y="7313"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id14">
+       <rect class="BoundingBox" stroke="none" fill="none" x="2539" y="5079" width="3812" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 2540,5080 L 5992,7381" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 6350,7620 L 6059,7246 5892,7495 6350,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id15">
+       <rect class="BoundingBox" stroke="none" fill="none" x="5461" y="7547" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="5711" y="8256"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+
+<p>We use Percona MySQL in production. We have verified that all of our indexes are appropriate, and our queries are using the right indexes. So we knew that in order to get better performance out of these queries we needed to make some architectural changes. I spent around a month experimenting with a few different approaches on hardware similar to production using the production dataset. After trial and error, and looking at the resulting numbers, I finally had a plan.</p>
+
+<h2 id="improvement-1-organize-time-entries-table-by-project">Improvement 1: Organize time entries table by project</h2>
+
+<p>My first change may sound strange to Rails developers, but made a lot of sense at the MySQL layer. I reorganized the data on disk by changing the primary key of our time entries table. A table that holds over 500 million rows. This is not a MySQL-specific concept. If you’re interested you can also search for “clustered index”, but for MySQL the primary key is the clustered index.</p>
+
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/innodb-index-types.html">MySQL’s docs</a> explain it better than I can:</p>
+
+<blockquote>
+  <p>Accessing a row through the clustered index is fast because the index search leads directly to the page with all the row data. If a table is large, the clustered index architecture often saves a disk I/O operation when compared to storage organizations that store row data using a different page from the index record.</p>
+</blockquote>
+
+<p><strong>Making this change sped up our report queries instantly by about 50% across the board (queries that took 12 seconds now took around 6 seconds).</strong></p>
+
+<p>MySQL stores data in pages, or clumps of rows/records. By default, for typical tables with an auto-incremented id, that means related rows are scattered around the disk based on the order they were inserted. Most of our queries retrieve and report on all time entries for a given project, so when I changed the primary key from <code class="highlighter-rouge">(id)</code> to an existing index which is <code class="highlighter-rouge">(project_id, spent_at, id)</code>, it meant that on disk all time entries for a given project were sitting next to each other. Reducing a lot of random access.</p>
+
+<p>To help illustrate the point. Let’s assume I have a page of rows organized by the <code class="highlighter-rouge">id</code> column. It might look something like this.</p>
+
+<table>
+  <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="50%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th>id</th>
+      <th>project_id</th>
+      <th>notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1000</td>
+      <td>50</td>
+      <td>Reviewed Web Design</td>
+    </tr>
+    <tr>
+      <td>1001</td>
+      <td>203</td>
+      <td>Spoke with client</td>
+    </tr>
+    <tr>
+      <td>1002</td>
+      <td>50</td>
+      <td>Worked on new logo</td>
+    </tr>
+    <tr>
+      <td>1003</td>
+      <td>203</td>
+      <td>Wrote down meeting notes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As you can see, two entirely separate projects are intertwined together based on the id order. However once I change the primary key to be based on the project id, we get something like this:</p>
+
+<table>
+  <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="50%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th>id</th>
+      <th>project_id</th>
+      <th>notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1000</td>
+      <td>50</td>
+      <td>Reviewed Web Design</td>
+    </tr>
+    <tr>
+      <td>1002</td>
+      <td>50</td>
+      <td>Worked on new logo</td>
+    </tr>
+    <tr>
+      <td>2000</td>
+      <td>50</td>
+      <td>Helped web designer with CSS</td>
+    </tr>
+    <tr>
+      <td>5000</td>
+      <td>50</td>
+      <td>Final call with client</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All time entries for that project are now grouped together within the pages on disk.</p>
+
+<p>Now I was really skeptical that this would have any performance boost because our monster database servers are using high performance enterprise SSDs in a RAID 10. On top of that, we have an extremely large InnoDB Buffer Pool with a hit rate of around 99%. So most data is served from memory, and even if it does have to hit the disk, it’s still much faster than than a traditional spinning platter. But our metrics proved me wrong and we were able to take an easy win right away.</p>
+
+<p>To keep Rails happy, we still have the auto-incremented id, but I added a manual unique index on it and I added <code class="highlighter-rouge">self.primary_key = :id</code> to the top of our time entry model. But for all intents and purposes this change is transparent to Rails and the rest of our code.</p>
+
+<p>This technique is not a free lunch. This will create more data pages overall for the table because MySQL will want to keep a portion of the page empty as defined by the <a href="https://dev.mysql.com/doc/refman/5.7/en/index-page-merge-threshold.html"><code class="highlighter-rouge">MERGE_THRESHOLD</code></a>. We are effectively trading disk space for much better read performance, and in our scenario that was perfectly acceptable. The disk space required for the time entries table ballooned after this change (and the next one I’ll talk about). If you are interested in more information about MySQL’s page mechanics, take a look at <a href="https://www.percona.com/blog/2017/04/10/innodb-page-merging-and-page-splitting/">this great post on Percona’s blog</a>.</p>
+
+<h2 id="improvement-2-denormalize-important-reporting-data-into-time-entries">Improvement 2: Denormalize important reporting data into time entries</h2>
+
+<p>The next step to increasing performance was to denormalize the important reporting data into the time entries table. This is not a new practice at all, but it did have some shocking results for our data set.</p>
+
+<p>One thing to know is that Harvest also allows a lot of flexibility in the way a project can be configured. Those settings will determine what time is billable and by how much. Meaning that some combinations of project settings store important report information in the join tables. For example, a project may bill by a person’s hourly rate. So for our report queries we also have to join those tables in order to have all the key pieces of information available. As you can imagine our reporting queries end up requiring a lot of boilerplate for our joins.</p>
+
+<svg version="1.2" viewBox="0 0 17780 20320" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="17780" height="20320" />
+  </clipPath>
+ </defs>
+ <defs class="TextShapeIndex">
+  <g ooo:slide="id1" ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15 id16 id17 id18 id19 id20 id21 id22 id23 id24 id25 id26 id27 id28 id29 id30 id31 id32 id33" />
+ </defs>
+ <defs class="EmbeddedBulletChars">
+  <g id="bullet-char-template(57356)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z" />
+  </g>
+  <g id="bullet-char-template(57354)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 8,1128 L 1137,1128 1137,0 8,0 8,1128 Z" />
+  </g>
+  <g id="bullet-char-template(10146)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 174,0 L 602,739 174,1481 1456,739 174,0 Z M 1358,739 L 309,1346 659,739 1358,739 Z" />
+  </g>
+  <g id="bullet-char-template(10132)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 2015,739 L 1276,0 717,0 1260,543 174,543 174,936 1260,936 717,1481 1274,1481 2015,739 Z" />
+  </g>
+  <g id="bullet-char-template(10007)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 0,-2 C -7,14 -16,27 -25,37 L 356,567 C 262,823 215,952 215,954 215,979 228,992 255,992 264,992 276,990 289,987 310,991 331,999 354,1012 L 381,999 492,748 772,1049 836,1024 860,1049 C 881,1039 901,1025 922,1006 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 C 774,196 753,168 711,139 L 727,119 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 C 142,-110 111,-127 72,-127 30,-127 9,-110 8,-76 1,-67 -2,-52 -2,-32 -2,-23 -1,-13 0,-2 Z" />
+  </g>
+  <g id="bullet-char-template(10004)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 41,549 55,616 82,672 116,743 169,778 240,778 293,778 328,747 346,684 L 369,508 C 377,444 397,411 428,410 L 1163,1116 C 1174,1127 1196,1133 1229,1133 1271,1133 1292,1118 1292,1087 L 1292,965 C 1292,929 1282,901 1262,881 L 442,47 C 390,-6 338,-33 285,-33 Z" />
+  </g>
+  <g id="bullet-char-template(9679)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 223,773 276,916 383,1023 489,1130 632,1184 813,1184 992,1184 1136,1130 1245,1023 1353,916 1407,772 1407,592 1407,412 1353,268 1245,161 1136,54 992,0 813,0 Z" />
+  </g>
+  <g id="bullet-char-template(8226)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z" />
+  </g>
+  <g id="bullet-char-template(8211)" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M -4,459 L 1135,459 1135,606 -4,606 -4,459 Z" />
+  </g>
+ </defs>
+ <defs class="TextEmbeddedBitmaps" />
+ <g>
+  <g id="id2" class="Master_Slide">
+   <g id="bg-id2" class="Background" />
+   <g id="bo-id2" class="BackgroundObjects" />
+  </g>
+ </g>
+ <g class="SlideGroup">
+  <g>
+   <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+    <g class="Page">
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id3">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6349" y="15239" width="5083" height="5083" />
+       <path fill="rgb(255,99,71)" stroke="none" d="M 8890,20320 L 6350,20320 6350,15240 11430,15240 11430,20320 8890,20320 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 8890,20320 L 6350,20320 6350,15240 11430,15240 11430,20320 8890,20320 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="6854" y="18026"><tspan fill="rgb(0,0,0)" stroke="none">Time Entry</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id4">
+       <rect class="BoundingBox" stroke="none" fill="none" x="-1" y="7619" width="5083" height="5083" />
+       <path fill="rgb(60,179,113)" stroke="none" d="M 2540,12700 L 0,12700 0,7620 5080,7620 5080,12700 2540,12700 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 2540,12700 L 0,12700 0,7620 5080,7620 5080,12700 2540,12700 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="1679" y="10406"><tspan fill="rgb(0,0,0)" stroke="none">User</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id5">
+       <rect class="BoundingBox" stroke="none" fill="none" x="12699" y="7619" width="5083" height="5083" />
+       <path fill="rgb(192,192,192)" stroke="none" d="M 15240,12700 L 12700,12700 12700,7620 17780,7620 17780,12700 15240,12700 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 15240,12700 L 12700,12700 12700,7620 17780,7620 17780,12700 15240,12700 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="14383" y="10406"><tspan fill="rgb(0,0,0)" stroke="none">Task</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id6">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6349" y="7619" width="5083" height="5083" />
+       <path fill="rgb(255,255,102)" stroke="none" d="M 8890,12700 L 6350,12700 6350,7620 11430,7620 11430,12700 8890,12700 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 8890,12700 L 6350,12700 6350,7620 11430,7620 11430,12700 8890,12700 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="7582" y="10406"><tspan fill="rgb(0,0,0)" stroke="none">Project</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id7">
+       <rect class="BoundingBox" stroke="none" fill="none" x="11430" y="12699" width="3812" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 15240,12700 L 11788,15001" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 11430,15240 L 11888,15115 11721,14866 11430,15240 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id8">
+       <rect class="BoundingBox" stroke="none" fill="none" x="11430" y="15167" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="11680" y="15876"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id9">
+       <rect class="BoundingBox" stroke="none" fill="none" x="15182" y="12700" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="15432" y="13409"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id10">
+       <rect class="BoundingBox" stroke="none" fill="none" x="8613" y="12699" width="301" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 8763,12700 L 8763,14810" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 8763,15240 L 8913,14790 8613,14790 8763,15240 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id11">
+       <rect class="BoundingBox" stroke="none" fill="none" x="1720" y="12700" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="1970" y="13409"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id12">
+       <rect class="BoundingBox" stroke="none" fill="none" x="8832" y="12703" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="9082" y="13412"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id13">
+       <rect class="BoundingBox" stroke="none" fill="none" x="8799" y="14224" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="9049" y="14933"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id14">
+       <rect class="BoundingBox" stroke="none" fill="none" x="2539" y="12699" width="3812" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 2540,12700 L 5992,15001" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 6350,15240 L 6059,14866 5892,15115 6350,15240 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id15">
+       <rect class="BoundingBox" stroke="none" fill="none" x="5461" y="15167" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="5711" y="15876"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id16">
+       <rect class="BoundingBox" stroke="none" fill="none" x="3174" y="-1" width="5083" height="5083" />
+       <path fill="rgb(173,255,47)" stroke="none" d="M 5715,5080 L 3175,5080 3175,0 8255,0 8255,5080 5715,5080 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 5715,5080 L 3175,5080 3175,0 8255,0 8255,5080 5715,5080 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="4765" y="2383"><tspan fill="rgb(0,0,0)" stroke="none">User </tspan></tspan></tspan><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="3567" y="3188"><tspan fill="rgb(0,0,0)" stroke="none">Assignment</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id17">
+       <rect class="BoundingBox" stroke="none" fill="none" x="3556" y="5079" width="1526" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 5080,5080 L 3777,7251" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 3556,7620 L 3916,7311 3659,7157 3556,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id18">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6349" y="5079" width="1399" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 6350,5080 L 7540,7243" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 7747,7620 L 7662,7153 7399,7298 7747,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.CustomShape">
+      <g id="id19">
+       <rect class="BoundingBox" stroke="none" fill="none" x="9524" y="-1" width="5083" height="5083" />
+       <path fill="rgb(255,235,205)" stroke="none" d="M 12065,5080 L 9525,5080 9525,0 14605,0 14605,5080 12065,5080 Z" />
+       <path fill="none" stroke="rgb(52,101,164)" d="M 12065,5080 L 9525,5080 9525,0 14605,0 14605,5080 12065,5080 Z" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="11119" y="2383"><tspan fill="rgb(0,0,0)" stroke="none">Task </tspan></tspan></tspan><tspan class="TextParagraph" font-family="Georgia, serif" font-size="706px" font-weight="700"><tspan class="TextPosition" x="9917" y="3188"><tspan fill="rgb(0,0,0)" stroke="none">Assignment</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id20">
+       <rect class="BoundingBox" stroke="none" fill="none" x="10160" y="5079" width="1272" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 11430,5080 L 10352,7235" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 10160,7620 L 10495,7285 10227,7150 10160,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.LineShape">
+      <g id="id21">
+       <rect class="BoundingBox" stroke="none" fill="none" x="12699" y="5079" width="1399" height="2542" />
+       <path fill="none" stroke="rgb(0,0,0)" d="M 12700,5080 L 13890,7243" />
+       <path fill="rgb(0,0,0)" stroke="none" d="M 14097,7620 L 14012,7153 13749,7298 14097,7620 Z" />
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id22">
+       <rect class="BoundingBox" stroke="none" fill="none" x="2794" y="6604" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="3044" y="7313"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id23">
+       <rect class="BoundingBox" stroke="none" fill="none" x="3820" y="5080" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="4070" y="5789"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id24">
+       <rect class="BoundingBox" stroke="none" fill="none" x="7747" y="6645" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="7997" y="7354"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id25">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6868" y="5080" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="7118" y="5789"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id26">
+       <rect class="BoundingBox" stroke="none" fill="none" x="2795" y="6605" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="3045" y="7314"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id27">
+       <rect class="BoundingBox" stroke="none" fill="none" x="3821" y="5081" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="4071" y="5790"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id28">
+       <rect class="BoundingBox" stroke="none" fill="none" x="14087" y="6645" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="14337" y="7354"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id29">
+       <rect class="BoundingBox" stroke="none" fill="none" x="13208" y="5080" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="13458" y="5789"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id30">
+       <rect class="BoundingBox" stroke="none" fill="none" x="7747" y="6645" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="7997" y="7354"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id31">
+       <rect class="BoundingBox" stroke="none" fill="none" x="6868" y="5080" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="7118" y="5789"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id32">
+       <rect class="BoundingBox" stroke="none" fill="none" x="9398" y="6645" width="774" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="9648" y="7354"><tspan fill="rgb(0,0,0)" stroke="none">1</tspan></tspan></tspan></text>
+      </g>
+     </g>
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id33">
+       <rect class="BoundingBox" stroke="none" fill="none" x="10160" y="5121" width="880" height="976" />
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Georgia, serif" font-size="635px" font-weight="400"><tspan class="TextPosition" x="10410" y="5830"><tspan fill="rgb(0,0,0)" stroke="none">n</tspan></tspan></tspan></text>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+
+<p>If you have used our public API, these concepts will be rather straight forward.</p>
+
+<p>If you look back at that graph, you can imagine how our queries reporting on time entries would have to continue to join both the user and task assignments tables. Just looking at “what is the billable rate for this time entry” could end up looking at either the project, user assignment, or task assignment based on how the project is setup to be billed (billed by project, user, or task). Even asking “is this time entry billable?” will always consult the task assignments table (a task is marked billable or non-billable for a given project).</p>
+
+<p>That means in order to show anything meaningful for our customers, we have to join these tables all the time. The nice thing about that design is that if a value changes in one place, all reports are instantly updated.</p>
+
+<p>However, what I didn’t realize was the cost involved in joining those tables. As I said previously, our indexes are set up just fine. However even with great indexes, when you take millions of time entry rows and join them to hundreds of related task assignment rows, there is still lots of work for MySQL to process. All things considered, it is rather impressive how quickly it can process that much work. But even after I reorganized the time entries table, I wanted better performance than our 6 second worst case query.</p>
+
+<p>So in addition to changing the primary key, I also added a few more columns on the time entries table, like <code class="highlighter-rouge">billable</code> and <code class="highlighter-rouge">billable_rate</code>. I also updated our Rails code to populate those fields when a time entry was created or updated, and <strong>also</strong> when a project’s settings changed dramatically.</p>
+
+<p>This section of denormalization code is complex. However, the upshot is that now all of our reporting queries have immediate access to the necessary data at the time entries level. We no longer need to join any other tables in order to calculate reporting data, meaning our reporting queries become easier to understand and maintain and less error prone. It also means that the bulk of the complexity is isolated to one section that the rest of the application depends on.</p>
+
+<p><strong>Shockingly, that took our worst case 6 second query down to around 1.5 seconds by just eliminating those joins.</strong></p>
+
+<p>To step back, with these two changes, our worst case 12 second query was now around 1.5 seconds. Decent sized projects that originally took around 2 seconds now ran in 0.25 seconds. Both of these changes contributed to this massive performance boost.</p>
+
+<p>Just like changing the primary key, this strategy isn’t a free lunch either. Now that the reporting data is denormalized, there’s always a possibility for it to fall out of sync with the original data stored in separate tables. Scenarios like programmer errors, customer support changes, or even freakish once-in-a-blue-moon events all have the potential of messing with that balance.</p>
+
+<p>To mitigate those problems, as part of the Rails changes, we’re testing our denormalization code very heavily. We are also running a consistency check once a day to make sure all of those denormalized fields stored have correct data. These two strategies have worked remarkably well for finding problems when they occur.</p>
+
+<p>This also worked out wonderfully as we transparently rolled out these changes to our customers. Even before we started using the new data in the report queries, we could store and verify the contents, allowing me to hunt down any holes in our logic and ensure the data can be trusted. These steps have also helped us with current development as we <a href="https://www.getharvest.com/blog/2017/05/introducing-fixed-fee-projects/">explore new project settings</a>.</p>
+
+<p>Aside from the logical errors that could happen, we also take another disk space penalty as we widen our large table. With the new primary key and the new columns, our time entries table ballooned by about 25%. But for our data set, this trade off was an easy decision.</p>
+
+<h2 id="parting-thoughts">Parting thoughts</h2>
+
+<p>I am extremely happy with these results and I hope that this information can help other teams as they examine their own application’s query performance. I believe we made these changes at the right time and I would not have started out our application with either of these techniques. Going forward we’ll have to see whether these approaches still apply or if there are smarter choices we can make, but for now, we can celebrate.</p>
+
+          </div>
+        </div>
+      </article>
+    
+  </main>
+
+  <footer class="row align-center text-center">
+    <p class="column">&copy; 2007-2018 Zach Moazeni</p>
+  </footer>
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>
+

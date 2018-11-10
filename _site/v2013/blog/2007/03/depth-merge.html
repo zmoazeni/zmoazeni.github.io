@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Depth Merge </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Depth Merge</cite></h1>
+    <time datetime="2007-03-13T14:00:48-04:00">13 March 2007</time>
+
+    <p><a href="http://www.ruby-doc.org/core/classes/Hash.html#M002908">Merge</a> is rather useful, but it has the limitation of staying shallow. Here is a simple extension of an implemented depth merge, with one caveat. Passing in <code class="highlighter-rouge">true</code> to <code class="highlighter-rouge">delete_nils</code> will remove the key if the value is <code class="highlighter-rouge">nil</code>.</p>
+
+<p>Install as a Rails plugin:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>./script/plugin install http://source.elevatorfight.com/public/merge_extensions
+</code></pre>
+</div>
+
+<p>To gut out the meat just grab <a href="http://source.elevatorfight.com/public/merge_extensions/lib/merge_extensions.rb">this file</a></p>
+
+<p>An example of use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Without trimming nils
+hash1 = { :a =&gt; "foo", :b =&gt; { :c =&gt; "bar"} }
+hash2 = { :b =&gt; { :c =&gt; "blah"} }
+hash1.depth_merge(hash2) #=&gt; { :a =&gt; "foo", :b =&gt; { :c =&gt; "blah"} }
+
+# With trimming nils
+hash1 = { :a =&gt; "foo", :b =&gt; { :c =&gt; "bar"} }
+hash2 = { :b =&gt; nil }
+hash1.depth_merge(hash2, true) #=&gt; { :a =&gt; "foo" }
+</code></pre>
+</div>
+
+<p>Again a very simple utility, however it comes in handy with testing.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># In Model
+class Foo &lt; ActiveRecord::Base
+  validates_presence_of :col1, :col2
+end
+
+# In Unit Test
+...
+def setup
+  @default_attributes = { :col1 =&gt; "foo", :col2 =&gt; "bar" }
+end
+
+def test_missing_important_fields
+  # A model with not only col1 == nil, but nil is never passed to the setter
+  model = create_model(:col1 =&gt; nil)
+  # do some checking on validity
+
+  model = create_model(:col2 =&gt; nil)
+  # again checking on validity
+end
+
+def test_something_else
+  model = create_model
+end
+
+private
+  def create_model(opts = {})
+SomeModel.new(@default_attributes.depth_merge(opts, true))
+  end
+...
+</code></pre>
+</div>
+
+<p>Having a the depth part of the merge many not be handy in that scenario, but in functional tests they can help with composing the <code class="highlighter-rouge">get</code>/<code class="highlighter-rouge">post</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># In Functional Test
+...
+def setup
+  ...
+  @default_params = {
+:id =&gt; 5,
+:foo =&gt; {
+  :col1 =&gt; "foo",
+  :col2 =&gt; "bar"
+}
+  }
+end
+
+def test_something
+  post :some_action, params(:foo =&gt; { :col1 =&gt; nil })
+  ...
+end
+
+def test_something_else
+  post :some_action, params
+  ...
+end
+
+private
+  def params(opts = {})
+@default_params.depth_merge(opts, true)
+  end
+...
+</code></pre>
+</div>
+
+<p>The premise for this is so tests become more concise, leaving only relevant information. Which in turn make the tests more readable.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

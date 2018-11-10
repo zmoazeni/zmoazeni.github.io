@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Liquid Forms </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Liquid Forms</cite></h1>
+    <time datetime="2007-08-25T18:44:39-04:00">25 August 2007</time>
+
+    <p>A few weeks back I <a href="/2007/8/liquids-leaking-from-a-developer">wrote</a> about using liquid. In the article I mentioned that soon I would write about how we integrated forms.</p>
+
+<p>I’ve been purposely stalling for two reasons. One, I’ve been extremely busy at work, and two, I’ve been wanting to clean up some code and provide some helpers, but that doesn’t look likely at least for some time.</p>
+
+<p>Before I start, I need to give kudos to the Mephisto team for giving me a good launch pad in creating forms.</p>
+
+<p>Here’s an example tag.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>##
+# In some other file
+##
+class MyForm &lt; Liquid::Block
+  # I typically include these to allow most of the html tag helpers
+  include ActionView::Helpers::TagHelper
+  include ActionView::Helpers::FormTagHelper
+  include ActionView::Helpers::FormOptionsHelper
+
+  def render(context)
+
+    # In the controller, pass the model along with the registers to be accessed
+    # from the tag
+    @model = context.registers[:model]
+
+    # this will contain side affects.
+    context.stack do
+      context["form"] = {
+        "first" =&gt; text_field_tag("model[first_field]", @model.first_field, :id =&gt; "model_first_field"),
+        "second" =&gt; text_field_tag("model[second_field]", @model.second_field, :id =&gt; "model_second_field"),
+
+        # This is some helper method used to generate an html output of
+        # the validation errors
+        "errors" =&gt; generate_validation_errors(@model),
+        "submit" =&gt; submit_tag("Submit Form")
+      }
+    end
+
+    result &lt;&lt; %(
+      &lt;form method="post" action="#{context.url_for(:controller =&gt; "some_controller", :action =&gt; "some_action")}"
+        #{render_all(@nodelist, context)}
+      &lt;/form&gt;
+    )
+
+    # this gets spit out to the view
+    result
+  end
+end
+
+##
+# Somewhere in your config you need to register the tag
+##
+Liquid::Template.register_tag(:myform, MyForm)
+</code></pre>
+</div>
+
+<p>The first thing to do is to create a tag that inherits from <code class="highlighter-rouge">Liquid::Block</code>, and override the <code class="highlighter-rouge">render</code>. Next notice add a hash to the <code class="highlighter-rouge">context</code>. This directly defines what the templater can use. Also notice <code class="highlighter-rouge">render_all</code> inside the generated <code class="highlighter-rouge">form</code>. This allows the tag to pass the buck further on whatever it wraps, and obviously is extremely important.</p>
+
+<p>For the most part that’s it. The templater can then template a form similar to the following.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div&gt;
+  {% my_form %}
+    {{ form.errors }}
+
+    &lt;p&gt;
+      &lt;label for="model_first_field"&gt;First Field&lt;/label&gt;
+      {{ form.first }}
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      &lt;label for="model_second_field"&gt;Second Field&lt;/label&gt;
+      {{ form.second }}
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      {{ form.submit }}
+    &lt;/p&gt;
+  {% end_my_form %}
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<p>I think this is a pretty slick way of enabling templaters customization over the way forms are laid out structurally. Obviously there is a lot of room for improvement. Extracting more out of the tag to keep it dry. I’ve also thought about allowing filters to allow designers to manipulate all the other attributes of the elements like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>...
+{{ form.first | html id:"new-id" class:"class_one class_two" style:"border: 1px solid"}}
+...
+</code></pre>
+</div>
+
+<p>I just haven’t had any time to devote to liquid since we closed the last project that used it three weeks ago.</p>
+
+<p>Finally you’ll notice above that I’m calling <code class="highlighter-rouge">context.url_for</code>. That’s not something that’s baked into liquid, but something I monkey patched to provide the tags with Rails routes. It only expects that the controller gets passed as a register.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Liquid::Context
+  def url_for(*options)
+    @registers[:controller].send(:url_for, *options)
+  end
+end
+</code></pre>
+</div>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

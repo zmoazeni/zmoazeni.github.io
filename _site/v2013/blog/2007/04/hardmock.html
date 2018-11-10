@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Hardmock </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Hardmock</cite></h1>
+    <time datetime="2007-04-24T22:03:09-04:00">24 April 2007</time>
+
+    <p>Most ruby developers who use mock libraries are familiar with either <a href="http://mocha.rubyforge.org/">Mocha</a> or <a href="http://onestepback.org/software/flexmock/">Flex Mock</a>. However not many are familiar with the mock library that I use, <a href="http://hardmock.rubyforge.org/">Hardmock</a>.</p>
+
+<p>Hardmock takes mocking one step further to assert order between mocks, much like the Java mocking library <a href="http://www.easymock.org/">EasyMock</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Person
+  def initialize(car, wallet)
+@car = car
+@wallet = wallet
+  end
+
+  def go_to_movies
+@car.drive_to_movies
+@wallet.pay_for_ticket("10.00")
+@car.drive_home
+  end
+end
+
+...
+
+# in tests
+def setup
+  create_mocks :car_mock, :wallet_mock
+  @person = Person.new(@car_mock, @wallet_mock)
+end
+
+# This test will pass
+def test_go_to_movies
+  @car_mock.expects.drive_to_movies
+  @wallet_mock.expects.pay_for_ticket("10.00")
+  @car_mock.expects.drive_home
+
+  @person.go_to_movies
+end
+
+# This test will fail since we
+# drive home before we paid for the ticket
+def test_go_to_movies_failure
+  @car_mock.expects.drive_to_movies
+  @car_mock.expects.drive_home
+  @wallet_mock.expects.pay_for_ticket("10.00")
+
+  @person.go_to_movies
+end
+</code></pre>
+</div>
+
+<p>Another one of my favorite perks of Hardmock is the open assertions of parameters. For the most part, parameters are expected to equal what is given in the initial assertions, however sometimes there’s complications on asserting the parameters given.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>def test_allow_any_money_for_ticket
+  @car_mock.expects.drive_to_movies
+  @wallet_mock.expects.pay_for_ticket do | amount |
+# this will be executed when "pay_for_ticket" is called on the mock
+
+# Only allow dollar amounts
+assert_match(/^\d+\.\d{2}$/, amount)
+
+# of course the last value in this block
+# with be returned from the mock to the caller
+"the ticket"
+  end
+  @car_mock.expects.drive_home
+
+  @person.go_to_movies
+end
+</code></pre>
+</div>
+
+<p>Hardmock was written by the solid developers at <a href="http://atomicobject.com/">Atomic Object</a></p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

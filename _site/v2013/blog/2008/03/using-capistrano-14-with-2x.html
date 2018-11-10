@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // Using Capistrano 1.4 with 2.x </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>Using Capistrano 1.4 with 2.x</cite></h1>
+    <time datetime="2008-03-31T10:48:41-04:00">31 March 2008</time>
+
+    <p>I typically use <a href="http://www.capify.org/">Capistrano</a> for deploying our applications. Though I do have a bookmark to investigate <a href="http://rubyhitsquad.com/Vlad_the_Deployer.html">Vlad</a> when I get some time.</p>
+
+<p>We’ve been a bit slow to upgrade to Capistrano 2.x, and have a lot of existing applications that depend upon Capistrano 1.4 for deployment.</p>
+
+<p>One tactic we’ve taken is to write a custom script to explicitly use 1.4 in conjunction with 2.x. A minor hack from the original, and we have:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">#!/usr/bin/env ruby</span>
+
+<span class="k">begin</span>
+  <span class="nb">require</span> <span class="s1">'rubygems'</span>
+  <span class="n">gem</span> <span class="s1">'capistrano'</span><span class="p">,</span> <span class="s1">'&lt;= 1.4.1'</span>
+<span class="k">rescue</span> <span class="no">LoadError</span>
+  <span class="c1"># no rubygems to load, so we fail silently</span>
+<span class="k">end</span>
+
+<span class="nb">require</span> <span class="s1">'capistrano/cli'</span>
+
+<span class="no">Capistrano</span><span class="o">::</span><span class="no">CLI</span><span class="p">.</span><span class="nf">execute!</span>
+</code></pre>
+</div>
+
+<p>I threw this into a script called <code class="highlighter-rouge">cap1.4</code> in <code class="highlighter-rouge">/usr/local</code> and can now do:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>illian:~ zach$ cap1.4 -V
+Capistrano v1.4.1
+illian:~ zach$ cap -V
+Capistrano v2.1.0
+</code></pre>
+</div>
+
+<p>Obviously, a better approach would be to freeze in the capistrano gems per project, and access them via <code class="highlighter-rouge">RAILS_ROOT/script/cap</code>, but that too has been time sensitive. Notice a trend here?</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

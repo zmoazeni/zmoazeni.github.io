@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // field_error_proc and Rails Configurations </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>field_error_proc and Rails Configurations</cite></h1>
+    <time datetime="2007-09-19T21:39:51-04:00">19 September 2007</time>
+
+    <p>I came across something in Rails that’s fixed an issue that has seriously irked me.</p>
+
+<p>Given a form in Rails:</p>
+
+<p>…</p>
+<p>
+    <label for="user_name">Name</label>
+    &lt;%= f.text_field :name %&gt;
+  </p>
+<p>…</p>
+
+<p>if a validation error would occur, the generated code becomes:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p&gt;
+  &lt;label for="user_name"&gt;Name&lt;/label&gt;
+  &lt;div class="fieldWithErrors"&gt;&lt;input id="user_name" name="user[name]" size="30" type="text" value="" /&gt;&lt;/div&gt;
+&lt;/p&gt;
+</code></pre>
+</div>
+
+<p>Which is invalid markup. I’ve constantly resorted to editing rails source in order to change the divs to spans.</p>
+
+<p>Today I came across something really neat: <code class="highlighter-rouge">field_proc_error</code>. By setting this in your configuration like <code class="highlighter-rouge">environment.rb</code>, you can drastically change the output of the generated error</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>config.action_view.field_error_proc = Proc.new{ |html_tag, instance| "&lt;span class=\"field_with_errors\"&gt;#{html_tag}&lt;/span&gt;" }
+</code></pre>
+</div>
+
+<p>Going through Trac, I see it’s been in there forever, but as usual, I’m the last one to catch it.</p>
+
+<p>Awesomely useful. Thanks Rails Core.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Connection Ϟ Required  // My First Introduction to Haskell Extensions: FlexibleInstances </title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Zach Moazeni">
+
+  <link href="/v2013/css/main.css?v=1" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/v2013/css/pygments-github.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Connection Required" href="/v2013/feed/atom/" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/v2013/">Connection Ϟ Required</a></li>
+      <li><a href="/v2013/highlighted">Highlighted</a></li>
+      <li><a href="/v2013/about">About</a></li>
+    </ul>
+  </nav>
+
+
+  <article id="main">
+    <h1><cite>My First Introduction to Haskell Extensions: FlexibleInstances</cite></h1>
+    <time datetime="2009-07-26T20:28:53-04:00">26 July 2009</time>
+
+    <p>I’ve been tinkering with Haskell lately, and I came across an odd issue. Let’s say I want to create a class that takes Integers, Characters, and Strings and returns an Integer.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Something a where
+  doSomething :: a -&gt; Integer
+
+instance Something Integer where
+  doSomething x = 1
+
+instance Something Char where
+  doSomething x = 2
+
+instance Something [Char] where
+  doSomething x = 3
+</code></pre>
+</div>
+
+<p>Trying to load this into the interpreter (or compiling it) results in the an error on the <code class="highlighter-rouge">String</code> (<code class="highlighter-rouge">[Char]</code>)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Illegal instance declaration for `Something [Char]'
+  (All instance types must be of the form (T a1 ... an)
+  where a1 ... an are type *variables*,
+  and each type variable appears at most once in the instance head.
+  Use -XFlexibleInstances if you want to disable this.)
+In the instance declaration for `Something [Char]'
+</code></pre>
+</div>
+
+<p>This cryptic message essentially means that I can’t make <code class="highlighter-rouge">[Char]</code> an instance of the <code class="highlighter-rouge">Something</code> class, but I could make <code class="highlighter-rouge">[a]</code> one (a list containing any type)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>instance Something [a] where
+  doSomething x = 3
+</code></pre>
+</div>
+
+<p>However that stinks because then I have to do a lot more work to differentiate between a list of characters (i.e. Strings) and a list of integers.</p>
+
+<p>The error message mentions a way to disable that check, and the helpful guys at <a href="http://freenode.net/"><code class="highlighter-rouge">#haskell</code></a> gave me a hand.</p>
+
+<p>If you put this at the top of your source file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">-#</span><span class="w"> </span><span class="err">LANGUAGE</span><span class="w"> </span><span class="err">FlexibleInstances</span><span class="w"> </span><span class="err">#-</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>you end up telling Haskell to load the extension <code class="highlighter-rouge">FlexibleInstances</code> which allows you to differentiate between lists of characters, integers, or whatever else. Which allows you to load in:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-- in file TestingTypes.hs
+{-# LANGUAGE FlexibleInstances #-}
+
+class Something a where
+  doSomething :: a -&gt; Integer
+
+instance Something Integer where
+  doSomething x = 1
+
+instance Something Char where
+  doSomething x = 2
+
+instance Something [Char] where
+  doSomething x = 3
+
+-- in ghci:
+Prelude&gt; :l TestingTypes.hs
+[1 of 1] Compiling TestingTypes     ( TestingTypes.hs, interpreted )
+Ok, modules loaded: TestingTypes.
+*TestingTypes&gt; doSomething 1
+1
+*TestingTypes&gt; doSomething 'c'
+2
+*TestingTypes&gt; doSomething "foo"
+3
+</code></pre>
+</div>
+
+<p>Nothing ground breaking, but I thought I’d pass this tidbit along.</p>
+
+  </article>
+
+
+<footer>
+  &copy; 2007-2017 Zach Moazeni
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1484071-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+
